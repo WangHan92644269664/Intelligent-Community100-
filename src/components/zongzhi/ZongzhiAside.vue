@@ -1,12 +1,18 @@
 <template>
-  <el-menu  class="submenu" :default-active="activeIndex"  router>
+  <el-menu  class="submenu" :default-active="activeIndex" unique-opened router>
     <el-menu-item index="#" class="leftTitle">综治</el-menu-item>
     <el-submenu index="1">
       <template slot="title"><i class="iconfont icon-home"></i>综治组织</template>
       <el-menu-item-group>
         <el-menu-item index="/zongzhi/organ/institution">综治机构</el-menu-item>
-        <el-menu-item index="#1">群防群治组织</el-menu-item>
-        <el-menu-item index="#2">网络队伍</el-menu-item>
+        <el-menu-item index="/zongzhi/organ/group">群防群治组织</el-menu-item>
+        <el-submenu index="#2">
+          <template slot="title">网络队伍</template>
+          <el-menu-item-group>
+            <el-menu-item index="/zongzhi/organ/network/long">楼栋长</el-menu-item>
+            <el-menu-item index="22">综治领导责任制</el-menu-item>
+          </el-menu-item-group>
+        </el-submenu>
       </el-menu-item-group>
     </el-submenu>
     <el-submenu index="2">

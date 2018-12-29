@@ -16,91 +16,86 @@
 <script>
   import ConHeader from '../../../components/ContainerHeader'
   import ConMainAside from '../../../components/ConMainAside'
-  import MainRight from '../../../components/zongzhi/OrganizationMain'
+  import MainRight from '../../../components/zongzhi/Organization/Group'
 
   export default {
     data() {
       return {
-        title: '综治机构',
-        name:'综治机构列表',
+        title: '群防群治组织',
+        name:'群防群治组织列表',
         data: [
           {
-            label: '综治机构-综治委',
+            label: '群防群治-专职巡防队伍',
             children: [
               {
-                label: '高新区综治委',
+                label: '群防群治组织',
               },
               {
-                label: '开发区综治委',
+                label: '专职巡防队伍',
               },
               {
-                label: '旅游区综治委',
+                label: '开发区专职巡防队伍',
               },
               {
-                label: '工业区综治委',
+                label: '高新区专职巡防队伍',
               },
               {
-                label: '度假区综治委',
+                label: '度假区专职巡防队伍',
+              },
+              {
+                label:'工业区巡防队伍'
+              }
+            ],
+          },
+          {
+            label: '群防群治-义务巡防队伍',
+            children: [
+              {
+                label: '义务巡防队伍',
+              },
+              {
+                label: '开发区专职巡防队伍',
+              },
+              {
+                label: '高新区专职巡防队伍',
+              },
+              {
+                label: '度假区专职巡防队伍',
+              },
+              {
+                label: '工业区巡防队伍',
               },
             ],
           },
           {
-            label: '综治机构-综治办',
+            label: '群防群治-保安服务公司',
             children: [
               {
-                label: '综治办',
+                label: '保安服务公司',
               },
               {
-                label: '天桥区综治办',
+                label: '开发区保安服务公司',
               },
               {
-                label: '顺泰综治办',
+                label: '高新区保安服务公司',
               },
               {
-                label: '软件园综治办',
-              },
-              {
-                label: '港区综治办',
-              },
-              {
-                label: '平西综治办',
-              },
-              {
-                label: '历下综治办',
-              },
+                label:'工业区保安服务公司'
+              }
             ],
           },
           {
-            label: '综治机构-综治工作室(站)',
+            label: '群防群治-志愿者队伍',
             children: [
               {
-                label: '平山村综治工作室',
+                label: '高新区志愿者队伍',
               },
               {
-                label: '四合村综治工作室',
-              },
-              {
-                label: '智慧村综治工作室',
+                label: '工业区志愿者队伍',
               },
             ],
           },
-          {
-            label: '综治机构-综治中心',
-            children: [
-              {
-                label: '综治中心',
-              },
-              {
-                label: '度假区综治中心',
-              },
-            ],
-          },
-          ],
-        formInline: {
-          sex: '',
-          time: '',
-          key:''
-        },
+        ],
       }
     },
     components: {

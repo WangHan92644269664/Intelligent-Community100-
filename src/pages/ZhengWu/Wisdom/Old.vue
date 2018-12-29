@@ -1,16 +1,14 @@
 <template>
-  <div>
+  <el-container>
     <el-header>
       <!--引入主体内容的标题组件-->
       <ConHeader :title=title></ConHeader>
     </el-header>
     <el-main>
-      <el-row :gutter="40">
         <!--主体内容的右边的内容组件-->
         <MainRight :rightTitle="rightTitle"></MainRight>
-      </el-row>
     </el-main>
-  </div>
+    </el-container>
 </template>
 
 <script>

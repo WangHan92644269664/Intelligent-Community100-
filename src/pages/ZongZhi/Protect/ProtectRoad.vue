@@ -1,13 +1,12 @@
 <template>
   <el-container>
-    <el-header style="height: 40px;">
+    <el-header style="height: 40px;background-color: #fff;line-height: 40px">
       <ConHeader :title="title"></ConHeader>
     </el-header>
     <el-main>
       <ProtectRoadMain></ProtectRoadMain>
     </el-main>
   </el-container>
-
 </template>
 
 <script>
@@ -40,16 +39,6 @@
     }
   }
 </script>
-<style>
-
-</style>
 <style scoped>
-  .el-header {
-    background: #fff;
-    height: 40px;
-    line-height: 40px;
-  }
-  .el-main{
-    padding:15px 0;
-  }
+
 </style>

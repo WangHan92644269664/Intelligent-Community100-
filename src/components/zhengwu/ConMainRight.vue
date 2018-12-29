@@ -1,9 +1,9 @@
 <template>
-          <el-col :span="21" class="mainRight">
-            <el-row class="borderBottom">
+  <div class="mainRight" style="margin-left: 220px">
+            <el-row class="borderBottom" style="height: 40px;">
               <el-col :span="24">{{rightTitle}}</el-col>
             </el-row>
-            <el-row style="padding-left: 15px;">
+            <el-row style="padding-left: 15px;height: 40px;" >
               <el-col :span="24" style="text-align: left;">
                 <el-form :inline="true" :model="formInline" class="demo-form-inline">
                   <el-form-item label="标题:">
@@ -12,11 +12,6 @@
                   <el-form-item label="添加时间:">
                     <el-input v-model="formInline.time"></el-input>
                   </el-form-item>
-                  <!--<el-form-item >-->
-                  <!--<div class="info">-->
-                  <!--民族/身份证号/婚姻状态/学历-->
-                  <!--</div>-->
-                  <!--</el-form-item>-->
                   <el-form-item class="search">
                     <el-button type="primary" icon="iconfont icon-jinduchaxun">查询</el-button>
                     <el-button type="primary"><i class="iconfont icon-tianjia"></i>添加</el-button>
@@ -100,7 +95,7 @@
                 </div>
               </el-col>
             </el-row>
-          </el-col>
+  </div>
 </template>
 
 <script>

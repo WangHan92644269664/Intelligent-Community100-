@@ -7,7 +7,6 @@
       <SchoolMain></SchoolMain>
     </el-main>
   </el-container>
-
 </template>
 
 <script>

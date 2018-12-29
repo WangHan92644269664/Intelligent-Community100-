@@ -1,6 +1,6 @@
 <template>
-  <el-col :span="21" class="mainRight">
-    <el-row class="borderBottom">
+  <div class="mainRight" style="margin-left: 220px">
+    <el-row class="borderBottom" style="height: 40px;">
       <el-col :span="24">{{rightTitle}}</el-col>
     </el-row>
     <el-table
@@ -65,7 +65,7 @@
         </div>
       </el-col>
     </el-row>
-  </el-col>
+  </div>
 </template>
 
 <script>

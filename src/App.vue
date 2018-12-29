@@ -20,4 +20,9 @@ export default {
   text-align: center;
   background: #f0f0f0;
 }
+  .el-main{
+    padding: 20px 0 0 0;
+  }
+
+
 </style>

@@ -222,4 +222,7 @@
   .el-main .el-button {
     border-radius: 2px;
   }
+  .el-pagination{
+    padding: 0!important;
+  }
 </style>

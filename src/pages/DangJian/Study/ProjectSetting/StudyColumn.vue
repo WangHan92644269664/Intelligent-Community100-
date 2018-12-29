@@ -1,16 +1,13 @@
 <template>
-  <div>
-    <el-header>
-      <!--引入主体内容的标题组件-->
-      <ConHeader :title=title></ConHeader>
+  <el-container>
+    <el-header style="height: 40px;">
+    <ConHeader :title="title"></ConHeader>
     </el-header>
     <el-main>
-      <el-row :gutter="40">
-        <!--主体内容的右边的内容组件-->
-        <MainRight :rightTitle="rightTitle"></MainRight>
-      </el-row>
+      <!--主体内容的右边的内容组件-->
+      <MainRight :rightTitle="rightTitle"></MainRight>
     </el-main>
-  </div>
+  </el-container>
 </template>
 
 <script>
@@ -31,20 +28,12 @@
     },
   }
 </script>
-
 <style scoped>
-  .el-menu-item.is-active {
-    color: #1951C1;
-    background: #EBF0FA;
-    font-weight: bolder;
-    border-left: 2px solid #1951C1;
-  }
-
-  /*主体内容*/
   .el-header {
     background-color: #fff !important;
-    height: 40px !important;
+    height: 40px;
     line-height: 38px;
     color: #aaa;
   }
+
 </style>

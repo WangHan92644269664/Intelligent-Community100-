@@ -34,16 +34,15 @@
       :data="tableData"
       border
       stripe
+      style="width: 100%;"
     >
       <el-table-column
-        fixed
         sortable
         prop="id"
         label="编号"
         width="120">
       </el-table-column>
       <el-table-column
-        fixed
         prop="name"
         label="标题"
         width="200">
@@ -81,7 +80,7 @@
       <el-table-column
         fixed="right"
         label="操作"
-        width="200">
+        width="300">
         <template slot-scope="scope">
           <el-button @click="handleClick(scope.row)" plain size="small">详情</el-button>
         </template>
@@ -196,6 +195,9 @@
   }
 </script>
 <style>
+  .el-main{
+    padding: 20px 0 0 0!important;
+  }
   .el-main .el-table th {
     text-align: center;
     padding: 5px 0;

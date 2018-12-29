@@ -1,7 +1,7 @@
 <template>
-  <div class="sidebar">
+  <div class="sidebar" >
     <h5>党建</h5>
-    <el-menu class="sidebar-el-menu" :default-active="onRoutes" active-text-color="#1951C1" unique-opened router>
+    <el-menu class="sidebar-el-menu" :default-active="onRoutes" active-text-color="#1951C1" unique-opened router style="height: 100%">
       <template v-for="item in items">
         <template v-if="item.subs">
           <el-submenu :index="item.index" :key="item.index">
@@ -273,13 +273,9 @@
     left: 20px;
     top: 70px;
     bottom: 0;
-    overflow-y: scroll;
   }
   .sidebar-el-menu:not(.el-menu--collapse){
     width: 200px;
-  }
-  .sidebar > ul {
-    height:100%;
   }
   .sidebar ul>li{
     text-align: left!important;

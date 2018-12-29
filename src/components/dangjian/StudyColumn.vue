@@ -1,9 +1,9 @@
 <template>
-  <el-col :span="24" class="mainRight">
-    <el-row class="borderBottom">
-      <el-col :span="24">{{rightTitle}}</el-col>
+  <div>
+    <el-row class="mainRight">
+      <el-col :span="24" class="borderBottom">{{rightTitle}}</el-col>
     </el-row>
-    <el-row style="padding-left: 15px;">
+    <el-row style="padding-left: 15px;padding-top: 20px;background: #fff;">
       <el-col :span="24" style="text-align: left;">
         <el-form :inline="true" :model="formInline" class="demo-form-inline">
           <el-form-item label="栏目名称:">
@@ -64,7 +64,7 @@
         </template>
       </el-table-column>
     </el-table>
-    <el-row>
+    <el-row style="background: #fff;">
       <el-col :span="24">
         <div class="block">
           <el-pagination
@@ -79,7 +79,7 @@
         </div>
       </el-col>
     </el-row>
-  </el-col>
+  </div>
 </template>
 
 <script>
@@ -133,15 +133,14 @@
   }
 </script>
 <style>
-  .el-main .el-table td {
-    text-align: center !important;
-  }
-
   .el-main .el-table th {
     text-align: center;
+    padding: 5px 0;
     background: rgba(222, 222, 222, .3);
   }
-
+  .el-main .el-table td{
+    text-align: center;
+  }
   .el-button--info {
     background-color: #fff!important;
     border: 1px solid #FF6400 !important;
@@ -168,45 +167,15 @@
   .el-pagination__total {
     margin-left: 10px;
   }
-
-  .hideWord {
-
-  }
-
 </style>
 <style scoped>
-  /*主体内容*/
-  .el-header[data-v-69eb3339] {
-    background-color: #fff !important;
-    height: 40px !important;
-    color: #aaa;
-  }
-
   .el-main .el-table td {
     padding: 0 !important;
-    text-align: center !important;
   }
 
-  .el-main .borderBottom {
-    border-bottom: 1px solid #eee;
-    text-align: left;
-    padding-left: 15px;
-    padding-bottom: 15px;
-    font-size: 14px;
-    color: #777;
-    font-weight: bolder;
-    letter-spacing: 0.1em;
-    margin-bottom: 15px;
-  }
-
-  .el-main .mainRight {
+  .el-main .el-table {
     background: #fff;
-    padding: 15px 0 !important;
-  }
-
-  .el-main .search .el-button--primary {
-    background-color: #FF6400 !important;
-    border-color: #FF6400 !important;
+    border: 1px solid #ddd;
   }
 
   .el-main .info {
@@ -222,4 +191,24 @@
   .el-main .el-button {
     border-radius: 2px;
   }
+
+  .mainRight {
+    background: #fff;
+  }
+
+  .mainRight .borderBottom {
+    border-bottom: 1px solid #eee;
+    text-align: left;
+    padding: 10px 0 10px 15px;
+    font-size: 14px;
+    color: #777;
+    font-weight: bolder;
+    letter-spacing: 0.1em;
+  }
+
+  .el-main .search .el-button--primary {
+    background-color: #FF6400 !important;
+    border-color: #FF6400 !important;
+  }
+
 </style>

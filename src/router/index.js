@@ -25,6 +25,7 @@ import FirstDynamic from '../pages/DangJian/Activity/First/Dynamic'
 import FirstLog from '../pages/DangJian/Activity/First/Log'
 import ZongZhi from '../pages/ZongZhi/ZongZhi'
 import ZongZhiOrigin from '../pages/ZongZhi/Organization/Organization'
+import ZongZhiGroup from '../pages/ZongZhi/Organization/Group'
 import ZongZhiSpecial from '../pages/ZongZhi/Special/Special'
 import ImportantArea from '../pages/ZongZhi/Society/ImportantArea'
 import ZongZhiSchool from '../pages/ZongZhi/Campus/School'
@@ -268,6 +269,13 @@ export default new Router({
         {
           path:'/zongzhi/organ/institution',
           component:ZongZhiOrigin,
+          meta:{
+            showHeader:true
+          }
+        },
+        {
+          path:'/zongzhi/organ/group',
+          component:ZongZhiGroup,
           meta:{
             showHeader:true
           }

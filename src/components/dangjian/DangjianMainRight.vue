@@ -1,9 +1,9 @@
 <template>
-  <el-col :span="21" class="mainRight">
-    <el-row class="borderBottom">
+  <div class="mainRight" style="margin-left: 220px">
+    <el-row class="borderBottom" style="height: 40px;">
       <el-col :span="24">{{rightTitle}}</el-col>
     </el-row>
-    <el-row style="padding-left: 15px;">
+    <el-row style="padding-left: 15px;height: 40px;">
       <el-col :span="24" style="text-align: left;">
         <el-form :inline="true" :model="formInline" class="demo-form-inline">
           <el-form-item label="性别:">
@@ -89,7 +89,7 @@
         </div>
       </el-col>
     </el-row>
-  </el-col>
+  </div>
 </template>
 
 <script>
@@ -221,8 +221,7 @@
   .el-pagination__total {
     margin-left: 10px;
   }
-
-  .hideWord {
+  .hideWord{
 
   }
 
@@ -234,12 +233,10 @@
     height: 40px !important;
     color: #aaa;
   }
-
   .el-main .el-table td {
-    padding: 0 !important;
+    padding:0 !important;
     text-align: center !important;
   }
-
   .el-main .borderBottom {
     border-bottom: 1px solid #eee;
     text-align: left;
@@ -251,7 +248,6 @@
     letter-spacing: 0.1em;
     margin-bottom: 15px;
   }
-
   .el-main .mainRight {
     background: #fff;
     padding: 15px 0 !important;

@@ -7,7 +7,6 @@
       <WorkingMain></WorkingMain>
     </el-main>
   </el-container>
-
 </template>
 
 <script>
@@ -43,9 +42,6 @@
     }
   }
 </script>
-<style>
-
-</style>
 <style scoped>
   .el-header {
     background: #fff;

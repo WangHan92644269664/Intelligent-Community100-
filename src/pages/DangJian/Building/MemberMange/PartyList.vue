@@ -1,18 +1,16 @@
 <template>
-  <div>
+  <el-container>
     <el-header>
       <!--引入主体内容的标题组件-->
       <ConHeader :title=title></ConHeader>
     </el-header>
     <el-main>
-      <el-row :gutter="40">
         <!--主体内容的中部的侧边栏组件-->
         <ConMainAside :name="name" :data="data"></ConMainAside>
         <!--主体内容的右边的内容组件-->
         <MainRight :rightTitle="rightTitle"></MainRight>
-      </el-row>
     </el-main>
-  </div>
+    </el-container>
 </template>
 
 <script>
@@ -75,18 +73,13 @@
 </script>
 
 <style scoped>
-  .el-menu-item.is-active {
-    color: #1951C1;
-    background: #EBF0FA;
-    font-weight: bolder;
-    border-left: 2px solid #1951C1;
-  }
-
-  /*主体内容*/
   .el-header {
     background-color: #fff !important;
     height: 40px !important;
     line-height: 38px;
     color: #aaa;
+  }
+  .el-main{
+    padding:20px 0 0 0;
   }
 </style>

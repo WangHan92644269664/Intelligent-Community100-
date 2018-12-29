@@ -6,11 +6,20 @@
     <el-row style="padding-left: 15px;">
       <el-col :span="24" style="text-align: left;">
         <el-form :inline="true" :model="formInline" class="demo-form-inline">
-          <el-form-item label="标题:">
-            <el-input v-model="formInline.name"></el-input>
+          <el-form-item label="总结类型:">
+            <el-select v-model="formInline.kind" placeholder="请选择">
+              <el-option label="日报" value="day"></el-option>
+              <el-option label="周报" value="week"></el-option>
+            </el-select>
           </el-form-item>
-          <el-form-item label="更改时间:">
-            <el-input v-model="formInline.time" ></el-input>
+          <el-form-item label="提交日期:">
+            <el-input v-model="formInline.date"   placeholder="请输入时间段"></el-input>
+          </el-form-item>
+          <el-form-item label="审核状态:">
+            <el-select v-model="formInline.status" placeholder="请选择">
+              <el-option label="未审核" value="undo"></el-option>
+              <el-option label="已审核" value="doing"></el-option>
+            </el-select>
           </el-form-item>
           <el-form-item class="search">
             <el-button type="primary" icon="iconfont icon-jinduchaxun">查询</el-button>
@@ -22,6 +31,7 @@
     <el-table
       :data="tableData"
       border
+      stripe
       height="500px"
     >
       <el-table-column
@@ -30,34 +40,31 @@
         label="编号"
         sortable
         :index="indexMethod"
-        width="200">
+        width="190">
       </el-table-column>
       <el-table-column
         prop="name"
         label="标题"
+        width="300">
+      </el-table-column>
+      <el-table-column
+        prop="kind"
+        label="总结类型"
+        width="200">
+      </el-table-column>
+      <el-table-column
+        prop="people"
+        label="提交人"
         width="200">
       </el-table-column>
       <el-table-column
         prop="time"
-        label="更改时间"
-        sortable
-        width="260">
-      </el-table-column>
-      <el-table-column
-        prop="people"
-        label="操作人"
-        sortable
-        width="300">
+        label="提交时间"
+        width="240">
       </el-table-column>
       <el-table-column
         prop="status"
         label="状态"
-        sortable
-        width="200">
-      </el-table-column>
-      <el-table-column
-        prop="class"
-        label="党课"
         width="120">
       </el-table-column>
       <el-table-column
@@ -68,10 +75,11 @@
       <el-table-column
         fixed="right"
         label="操作"
-        width="250">
+        width="300">
         <template slot-scope="scope">
-          <el-button @click="handleClick(scope.row)" plain size="small">编辑</el-button>
-          <el-button @click="handleClick(scope.row)" type="info" size="small">停用</el-button>
+          <el-button @click="handleClick(scope.row)" plain size="small">详情</el-button>
+          <el-button @click="handleClick(scope.row)" type="info" size="small">编辑</el-button>
+          <el-button type="success" size="small">删除</el-button>
         </template>
       </el-table-column>
     </el-table>
@@ -103,70 +111,70 @@
         currentPage4: 1,
         tableData: [
           {
-            name: '两学一做',
+            name: '曾让习近平驻足观看的三件展品',
             people:'超级管理员',
             time:'2018-11-17 14:02:43',
-            status:'可用',
-            class: '0/0',
+            status:'未审核',
+            kind:'日报',
             zip: 200333
           }, {
-            name: '两学一做',
+            name: '曾让习近平驻足观看的三件展品',
             people:'超级管理员',
             time:'2018-11-17 14:02:43',
-            status:'可用',
-            class: '0/0',
+            status:'未审核',
+            kind:'日报',
             zip: 200333
           }, {
-            name: '三严三实',
+            name: '曾让习近平驻足观看的三件展品',
             people:'超级管理员',
             time:'2018-11-17 14:02:43',
-            status:'可用',
-            class: '0/0',
+            status:'未审核',
+            kind:'日报',
             zip: 200333
           }, {
-            name: '三会一课',
+            name: '曾让习近平驻足观看的三件展品',
             people:'超级管理员',
             time:'2018-11-17 14:02:43',
-            status:'可用',
-            class: '0/0',
+            status:'未审核',
+            kind:'日报',
             zip: 200333
           },
           {
-            name: '法治建设',
+            name: '曾让习近平驻足观看的三件展品',
             people:'超级管理员',
             time:'2018-11-17 14:02:43',
-            status:'可用',
-            class: '0/0',
+            status:'未审核',
+            kind:'日报',
             zip: 200333
           },
           {
-            name: '规章制度',
+            name: '曾让习近平驻足观看的三件展品',
             people:'超级管理员',
             time:'2018-11-17 14:02:43',
-            status:'可用',
-            class: '0/0',
+            status:'未审核',
+            kind:'日报',
             zip: 200333
           },
           {
-            name: '公共服务',
+            name: '曾让习近平驻足观看的三件展品',
             people:'超级管理员',
             time:'2018-11-17 14:02:43',
-            status:'可用',
-            class: '0/0',
+            status:'未审核',
+            kind:'日报',
             zip: 200333
           },
-          {
-            name: '就业创业',
+          {name: '曾让习近平驻足观看的三件展品',
             people:'超级管理员',
             time:'2018-11-17 14:02:43',
-            status:'可用',
-            class: '0/0',
+            status:'未审核',
+            kind:'日报',
             zip: 200333
           },
         ],
         formInline: {
-          name: '',
-          time: '',
+         kind:'',
+          date:'',
+          status:''
         },
       }
     },
@@ -184,7 +192,7 @@
         console.log(`当前页: ${val}`);
       },
       indexMethod(index){
-        return index+1
+        return index+24
       }
     }
   }
@@ -229,7 +237,14 @@
   .hideWord {
 
   }
-
+  @media (min-width: 1500px) and (max-width: 1920px) {
+    /*.el-header{*/
+      /*width:100%;*/
+    /*}*/
+    /*.el-main{*/
+      /*width:80%;*/
+    /*}*/
+  }
 </style>
 <style scoped>
   /*主体内容*/
@@ -279,4 +294,8 @@
   .el-main .el-button {
     border-radius: 2px;
   }
+  .el-pagination{
+    padding: 0!important;
+  }
+
 </style>

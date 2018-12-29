@@ -1,11 +1,11 @@
 <template>
-    <el-col :span="3" class="mainLeft" style="height: 100%;">
+    <div class="mainLeft" style="height: 100%;float: left;width: 220px">
       <el-row class="borderBottom">
         <el-col :span="21">{{name}}</el-col>
         <el-col :span="2" style="color:#FF6400;"><i class="iconfont icon-tianjia"></i></el-col>
       </el-row>
       <el-tree :data="data" :props="defaultProps" @node-click="handleNodeClick" default-expand-all></el-tree>
-    </el-col>
+    </div>
 </template>
 
 <script>
