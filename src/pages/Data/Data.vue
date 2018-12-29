@@ -2,45 +2,13 @@
   <div class="content" id="content" ref="homePage">
     <h2 class="title-h2">大数据平台</h2>
     <div class="top-link">
-      <el-row>
-        <el-col :span="12">
-          <ul class="top-link-left">
-            <li>实有人口</li>
-            <li>实有数据</li>
-            <li>综治数据</li>
-          </ul>
-        </el-col>
-        <el-col :span="12">
-          <ul class="top-link-right">
-            <li>社区工作</li>
-            <li>智慧党建</li>
-            <li>智慧政务</li>
-          </ul>
-        </el-col>
-      </el-row>
+      <DataRouter></DataRouter>
     </div>
     <el-row class="main-content">
       <el-col class="main-content" :span="7">
-        <ul class="bili">
-          <li>
-            <div class="bili-div bili-left">
-              <i style class="icon iconfont icon-iconcle07"></i>
-            </div>
-            <div class="bili-div bili-right">男性比例
-              <br>
-              <span>59%</span>
-            </div>
-          </li>
-          <li>
-            <div class="bili-div bili-left1">
-              <i style class="icon iconfont icon-iconxingbie08"></i>
-            </div>
-            <div class="bili-div bili-right1">女性比例
-              <br>
-              <span>41%</span>
-            </div>
-          </li>
-        </ul>
+        <div class="bili-chart">
+          <BiliChart></BiliChart>
+        </div>
         <div class="chart-common chart-1">
           <EchartsConponent
             :chartData="chartData1"
@@ -48,6 +16,11 @@
             :chartTitle="chartTitle1"
             :yName="yName1"
             :xName="xName1"
+            :barLeftColor="barLeftColor1"
+            :barRightColor="barRightColor1"
+            :circleLeftColor="circleLeftColor1"
+            :circleRightColor="circleRightColor1"
+            :circleBorderColor="circleBorderColor1"
           />
         </div>
         <div class="chart-common chart-2">
@@ -57,6 +30,11 @@
             :chartTitle="chartTitle2"
             :yName="yName2"
             :xName="xName2"
+            :barLeftColor="barLeftColor2"
+            :barRightColor="barRightColor2"
+            :circleLeftColor="circleLeftColor2"
+            :circleRightColor="circleRightColor2"
+            :circleBorderColor="circleBorderColor2"
           />
         </div>
         <div class="chart-common chart-3">
@@ -66,6 +44,11 @@
             :chartTitle="chartTitle3"
             :yName="yName3"
             :xName="xName3"
+            :barLeftColor="barLeftColor3"
+            :barRightColor="barRightColor3"
+            :circleLeftColor="circleLeftColor3"
+            :circleRightColor="circleRightColor3"
+            :circleBorderColor="circleBorderColor3"
           />
         </div>
       </el-col>
@@ -75,70 +58,93 @@
         </div>
         <div class="main-content-data" style="height:25%;">
           <el-row class="data-row">
+            <el-row>
+              <el-col :span="8">
+                <div class="face-data">
+                  人脸识别数据
+                </div>
+                <div class="data-number">
+                  <span><b>2</b><b>6</b><b>5</b><b>3</b></span>
+                  <span class="unit">人次</span>
+                </div>
+              </el-col>
+              <el-col :span="8">
+                <div class="door-key-data">
+                  门禁数据
+                </div>
+                <div class="data-number">
+                  <span><b>2</b><b>9</b><b>5</b><b>6</b></span>
+                  <span class="unit">次</span>
+                </div>
+              </el-col>
+              <el-col :span="8">
+                <div class="car-key-data">
+                  车辆进出数据
+                </div>
+                <div class="data-number">
+                  <span><b>2</b><b>4</b><b>9</b></span>
+                  <span class="unit">辆</span>
+                </div>
+              </el-col>
+            </el-row>
             <el-col class="data-common" :span="4">
               <div class="data-common-div data-left">
-                <i class="icon iconfont icon-tubiao_huabanfuben"></i>
+                <img src="../../assets/images/data/zongrenshu.png" alt="">
               </div>
               <div class="data-common-div data-right">总人数
                 <br>
-                <span>1008人</span>
+                <span>1008</span><span class="unit1">人</span>
               </div>
             </el-col>
             <el-col class="data-common" :span="4">
               <div class="data-common-div data-left">
-                <i class="icon iconfont icon-jianzhu"></i>
+                <img src="../../assets/images/data/jianzhu.png" alt="">
               </div>
               <div class="data-common-div data-right">建筑物
                 <br>
-                <span>20栋</span>
+                <span>20</span><span class="unit1">栋</span>
               </div>
             </el-col>
             <el-col class="data-common" :span="4">
               <div class="data-common-div data-left">
-                <i class="icon iconfont icon-bujian"></i>
+                <img src="../../assets/images/data/bujian.png" alt="">
               </div>
               <div class="data-common-div data-right">部件
                 <br>
-                <span>10件</span>
+                <span>10</span><span class="unit1">件</span>
               </div>
             </el-col>
             <el-col class="data-common" :span="4">
               <div class="data-common-div data-left">
-                <i class="icon iconfont icon-ren"></i>
+                <img src="../../assets/images/data/zoufang.png" alt="">
               </div>
               <div class="data-common-div data-right">走访
                 <br>
-                <span>10件</span>
+                <span>10</span><span class="unit1">件</span>
               </div>
             </el-col>
             <el-col class="data-common" :span="4">
               <div class="data-common-div data-left">
-                <i class="icon iconfont icon-shi-jian-fen-xi"></i>
+                <img src="../../assets/images/data/shijian.png" alt="">
               </div>
               <div class="data-common-div data-right">事件
                 <br>
-                <span>15件</span>
+                <span>15</span><span class="unit1">件</span>
               </div>
             </el-col>
             <el-col class="data-common" :span="4">
               <div class="data-common-div data-left">
-                <i class="icon iconfont icon-zuzhi"></i>
+                <img src="../../assets/images/data/zuzhi.png" alt="">
               </div>
               <div class="data-common-div data-right">组织
                 <br>
-                <span>12个</span>
+                <span>12</span><span class="unit1">个</span>
               </div>
             </el-col>
           </el-row>
         </div>
         <div class="chart-common chart-4">
-          <EchartsConponent
-            :chartData="chartData4"
-            :chartYdata="chartYdata4"
-            :chartTitle="chartTitle4"
-            :yName="yName4"
-            :xName="xName4"
-          />
+          <BuildingTypeChart></BuildingTypeChart>
         </div>
       </el-col>
       <el-col class="main-content" :span="7">
@@ -155,6 +161,11 @@
             :chartTitle="chartTitle5"
             :yName="yName5"
             :xName="xName5"
+            :barLeftColor="barLeftColor5"
+            :barRightColor="barRightColor5"
+            :circleLeftColor="circleLeftColor5"
+            :circleRightColor="circleRightColor5"
+            :circleBorderColor="circleBorderColor5"
           />
         </div>
       </el-col>
@@ -167,39 +178,57 @@ import EchartsConponent from "../../components/Data/EchartsComponent";
 import MapChina from "../../components/Data/MapChina";
 import Table from "../../components/Data/TableComponent";
 import Pie from "../../components/Data/PieCompontent";
+import DataRouter from "../../components/Data/DataRouter";
+import BiliChart from "../../components/Data/BiliChart";
+import BuildingTypeChart from "../../components/Data/BuildingTypeChart"
 export default {
   name: "Data",
   data() {
     return {
       screenHeight: document.documentElement.clientHeight, //屏幕高度
       chartData1: ["常住", "租赁", "其他"],
-      chartYdata1: [180, 15, 10],
+      chartYdata1: [180, 150, 100],
       chartTitle1: "房屋住房情况分布",
       yName1: "(数量)",
       xName1: "(类型)",
+      barLeftColor1: "#006a62",
+      barRightColor1: "#00e7af",
+      circleLeftColor1: "#b3fea9",
+      circleRightColor1: "#01eab1",
+      circleBorderColor1: "#01eab1",
       chartData2: ["18-30", "30-40", "40-50", "50-60", "60-70", "70以上"],
       chartYdata2: [3000, 2600, 2400, 2000, 1000, 1500],
       chartTitle2: "党员年龄分布",
       yName2: "(党员)",
       xName2: "(年龄)",
+      barLeftColor2: "#4d2597",
+      barRightColor2: "#957df9",
+      circleLeftColor2: "#eaacff",
+      circleRightColor2: "#a083fa",
+      circleBorderColor2: "#a083fa",
       chartData3: ["常住人口", "外出人口", "境外人口", "未落户人口"],
-      chartYdata3: [1000, 100, 50, 1000],
+      chartYdata3: [1000, 300, 500, 1000],
       chartTitle3: "人口类型分布",
       yName3: "(数量)",
       xName3: "(类型)",
-      chartData4: ["自建", "商务楼", "商住", "公园/景点", "街道办"],
-      chartYdata4: [1000, 100, 50, 1000, 1700],
-      chartTitle4: "建筑物类型分布",
-      yName4: "(数量)",
-      xName4: "(类型)",
+      barLeftColor3: "#01b1ea",
+      barRightColor3: "#46c4f6",
+      circleLeftColor3: "#b8e7fb",
+      circleRightColor3: "#3cc7f2",
+      circleBorderColor3: "#3cc7f2",
       chartData5: ["刑满释放人员", "吸毒人员", "艾滋病人群"],
       chartYdata5: [10, 10, 10],
       chartTitle5: "特殊人员分布",
       yName5: "(数量)",
-      xName5: "(类型)"
+      xName5: "(类型)",
+      barLeftColor5: "#960435",
+      barRightColor5: "#ff7db9",
+      circleLeftColor5: "#ff7ab2",
+      circleRightColor5: "#bd4d5b",
+      circleBorderColor5: "#bd4d5b"
     };
   },
-  components: { EchartsConponent, MapChina, Table, Pie },
+  components: { EchartsConponent, MapChina, Table, Pie, DataRouter, BiliChart ,BuildingTypeChart},
   mounted() {
     var _this = this;
     //页面加载时赋值id全屏高度
@@ -255,38 +284,37 @@ ul {
   margin-right: 2%;
   height: 40px;
   line-height: 40px;
-  width:150px;
+  width: 150px;
   text-align: center;
   background: rgba(24, 39, 76, 0.8);
   border-top-left-radius: 20px;
 }
 .top-link-right {
-  float:right;
+  float: right;
   color: #fff;
   text-align: center;
   height: 40px;
   text-align: right;
-
 }
 .top-link-right li {
   /* float: left; */
-  display:inline-block;
-  width:150px;
+  display: inline-block;
+  width: 150px;
   text-align: center;
   line-height: 40px;
   background: rgba(24, 39, 76, 0.8);
   border-top-left-radius: 20px;
-  margin-right:20px;
+  margin-right: 20px;
 }
 .main-content {
   height: calc(100% - 122px);
 }
 .bili {
-  height:15%;
-  background:#040b35;
-  width:80%;
-  margin:0 auto;
-  padding:3% 0;
+  height: 15%;
+  background: #040b35;
+  width: 80%;
+  margin: 0 auto;
+  padding: 3% 0;
   border-top-left-radius: 50px;
   border-bottom-right-radius: 50px;
 }
@@ -301,9 +329,10 @@ ul {
 }
 .chart-common {
   height: 31%;
-  background:rgba(4,11,53,.6);
-  width:90%;
-  margin:1% auto;
+  background: url("../../assets/images/data/common_chart_bg.png") no-repeat;
+  background-size: 100% 100%;
+  width: 90%;
+  margin: 1% auto;
 }
 .bili-div {
   width: 50%;
@@ -334,28 +363,27 @@ ul {
   height: 100%;
   margin-bottom: 1%;
 }
-.mapChart{
-   background: rgba(4, 11, 53, 0.5);
-   margin-bottom:1%;
+.mapChart {
+  background: url("../../assets/images/data/map_bg.png") no-repeat;
+  background-size: 100% 100%;
+  margin-bottom: 1%;
 }
 .mapChart div {
   height: 100%;
 }
 .main-content-data {
-  background: rgba(4, 11, 53, 0.5);
   position: relative;
 }
 .data-common {
-  margin: 0 auto;
+  margin: 2% auto;
   text-align: center;
-  padding-left: 2%;
 }
 .data-common-div {
   float: left;
   text-align: center;
 }
-.chart-4{
-  width:100%;
+.chart-4 {
+  width: 100%;
 }
 .data-left i {
   font-size: 30px;
@@ -372,18 +400,44 @@ ul {
 .data-row {
   width: 90%;
   height: 40%;
-  /* background: #30e4f6; */
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  color:#fff;
+  margin:2% auto;
+}
+.door-key-data, .face-data, .car-key-data{
+  font-size:16px;
+}
+.data-number{
+  margin-top:10px;
+}
+.data-number b{
+  color:#00a7ff;
+  border:1px solid #0c3467;
+  font-size: 28px;
+  padding:0 6px;
+
+}
+.unit{
+  font-size: 14px;
+  color:#00a7ff;
+}
+.unit1{
+  font-size: 14px !important;
 }
 /* 右侧公告 */
-.gonggao{
-  background: rgba(4,11,53,.6);
-  width:90%;
-  margin:0 auto;
+.gonggao {
+  background: rgba(4, 11, 53, 0.6);
+  width: 90%;
+  margin: 0 auto;
   position: relative;
+}
+/* 男女比例图表 */
+.bili-chart {
+  height: 15%;
+}
+.bili-chart div {
+  height: 100%;
+  width: 90%;
+  margin: 0 auto;
 }
 </style>
 
