@@ -12,9 +12,11 @@
   "dependencies": {
     "echarts": "^4.2.0-rc.2",
     "element-ui": "^2.4.11",
+    "highcharts": "^7.0.1",
     "jquery": "^3.3.1",
     "popper.js": "^1.14.6",
     "vue": "^2.5.2",
+    "vue-highcharts": "0.0.11",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {

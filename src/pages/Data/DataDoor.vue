@@ -1,6 +1,6 @@
 <template>
   <div class="content" id="content" ref="homePage">
-    <h2 class="title-h2">大数据平台</h2>
+    <h2 class="title-h2">大数据平台门户页</h2>
     <div class="top-link">
       <DataRouter></DataRouter>
     </div>

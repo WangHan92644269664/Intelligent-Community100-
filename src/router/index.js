@@ -31,6 +31,11 @@ import ImportantArea from '../pages/ZongZhi/Society/ImportantArea'
 import ZongZhiSchool from '../pages/ZongZhi/Campus/School'
 import ZongZhiProtect from '../pages/ZongZhi/Protect/ProtectRoad'
 import DisputeFoundReport from '../pages/ZongZhi/Dispute/FoundReport'
+import DataDoor from '../pages/Data/DataDoor'
+import DataPeople from '../pages/Data/DataPeople'
+import DataActual from '../pages/Data/DataActual'
+import DataZongzhi from '../pages/Data/DataZongzhi'
+import DataShequ from '../pages/Data/DataCommunity'
 
 Vue.use(Router)
 
@@ -320,6 +325,26 @@ export default new Router({
     {
       path:'/',
       redirect:'/working/plan'
-    }
+    },
+    {
+      path:'/data/door',
+      component:DataDoor
+    },
+     {
+      path:'/data/people',
+      component:DataPeople
+    },
+    {
+      path:'/data/actual',
+      component:DataActual
+    },
+    {
+      path:'/data/zongzhi',
+      component:DataZongzhi
+    },
+    {
+      path:'/data/shequ',
+      component:DataShequ
+    },
   ]
 })

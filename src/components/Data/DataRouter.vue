@@ -3,19 +3,21 @@
     <el-row>
       <el-col :span="12">
         <ul class="top-link-left">
-          <li class="back-index">
+          <li class="back-index" >
             <i></i>
             返回首页
           </li>
-          <li class="link-other">门户页</li>
-          <li class="link-other">实有人口</li>
+          <li class="link-other">
+          <router-link  to="/data/door">门户页</router-link>
+         </li>
+          <li class="link-other"> <router-link  to="/data/people">实有人口</router-link></li>
         </ul>
       </el-col>
       <el-col :span="12">
         <ul class="top-link-right">
-          <li class="link-other">实有数据</li>
-          <li class="link-other">综治数据</li>
-          <li class="link-other">社区工作</li>
+          <li class="link-other"> <router-link  to="/data/actual">实有数据</router-link></li>
+          <li class="link-other"> <router-link  to="/data/zongzhi">综治数据</router-link></li>
+          <li class="link-other"> <router-link  to="/data/shequ">社区工作</router-link></li>
         </ul>
       </el-col>
     </el-row>
