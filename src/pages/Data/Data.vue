@@ -134,7 +134,7 @@
           <Table/>
         </div>
         <div class="chart-common chart-5">
-          <Pie/>
+          <PieChart :pieTitle ="pieTitle1" :pieData="pieData1"  :pieLegendData="pieLegendData1" :pieColors="pieColor1"/>
         </div>
         <div class="chart-common chart-6">
           <EchartsConponent
@@ -159,7 +159,7 @@
 import EchartsConponent from "../../components/Data/EchartsComponent";
 import MapChina from "../../components/Data/MapChina";
 import Table from "../../components/Data/TableComponent";
-import Pie from "../../components/Data/PieCompontent";
+import PieChart from "../../components/Data/PieCompontent";
 import DataRouter from "../../components/Data/DataRouter";
 import BiliChart from "../../components/Data/BiliChart";
 import BuildingTypeChart from "../../components/Data/BuildingTypeChart"
@@ -207,10 +207,14 @@ export default {
       barRightColor5: "#ff7db9",
       circleLeftColor5: "#ff7ab2",
       circleRightColor5: "#bd4d5b",
-      circleBorderColor5: "#bd4d5b"
+      circleBorderColor5: "#bd4d5b",
+      pieTitle1:"重点事件比例分布",
+      pieData1:[{ value: 335, name: "待延期审核" },{ value: 310, name: "待结案" },{ value: 234, name: "待核查" },{ value: 135, name: "待处理" },{ value: 1548, name: "待派遣" },{ value: 1548, name: "待接收" }],
+      pieLegendData1:["待延期审核", "待结案", "待核查", "待处理", "待派遣","待接收"],
+      pieColor1:["#c83f6b","#8d7de0","#00b4e9","#fbd884","#e490a7","#ff8b4e","#0ab06e"]
     };
   },
-  components: { EchartsConponent, MapChina, Table, Pie, DataRouter, BiliChart ,BuildingTypeChart},
+  components: { EchartsConponent, MapChina, Table, PieChart, DataRouter, BiliChart ,BuildingTypeChart},
   mounted() {
     var _this = this;
     //页面加载时赋值id全屏高度

@@ -4,151 +4,59 @@
     <div class="top-link">
       <DataRouter></DataRouter>
     </div>
-    <el-row class="main-content">
-      <el-col class="main-content" :span="7">
-        <div class="bili-chart">
-          <BiliChart></BiliChart>
-        </div>
-        <div class="chart-common chart-1">
-          <EchartsConponent
+    <el-row class="main-con main-content">
+      <el-col class="main-content" :span="8">
+        <div class="chart-common chart-2">
+          <h5>人口类型分布</h5>
+          <PeopleBar
             :chartData="chartData1"
             :chartYdata="chartYdata1"
             :chartTitle="chartTitle1"
             :yName="yName1"
             :xName="xName1"
-            :barLeftColor="barLeftColor1"
-            :barRightColor="barRightColor1"
-            :circleLeftColor="circleLeftColor1"
-            :circleRightColor="circleRightColor1"
-            :circleBorderColor="circleBorderColor1"
+            :colorZero="colorZero1"
+            :colorHalf="colorHalf1"
+            :colorAll="colorAll1"
           />
         </div>
+        <div class="chart-common chart-3">
+          <DataPieChart :pieData="pieData1" :pieColor ="pieColor1" :pieTitle ="pieTitle1"/>
+        </div>
+      </el-col>
+      <el-col class="main-content" :span="8">
         <div class="chart-common chart-2">
-          <EchartsConponent
+          <h5>人口学历分布</h5>
+          <PeopleBar
             :chartData="chartData2"
             :chartYdata="chartYdata2"
             :chartTitle="chartTitle2"
             :yName="yName2"
             :xName="xName2"
-            :barLeftColor="barLeftColor2"
-            :barRightColor="barRightColor2"
-            :circleLeftColor="circleLeftColor2"
-            :circleRightColor="circleRightColor2"
-            :circleBorderColor="circleBorderColor2"
+            :colorZero="colorZero2"
+            :colorHalf="colorHalf2"
+            :colorAll="colorAll2"
           />
         </div>
         <div class="chart-common chart-3">
-          <EchartsConponent
+           <DataPieChart :pieData="pieData2" :pieColor ="pieColor2" :pieTitle ="pieTitle2"/>
+        </div>
+      </el-col>
+      <el-col class="main-content" :span="8">
+        <div class="chart-common chart-5">
+          <h5>人员年龄分布</h5>
+          <PeopleBar
             :chartData="chartData3"
             :chartYdata="chartYdata3"
             :chartTitle="chartTitle3"
             :yName="yName3"
             :xName="xName3"
-            :barLeftColor="barLeftColor3"
-            :barRightColor="barRightColor3"
-            :circleLeftColor="circleLeftColor3"
-            :circleRightColor="circleRightColor3"
-            :circleBorderColor="circleBorderColor3"
+            :colorZero="colorZero3"
+            :colorHalf="colorHalf3"
+            :colorAll="colorAll3"
           />
-        </div>
-      </el-col>
-      <el-col class="main-content" :span="10">
-        <div class="mapChart" style="height:52.5%;">
-          <mapChina/>
-        </div>
-        <div class="main-content-data" style="height:25%;">
-          <el-row class="data-row">
-            <el-row>
-              <el-col :span="8">
-                <div class="face-data">
-                  人脸识别数据
-                </div>
-                <div class="data-number">
-                  <span><b>2</b><b>6</b><b>5</b><b>3</b></span>
-                  <span class="unit">人次</span>
-                </div>
-              </el-col>
-              <el-col :span="8">
-                <div class="door-key-data">
-                  门禁数据
-                </div>
-                <div class="data-number">
-                  <span><b>2</b><b>9</b><b>5</b><b>6</b></span>
-                  <span class="unit">次</span>
-                </div>
-              </el-col>
-              <el-col :span="8">
-                <div class="car-key-data">
-                  车辆进出数据
-                </div>
-                <div class="data-number">
-                  <span><b>2</b><b>4</b><b>9</b></span>
-                  <span class="unit">辆</span>
-                </div>
-              </el-col>
-            </el-row>
-            <el-col class="data-common" :span="4">
-              <div class="data-common-div data-right">总人数
-                <br>
-                <span>1008</span><span class="unit1">人</span>
-              </div>
-            </el-col>
-            <el-col class="data-common" :span="4">
-              <div class="data-common-div data-right">建筑物
-                <br>
-                <span>20</span><span class="unit1">栋</span>
-              </div>
-            </el-col>
-            <el-col class="data-common" :span="4">
-              <div class="data-common-div data-right">部件
-                <br>
-                <span>10</span><span class="unit1">件</span>
-              </div>
-            </el-col>
-            <el-col class="data-common" :span="4">
-              <div class="data-common-div data-right">走访
-                <br>
-                <span>10</span><span class="unit1">件</span>
-              </div>
-            </el-col>
-            <el-col class="data-common" :span="4">
-              <div class="data-common-div data-right">事件
-                <br>
-                <span>15</span><span class="unit1">件</span>
-              </div>
-            </el-col>
-            <el-col class="data-common" :span="4">
-              <div class="data-common-div data-right">组织
-                <br>
-                <span>12</span><span class="unit1">个</span>
-              </div>
-            </el-col>
-          </el-row>
-        </div>
-        <div class="chart-common chart-4">
-          <BuildingTypeChart></BuildingTypeChart>
-        </div>
-      </el-col>
-      <el-col class="main-content" :span="7">
-        <div class="gonggao" style="height:47%;">
-          <Table/>
-        </div>
-        <div class="chart-common chart-5">
-          <Pie/>
         </div>
         <div class="chart-common chart-6">
-          <EchartsConponent
-            :chartData="chartData5"
-            :chartYdata="chartYdata5"
-            :chartTitle="chartTitle5"
-            :yName="yName5"
-            :xName="xName5"
-            :barLeftColor="barLeftColor5"
-            :barRightColor="barRightColor5"
-            :circleLeftColor="circleLeftColor5"
-            :circleRightColor="circleRightColor5"
-            :circleBorderColor="circleBorderColor5"
-          />
+           <DataPieChart :pieData="pieData3" :pieColor ="pieColor3" :pieTitle ="pieTitle3"/>
         </div>
       </el-col>
     </el-row>
@@ -156,61 +64,97 @@
 </template>
 
 <script>
-import EchartsConponent from "../../components/Data/EchartsComponent";
-import MapChina from "../../components/Data/MapChina";
-import Table from "../../components/Data/TableComponent";
-import Pie from "../../components/Data/PieCompontent";
+import PeopleBar from "../../components/Data/PeopleBarChart";
 import DataRouter from "../../components/Data/DataRouter";
-import BiliChart from "../../components/Data/BiliChart";
-import BuildingTypeChart from "../../components/Data/BuildingTypeChart"
+import DataPieChart from "../../components/Data/PeoplePieChart"
 export default {
   name: "Data",
   data() {
     return {
       screenHeight: document.documentElement.clientHeight, //屏幕高度
-      chartData1: ["常住", "租赁", "其他"],
-      chartYdata1: [180, 150, 100],
-      chartTitle1: "房屋住房情况分布",
+      chartData1: ["常住人口", "外出人口", "境外人口", "未落户人口"],
+      chartYdata1: [1800, 1500, 1000, 1200],
+      chartTitle1: "人口类型分布",
       yName1: "(数量)",
       xName1: "(类型)",
-      barLeftColor1: "#006a62",
-      barRightColor1: "#00e7af",
-      circleLeftColor1: "#b3fea9",
-      circleRightColor1: "#01eab1",
-      circleBorderColor1: "#01eab1",
-      chartData2: ["18-30", "30-40", "40-50", "50-60", "60-70", "70以上"],
-      chartYdata2: [3000, 2600, 2400, 2000, 1000, 1500],
-      chartTitle2: "党员年龄分布",
+      colorZero1: "rgba(0,224,252,1)",
+      colorHalf1: "rgba(0,224,252,.5)",
+      colorAll1: "rgba(0,224,252,0)",
+      chartData2: ["其他", "研究生", "本科"],
+      chartYdata2: [3000, 2600, 2400],
+      chartTitle2: "人口学历分布",
       yName2: "(党员)",
       xName2: "(年龄)",
-      barLeftColor2: "#4d2597",
-      barRightColor2: "#957df9",
-      circleLeftColor2: "#eaacff",
-      circleRightColor2: "#a083fa",
-      circleBorderColor2: "#a083fa",
-      chartData3: ["常住人口", "外出人口", "境外人口", "未落户人口"],
-      chartYdata3: [1000, 300, 500, 1000],
-      chartTitle3: "人口类型分布",
+      colorZero2: "rgba(0,126,255,1)",
+      colorHalf2: "rgba(0,126,255,.5)",
+      colorAll2: "rgba(0,126,255,0)",
+      chartData3: ["1-18", "18-30", "30-40", "40-50", "60-70", "70以上"],
+      chartYdata3: [1000, 300, 500, 1000, 500, 600],
+      chartTitle3: "人口年龄分布",
       yName3: "(数量)",
       xName3: "(类型)",
-      barLeftColor3: "#01b1ea",
-      barRightColor3: "#46c4f6",
-      circleLeftColor3: "#b8e7fb",
-      circleRightColor3: "#3cc7f2",
-      circleBorderColor3: "#3cc7f2",
-      chartData5: ["刑满释放人员", "吸毒人员", "艾滋病人群"],
-      chartYdata5: [10, 10, 10],
-      chartTitle5: "特殊人员分布",
-      yName5: "(数量)",
-      xName5: "(类型)",
-      barLeftColor5: "#960435",
-      barRightColor5: "#ff7db9",
-      circleLeftColor5: "#ff7ab2",
-      circleRightColor5: "#bd4d5b",
-      circleBorderColor5: "#bd4d5b"
+      colorZero3: "rgba(173,0,252,1)",
+      colorHalf3: "rgba(173,0,252,.5)",
+      colorAll3: "rgba(173,0,252,0)",
+      pieData1:[
+              {
+                value: 335,
+                name: "男性",
+                
+              },
+              {
+                value: 310,
+                name: "女性"
+              }
+            ],
+            pieColor1:'#017eff',
+            pieTitle1:'人口婚姻分布',
+            pieData2:[
+              {
+                value: 335,
+                name: "未婚",
+                
+              },
+              {
+                value: 310,
+                name: "已婚"
+              },
+              {
+                value: 450,
+                name: "已婚"
+              }
+            ],
+            pieColor2:'#8d3600',
+            pieTitle2:'人口民族分布',
+            pieData3:[
+              {
+                value: 335,
+                name: "汉族",
+                
+              },
+              {
+                value: 310,
+                name: "回族"
+              },
+              {
+                value: 450,
+                name: "藏族"
+              },
+              {
+                value: 450,
+                name: "蒙古族"
+              },
+              {
+                value: 450,
+                name: "维吾尔族"
+              }
+            ],
+            pieColor3:'#6b1f1f',
+            pieTitle3:'人口民族分布'
+     
     };
   },
-  components: { EchartsConponent, MapChina, Table, Pie, DataRouter, BiliChart ,BuildingTypeChart},
+  components: { PeopleBar, DataRouter,DataPieChart },
   mounted() {
     var _this = this;
     //页面加载时赋值id全屏高度
@@ -291,34 +235,24 @@ ul {
 .main-content {
   height: calc(100% - 122px);
 }
-.bili {
-  height: 15%;
-  background: #040b35;
-  width: 80%;
-  margin: 0 auto;
-  padding: 3% 0;
-  border-top-left-radius: 50px;
-  border-bottom-right-radius: 50px;
-}
-.bili li {
-  color: #30e4f6;
-  float: left;
-  width: 50%;
-  text-align: center;
-}
-.bili li span {
-  font-size: 30px;
-}
+
 .chart-common {
-  height: 31%;
-  background: url("../../assets/images/data/common_chart_bg.png") no-repeat;
+  background: url("../../assets/images/data/ziyemian_bg.png") no-repeat;
   background-size: 100% 100%;
-  width: 90%;
+  width: 95%;
   margin: 1% auto;
+  height: 55%;
+  padding:2px;
 }
-.bili-div {
-  width: 50%;
-  float: left;
+.chart-common h5{
+  height: 40px;
+  background:url('../../assets/images/data/ziyemian_nav.png') no-repeat;
+  background-size: 100% 100%;
+  text-align: left;
+  line-height: 40px;
+  color:#fff;
+  padding-left:20px;
+
 }
 .bili-left {
   text-align: right;
@@ -342,7 +276,7 @@ ul {
   text-align: left;
 }
 .chart-common div {
-  height: 100%;
+  height: calc(100% - 50px);
   margin-bottom: 1%;
 }
 .mapChart {
@@ -367,55 +301,19 @@ ul {
 .chart-4 {
   width: 100%;
 }
-.data-right {
-  color: #fff;
-  padding-left: 10px;
-}
-.data-right span {
-  font-size: 20px;
-  color: #f5af19;
-}
+
 .data-row {
   width: 90%;
   height: 40%;
-  color:#fff;
-  margin:1% auto;
+  color: #fff;
+  margin: 1% auto;
 }
-.door-key-data, .face-data, .car-key-data{
-  font-size:16px;
-}
-.data-number{
-  margin-top:10px;
-}
-.data-number b{
-  color:#00a7ff;
-  border:1px solid #0c3467;
-  font-size: 28px;
-  padding:0 6px;
 
-}
-.unit{
-  font-size: 14px;
-  color:#00a7ff;
-}
-.unit1{
-  font-size: 14px !important;
-}
 /* 右侧公告 */
-.gonggao {
-  background: rgba(4, 11, 53, 0.6);
-  width: 90%;
-  margin: 0 auto;
-  position: relative;
-}
+
 /* 男女比例图表 */
-.bili-chart {
-  height: 15%;
-}
-.bili-chart div {
-  height: 100%;
-  width: 90%;
-  margin: 0 auto;
+.main-con {
+  width: 100%;
 }
 </style>
 

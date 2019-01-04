@@ -9,6 +9,11 @@ import 'element-ui/lib/theme-chalk/index.css'
 import $ from 'jquery'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min'
+import highcharts from 'highcharts'
+import VueHighCharts from 'vue-highcharts'
+import highcharts3d from 'highcharts/highcharts-3d'
+highcharts3d(highcharts)
+
 //引入echarts
 import echarts from 'echarts'
 Vue.prototype.$echarts = echarts

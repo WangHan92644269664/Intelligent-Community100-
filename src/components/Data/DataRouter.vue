@@ -8,7 +8,7 @@
             返回首页
           </li>
           <li class="link-other">
-          <router-link  to="/data/door">门户页</router-link>
+          <router-link  to="/data">门户页</router-link>
          </li>
           <li class="link-other"> <router-link  to="/data/people">实有人口</router-link></li>
         </ul>
@@ -38,6 +38,9 @@ export default {
 <style scoped>
 ul {
   list-style: none;
+}
+.top-link{
+  width:100%;
 }
 .top-link-left {
   color: #fff;

@@ -7,22 +7,39 @@
 <script>
 import echarts from "echarts";
 export default {
+  name: "EchartsComponents",
   props: {
-    pieTitle: {
+    roseData: {
+      type: Array,
+      default: () => []
+    },
+    legendData: {
+      type: Array,
+      default: () => []
+    },
+    roseColors: {
+      type: Array,
+      default: () => []
+    },
+    yName: {
       type: String,
       default: () => ""
     },
-    pieData: {
-      type: Array,
-      default: () => []
+    xName: {
+      type: String,
+      default: () => ""
     },
-    pieLegendData: {
-      type: Array,
-      default: () => []
+    colorZero: {
+      type: String,
+      default: () => ""
     },
-    pieColors: {
-      type: Array,
-      default: () => []
+    colorHalf: {
+      type: String,
+      default: () => ""
+    },
+    colorAll: {
+      type: String,
+      default: () => ""
     }
   },
   data() {
@@ -40,15 +57,10 @@ export default {
       });
       // 绘制图表
       myChart.setOption({
-        color:this.pieColors,
+        color: this.roseColors,
         title: {
-          text: this.pieTitle,
-          x: "left",
-          textStyle:{
-            color:'#fff',
-            fontSize:'16'
-          },
-          padding:[20,10]
+          text: "重点事件状态分布",
+          x: "left"
         },
         tooltip: {
           trigger: "item",
@@ -56,27 +68,19 @@ export default {
         },
         legend: {
           orient: "vertical",
-          left: "left",
-          data: this.pieLegendData1,
-          bottom:'2%',
-          textStyle:{
-            color:'#fff'
-          }
+          x: "right",
+          y: "top",
+          data: this.legendData
         },
+        calculable: true,
         series: [
           {
-            name: "访问来源",
+            name: "面积模式",
             type: "pie",
-            radius: "55%",
-            center: ["50%", "60%"],
-            data: this.pieData,
-            itemStyle: {
-              emphasis: {
-                shadowBlur: 10,
-                shadowOffsetX: 0,
-                shadowColor: "rgba(0, 0, 0, 0.5)"
-              }
-            }
+            radius: [30, 110],
+            center: ["50%", "55%"],
+            roseType: "area",
+            data: this.roseData
           }
         ]
       });
@@ -93,7 +97,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .chartHeight {
   height: 100%;
 }
