@@ -2,7 +2,7 @@
   <el-menu  class="submenu"   :default-active="activeIndex" unique-opened router>
     <el-menu-item index="#" class="leftTitle">工作平台</el-menu-item>
     <el-submenu index="/working/advertise">
-      <template slot="title"><i class="iconfont icon-home"></i>宣传管理</template>
+      <template slot="title">宣传管理</template>
       <el-menu-item-group>
         <el-menu-item index="/working/advertise/essay">文章管理</el-menu-item>
         <el-menu-item index="/working/essay/column">文章栏目管理</el-menu-item>
@@ -10,21 +10,21 @@
       </el-menu-item-group>
     </el-submenu>
     <el-submenu index="/working/logmanage">
-      <template slot="title"><i class="iconfont icon-home"></i>日志管理</template>
+      <template slot="title">日志管理</template>
       <el-menu-item-group>
         <el-menu-item index="/working/logmanage/log">工作日志</el-menu-item>
         <el-menu-item index="/working/logmanage/audit">日志审核</el-menu-item>
       </el-menu-item-group>
     </el-submenu>
     <el-submenu index="/working/plan">
-      <template slot="title"><i class="iconfont icon-home"></i>工作计划</template>
+      <template slot="title">工作计划</template>
       <el-menu-item-group>
         <el-menu-item index="/working/plan/my">我的工作计划</el-menu-item>
         <el-menu-item index="/working/plan/undo">我安排的工作</el-menu-item>
         <el-menu-item index="/working/plan/dept">部门工作计划</el-menu-item>
       </el-menu-item-group>
     </el-submenu>
-    <el-menu-item index="/working/notice"><i class="iconfont icon-home"></i>公告管理</el-menu-item>
+    <el-menu-item index="/working/notice">公告管理</el-menu-item>
 
   </el-menu>
 </template>

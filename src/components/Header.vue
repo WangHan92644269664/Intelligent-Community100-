@@ -14,9 +14,9 @@
             background-color="#055295"
             text-color="#fff"
             active-text-color="#fff" router>
-            <el-menu-item index="/gis" class="left">首页</el-menu-item>
+            <el-menu-item index="/" class="left">首页</el-menu-item>
             <el-menu-item index="/data">大数据平台</el-menu-item>
-            <el-menu-item index="/data">安防平台</el-menu-item>
+            <el-menu-item index="/gis">安防平台</el-menu-item>
             <el-menu-item index="/#4">网格平台</el-menu-item>
             <el-menu-item index="/zongzhi">综治平台</el-menu-item>
             <el-menu-item index="/dangjian">党建平台</el-menu-item>

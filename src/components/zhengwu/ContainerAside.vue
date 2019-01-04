@@ -1,9 +1,9 @@
 <template>
   <el-menu  class="submenu" :default-active="activeIndex" unique-opened router>
     <el-menu-item index="#" class="leftTitle">政务平台</el-menu-item>
-    <el-menu-item index="/zhengwu/three"><i class="iconfont icon-home"></i>三务公开</el-menu-item>
+    <el-menu-item index="/zhengwu/three">三务公开</el-menu-item>
     <el-submenu index="#666">
-      <template slot="title"><i class="iconfont icon-home"></i>精准扶贫</template>
+      <template slot="title">精准扶贫</template>
       <el-menu-item-group>
         <el-menu-item index="/zhengwu/poverty/people">贫困人员</el-menu-item>
         <el-menu-item index="/zhengwu/poverty/record">精准扶贫记录</el-menu-item>
@@ -11,7 +11,7 @@
       </el-menu-item-group>
     </el-submenu>
     <el-submenu index="#777">
-      <template slot="title"><i class="iconfont icon-home"></i>智慧养老</template>
+      <template slot="title">智慧养老</template>
       <el-menu-item-group>
         <el-menu-item index="/zhengwu/wisdom/old">老人信息</el-menu-item>
         <el-menu-item index="/zhengwu/wisdom/health">健康档案</el-menu-item>
