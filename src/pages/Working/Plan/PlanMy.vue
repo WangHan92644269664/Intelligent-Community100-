@@ -1,8 +1,5 @@
 <template>
   <el-container>
-    <el-header style="height: 40px;">
-      <ConHeader :title="title"></ConHeader>
-    </el-header>
     <el-main>
       <WorkingMain></WorkingMain>
     </el-main>
@@ -10,7 +7,6 @@
 </template>
 
 <script>
-  import ConHeader from '../../../components/ContainerHeader'
   import WorkingMain from '../../../components/working/WorkingMain'
 
   export default {
@@ -18,7 +14,6 @@
       rightTitle: String
     },
     components: {
-      ConHeader,
       WorkingMain
     },
     data() {
@@ -49,6 +44,6 @@
     line-height: 40px;
   }
   .el-main{
-    padding:15px 0;
+    padding:0;
   }
 </style>

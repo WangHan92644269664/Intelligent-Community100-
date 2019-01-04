@@ -1,12 +1,8 @@
 <template>
   <el-container>
-    <el-header>
-      <!--引入主体内容的标题组件-->
-      <ConHeader :title=title></ConHeader>
-    </el-header>
+    <!--主体内容的中部的侧边栏组件-->
+    <ConMainAside :name="name" :data="data"></ConMainAside>
     <el-main>
-        <!--主体内容的中部的侧边栏组件-->
-        <ConMainAside :name="name" :data="data"></ConMainAside>
         <!--主体内容的右边的内容组件-->
         <MainRight :rightTitle="rightTitle"></MainRight>
     </el-main>
@@ -14,7 +10,6 @@
 </template>
 
 <script>
-  import ConHeader from '../../../components/ContainerHeader'
   import ConMainAside from '../../../components/ConMainAside'
   import MainRight from '../../../components/zhengwu/ConMainRight'
 
@@ -39,7 +34,6 @@
       }
     },
     components: {
-      ConHeader,
       ConMainAside,
       MainRight
     },
@@ -53,5 +47,8 @@
     height: 40px !important;
     line-height: 38px;
     color: #aaa;
+  }
+  .el-main{
+    padding: 0;
   }
 </style>

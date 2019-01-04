@@ -5,7 +5,7 @@
         老人信息列表
       </el-col>
     </el-row>
-    <el-row style="padding-left: 15px;padding-top: 20px;background: #fff;">
+    <el-row style="padding-left: 30px;padding-top: 20px;background: #fff;">
       <el-col :span="24" style="text-align: left;">
         <el-form :inline="true" :model="formInline" class="demo-form-inline">
           <el-form-item label="性别:">
@@ -21,8 +21,9 @@
             <el-input v-model="formInline.info" placeholder="民族/身份证号/婚姻状态/学历" disabled></el-input>
           </el-form-item>
           <el-form-item class="search">
-            <el-button type="primary" icon="iconfont icon-jinduchaxun" size="small">查询</el-button>
-            <el-button type="primary" size="medium" class="iconfont icon-tianjia">添加</el-button>
+            <el-button type="primary" size="small"><img :src="search" alt="" style="margin-right: 8px;">查询</el-button>
+            <el-button type="primary" size="small"><img :src="reset" alt="" style="margin-right: 8px;">重置</el-button>
+            <el-button type="primary" size="small"><img :src="add" alt="" class="add">添加</el-button>
           </el-form-item>
         </el-form>
       </el-col>
@@ -30,7 +31,12 @@
     <el-table
       :data="tableData"
       border
+      style="width:96%;margin:0 auto"
     >
+      <el-table-column
+        type="selection"
+        width="55">
+      </el-table-column>
       <el-table-column
         fixed
         prop="name"
@@ -81,7 +87,7 @@
         </template>
       </el-table-column>
     </el-table>
-    <el-row style="background: #fff;padding-bottom: 20px;">
+    <el-row style="background: #fff;padding-bottom:40px;margin-top:90px;">
       <el-col :span="24">
         <div class="block">
           <el-pagination
@@ -104,6 +110,9 @@
   export default {
     data() {
       return {
+        search:require('../images/search.png'),
+        add:require('../images/add.png'),
+        reset:require('../images/reset.png'),
         formInline: {
           people: '',
           date: '',
@@ -189,83 +198,9 @@
     }
   }
 </script>
-<style>
-  .el-main .el-table th {
-    text-align: center;
-    padding: 5px 0;
-    background: rgba(222, 222, 222, .3);
-  }
-  .el-main .el-table td{
-    text-align: center;
-  }
-  .el-button--info {
-    background-color: #fff!important;
-    border: 1px solid #FF6400 !important;
-    color: #FF6400 !important;
-  }
-
-  .el-button--success {
-    background-color: #fff!important;
-    border: 1px solid #409EFF !important;
-    color: #409EFF !important;
-  }
-
-  .block {
-    text-align: left;
-    margin-top: 10px;
-  }
-
-  .el-pager li.active {
-    background: #FF6400;
-    color: #fff;
-    border-radius: 4px;
-  }
-
-  .el-pagination__total {
-    margin-left: 10px;
-  }
-</style>
 <style scoped>
-  .el-main .el-table td {
-    padding: 0 !important;
+  .cell .el-button:first-child{
+    background: none;
+    border:1px solid #999
   }
-
-  .el-main .el-table {
-    background: #fff;
-    border: 1px solid #ddd;
-  }
-
-  .el-main .info {
-    background-color: #fff;
-    border-radius: 4px;
-    border: 1px solid #dcdfe6;
-    padding: 0 15px;
-    height: 40px;
-    line-height: 40px;
-    color: #ababab;
-  }
-
-  .el-main .el-button {
-    border-radius: 2px;
-  }
-
-  .mainRight {
-    background: #fff;
-  }
-
-  .mainRight .borderBottom {
-    border-bottom: 1px solid #eee;
-    text-align: left;
-    padding: 10px 0 10px 15px;
-    font-size: 14px;
-    color: #777;
-    font-weight: bolder;
-    letter-spacing: 0.1em;
-  }
-
-  .el-main .search .el-button--primary {
-    background-color: #FF6400 !important;
-    border-color: #FF6400 !important;
-  }
-
 </style>

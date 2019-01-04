@@ -1,9 +1,9 @@
 <template>
-  <div class="mainRight" style="margin-left: 220px">
-            <el-row class="borderBottom" style="height: 40px;">
+  <div class="mainRight">
+            <el-row class="borderBottom" >
               <el-col :span="24">{{rightTitle}}</el-col>
             </el-row>
-            <el-row style="padding-left: 15px;height: 40px;" >
+            <el-row style="padding-left: 30px;padding-top: 20px;background: #fff;" >
               <el-col :span="24" style="text-align: left;">
                 <el-form :inline="true" :model="formInline" class="demo-form-inline">
                   <el-form-item label="标题:">
@@ -13,8 +13,9 @@
                     <el-input v-model="formInline.time"></el-input>
                   </el-form-item>
                   <el-form-item class="search">
-                    <el-button type="primary" icon="iconfont icon-jinduchaxun">查询</el-button>
-                    <el-button type="primary"><i class="iconfont icon-tianjia"></i>添加</el-button>
+                    <el-button type="primary" size="small"><img :src="search" alt="" style="margin-right: 8px;">查询</el-button>
+                    <el-button type="primary" size="small"><img :src="reset" alt="" style="margin-right: 8px;">重置</el-button>
+                    <el-button type="primary" size="small"><img :src="add" alt="" class="add">添加</el-button>
                   </el-form-item>
                 </el-form>
               </el-col>
@@ -22,7 +23,12 @@
             <el-table
               :data="tableData"
               border
+              style="width:96%;margin:0 auto"
             >
+              <el-table-column
+                type="selection"
+                width="55">
+              </el-table-column>
               <el-table-column
                 fixed
                 prop="id"
@@ -74,13 +80,13 @@
                 label="操作"
                 width="300">
                 <template slot-scope="scope">
-                  <el-button @click="handleClick(scope.row)" plain size="small">详情</el-button>
-                  <el-button @click="handleClick(scope.row)" type="info" size="small">编辑</el-button>
-                  <el-button type="success" size="small">删除</el-button>
+                  <el-button @click="handleClick(scope.row)"size="small" >详情</el-button>
+                  <el-button @click="handleClick(scope.row)" size="small">编辑</el-button>
+                  <el-button @click="handleClick(scope.row)"size="small">移除</el-button>
                 </template>
               </el-table-column>
             </el-table>
-            <el-row>
+            <el-row style="background: #fff;padding-bottom:40px;margin-top:40px;">
               <el-col :span="24">
                 <div class="block">
                   <el-pagination
@@ -105,6 +111,9 @@
     },
     data() {
       return {
+        search:require('../images/search.png'),
+        add:require('../images/add.png'),
+        reset:require('../images/reset.png'),
         currentPage4: 1,
         tableData: [
           {
@@ -181,90 +190,19 @@
     }
   }
 </script>
-<style>
-  .el-main .el-table td {
-    text-align: center !important;
-  }
-
-  .el-main .el-table th {
-    text-align: center;
-    background: rgba(222, 222, 222, .3);
-  }
-
-  .el-button--info {
-    background-color: #fff!important;
-    border: 1px solid #FF6400 !important;
-    color: #FF6400 !important;
-  }
-
-  .el-button--success {
-    background-color: #fff!important;
-    border: 1px solid #409EFF !important;
-    color: #409EFF !important;
-  }
-
-  .block {
-    text-align: left;
-    margin-top: 10px;
-  }
-
-  .el-pager li.active {
-    background: #FF6400;
-    color: #fff;
-    border-radius: 4px;
-  }
-
-  .el-pagination__total {
-    margin-left: 10px;
-  }
-  .hideWord{
-
-  }
-
-</style>
 <style scoped>
-  /*主体内容*/
-  .el-header[data-v-69eb3339] {
-    background-color: #fff !important;
-    height: 40px !important;
-    color: #aaa;
+  .cell .el-button:first-child{
+    background: none;
+    border:1px solid #999
   }
-  .el-main .el-table td {
-    padding:0 !important;
-    text-align: center !important;
+  .cell .el-button:nth-child(2){
+    background: none;
+    border:1px solid #ff813d;
+    color:#ff813d
   }
-  .el-main .borderBottom {
-    border-bottom: 1px solid #eee;
-    text-align: left;
-    padding-left: 15px;
-    padding-bottom: 15px;
-    font-size: 14px;
-    color: #777;
-    font-weight: bolder;
-    letter-spacing: 0.1em;
-    margin-bottom: 15px;
-  }
-  .el-main .mainRight {
-    background: #fff;
-    padding: 15px 0 !important;
-  }
-
-  .el-main .search .el-button--primary {
-    background-color: #FF6400 !important;
-    border-color: #FF6400 !important;
-  }
-
-  .el-main .info {
-    background-color: #fff;
-    border-radius: 4px;
-    border: 1px solid #dcdfe6;
-    padding: 0 15px;
-    height: 40px;
-    line-height: 40px;
-    color: #ababab;
-  }
-
-  .el-main .el-button {
-    border-radius: 2px;
+  .cell .el-button:nth-child(3){
+    background: none;
+    border:1px solid #008aff;
+    color:#008aff;
   }
 </style>

@@ -3,12 +3,21 @@ import Router from 'vue-router'
 import ZhengWu from '../pages/ZhengWu/ZhengWu'
 import Three from '../pages/ZhengWu/Three/Three'
 import ProvertyPeople from '../pages/ZhengWu/Poverty/PovertyPeople'
+import ProvertyRecord from '../pages/ZhengWu/Poverty/PovertyRecord'
+import ProvertyPolicy from '../pages/ZhengWu/Poverty/PovertyPolicy'
+import WisdomHealth from '../pages/ZhengWu/Wisdom/Health'
+import WisdomServe from '../pages/ZhengWu/Wisdom/Serve'
 import WisdomOld from '../pages/ZhengWu/Wisdom/Old'
 import Working from '../pages/Working/Working'
 import WorkingPlan from '../pages/Working/Plan/PlanMy'
+import WorkingUndo from '../pages/Working/Plan/Undo'
+import WorkingDept from '../pages/Working/Plan/Dept'
 import WorkingNoticeMange from '../pages/Working/Notice/NoticeMange'
 import WorkingLog from '../pages/Working/Log/Log'
+import WorkingLogAudit from '../pages/Working/Log/LogAudit'
 import WorkingAdvertise from '../pages/Working/Advertise/Advertise'
+import WorkinEssayCarousel from '../pages/Working/Advertise/Carousel'
+import WorkingEssayColumn from '../pages/Working/Advertise/Column'
 import Data from '../pages/Data/Data'
 import Gis from '../pages/GIS/GIS'
 import Dangjian from '../pages/DangJian/DangJian'
@@ -64,6 +73,20 @@ export default new Router({
           },
         },
         {
+          path:'/zhengwu/poverty/record',
+          component:ProvertyRecord,
+          meta:{
+            showHeader:true
+          },
+        },
+        {
+          path:'/zhengwu/poverty/policy',
+          component:ProvertyPolicy,
+          meta:{
+            showHeader:true
+          },
+        },
+        {
           path:'/zhengwu/poverty',
           component:ProvertyPeople,
           meta:{
@@ -96,6 +119,20 @@ export default new Router({
           ],
         },
         {
+          path:'/zhengwu/wisdom/health',
+          component:WisdomHealth,
+          meta:{
+            showHeader:true
+          },
+        },
+        {
+          path:'/zhengwu/wisdom/serve',
+          component:WisdomServe,
+          meta:{
+            showHeader:true
+          },
+        },
+        {
           path:'/zhengwu',
           redirect:'/zhengwu/three'
         }
@@ -122,7 +159,37 @@ export default new Router({
                 showHeader:true
               },
             },
+
+
           ]
+        },
+        {
+          path:'/working/plan/dept',
+          component:WorkingDept,
+          meta:{
+            showHeader:true
+          },
+        },
+        {
+          path:'/working/plan/undo',
+          component:WorkingUndo,
+          meta:{
+            showHeader:true
+          },
+        },
+        {
+          path:'/working/essay/column',
+          component:WorkingEssayColumn,
+          meta:{
+            showHeader:true
+          },
+        },
+        {
+          path:'/working/essay/carousel',
+          component: WorkinEssayCarousel,
+          meta:{
+            showHeader:true
+          },
         },
         {
           path:'/working/notice',
@@ -145,7 +212,16 @@ export default new Router({
                 showHeader:true
               },
             },
-          ]
+
+          ],
+
+        },
+        {
+          path:'/working/logmanage/audit',
+          component:WorkingLogAudit,
+          meta:{
+            showHeader:true
+          },
         },
         {
           path:'/working/advertise',
@@ -346,5 +422,6 @@ export default new Router({
       path:'/data/shequ',
       component:DataShequ
     },
+
   ]
 })

@@ -1,32 +1,21 @@
 <template>
   <el-menu  class="submenu" :default-active="activeIndex" unique-opened router>
-    <el-menu-item index="#" class="leftTitle">政务</el-menu-item>
-    <el-menu-item index="#1"><i class="iconfont icon-home"></i>辖区简介</el-menu-item>
-    <el-menu-item index="#2"><i class="iconfont icon-home"></i>调查问卷</el-menu-item>
-    <el-menu-item index="#3"><i class="iconfont icon-home"></i>投票管理</el-menu-item>
-    <el-menu-item index="#4"><i class="iconfont icon-home"></i>留言建议</el-menu-item>
+    <el-menu-item index="#" class="leftTitle">政务平台</el-menu-item>
     <el-menu-item index="/zhengwu/three"><i class="iconfont icon-home"></i>三务公开</el-menu-item>
-    <el-submenu index="#5">
-      <template slot="title"><i class="iconfont icon-home"></i>在线办事</template>
-      <el-menu-item-group>
-        <el-menu-item index="#51">在线办事1</el-menu-item>
-        <el-menu-item index="#52">在线办事2</el-menu-item>
-      </el-menu-item-group>
-    </el-submenu>
     <el-submenu index="#666">
       <template slot="title"><i class="iconfont icon-home"></i>精准扶贫</template>
       <el-menu-item-group>
         <el-menu-item index="/zhengwu/poverty/people">贫困人员</el-menu-item>
-        <el-menu-item index="#62">精准扶贫记录</el-menu-item>
-        <el-menu-item index="#63">精准扶贫政策</el-menu-item>
+        <el-menu-item index="/zhengwu/poverty/record">精准扶贫记录</el-menu-item>
+        <el-menu-item index="/zhengwu/poverty/policy">精准扶贫政策</el-menu-item>
       </el-menu-item-group>
     </el-submenu>
     <el-submenu index="#777">
       <template slot="title"><i class="iconfont icon-home"></i>智慧养老</template>
       <el-menu-item-group>
         <el-menu-item index="/zhengwu/wisdom/old">老人信息</el-menu-item>
-        <el-menu-item index="#73">健康档案</el-menu-item>
-        <el-menu-item index="#72">服务档案</el-menu-item>
+        <el-menu-item index="/zhengwu/wisdom/health">健康档案</el-menu-item>
+        <el-menu-item index="/zhengwu/wisdom/serve">服务档案</el-menu-item>
       </el-menu-item-group>
     </el-submenu>
   </el-menu>
@@ -47,46 +36,55 @@
 </script>
 <style>
   .el-submenu__title{
-    color: #444;
+    color:#c9c9c9;
     font-weight: bolder;
   }
   .el-menu-item-group .el-menu-item{
     color:#777!important;
+    line-height: 34px!important;
+    height: 34px!important;
   }
 </style>
 <style scoped>
-ul{
-  position: absolute;
-  bottom: 0;
-  top: 70px;
-  width: 200px;
-}
+  ul{
+    position: absolute;
+    bottom: 0;
+    top: 70px;
+    width: 160px;
+    left: 0;
+    background: #202020;
+  }
   .submenu li.leftTitle{
-    background: #1D5BDA;
+    background: #008aff;
     color:#fff;
     text-align: center!important;
     border:none!important;
+    height: 70px;
+    line-height: 70px;
+    font-size: 20px;
+    font-weight: bolder;
+  }
+  .el-submenu .el-menu-item{
+    min-width: 160px;
   }
   .el-menu-item.is-active {
-    color: #1951C1;
-    background: #EBF0FA;
+    color: #0077ff!important;
+    background: #eef2fa;
     font-weight: bolder;
-    border-left: 2px solid #1951C1;
-  }
-  .el-menu-item,.el-submenu__title{
-    color: #444;
-    font-weight: bolder;
+    border-left: 2px solid #0077ff;
   }
   .el-menu-item, .el-submenu__title{
-    height: 50px;
-    line-height: 50px;
+    height: 60px;
+    line-height: 60px;
+    color:#c9c9c9;
+    font-size:14px
   }
   .submenu li:nth-of-type(1){
     text-align: center;
   }
   .submenu>li{
     text-align: left!important;
-    border-bottom: 2px solid #f0f0f0;
+    border-bottom: 2px solid #3a3a3a;
   }
   .submenu>li i{
     margin-right: 10px;

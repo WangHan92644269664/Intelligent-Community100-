@@ -1,8 +1,5 @@
 <template>
   <el-container>
-    <el-header style="height: 40px;">
-      <ConHeader :title="title"></ConHeader>
-    </el-header>
     <el-main>
       <WorkingNoticeManger></WorkingNoticeManger>
     </el-main>
@@ -11,7 +8,6 @@
 </template>
 
 <script>
-  import ConHeader from '../../../components/ContainerHeader'
   import WorkingNoticeManger from '../../../components/working/WorkingNoticeManger'
 
   export default {
@@ -19,7 +15,6 @@
       rightTitle: String
     },
     components: {
-      ConHeader,
       WorkingNoticeManger
     },
     data() {
@@ -53,6 +48,6 @@
     line-height: 40px;
   }
   .el-main{
-    padding:15px 0;
+    padding:0;
   }
 </style>

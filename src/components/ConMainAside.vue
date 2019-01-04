@@ -1,8 +1,8 @@
 <template>
-    <div class="mainLeft" style="height: 100%;float: left;width: 220px">
+    <div class="mainLeft" style="height:710px;width: 300px">
       <el-row class="borderBottom">
         <el-col :span="21">{{name}}</el-col>
-        <el-col :span="2" style="color:#FF6400;"><i class="iconfont icon-tianjia"></i></el-col>
+        <el-col :span="2" style="color:#FF6400;"><img :src="add" alt=""></el-col>
       </el-row>
       <el-tree :data="data" :props="defaultProps" @node-click="handleNodeClick" default-expand-all></el-tree>
     </div>
@@ -17,6 +17,7 @@
       },
       data(){
           return {
+            add:require('./images/4add.png'),
             defaultProps: {
               children: 'children',
               label: 'label'
@@ -34,8 +35,8 @@
 <style scoped>
   .mainLeft {
     background: #fff;
-    height: 600px;
-    border-right: 10px solid #f0f0f0;
+    margin-right: 30px;
+    box-shadow: 2px 2px 20px rgba(76,76,76,0.2);
     padding: 15px 0 !important;
   }
   .borderBottom {

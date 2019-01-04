@@ -1,16 +1,12 @@
 <template>
   <el-container>
-    <el-header style="height: 40px;">
-      <ConHeader :title="title"></ConHeader>
-    </el-header>
-    <el-main>
+    <el-main style="padding: 0;">
       <MainRight></MainRight>
     </el-main>
   </el-container>
 </template>
 
 <script>
-  import ConHeader from '../../../components/ContainerHeader'
   import MainRight from '../../../components/working/LogMainRight'
 
   export default {
@@ -22,7 +18,6 @@
       }
     },
     components: {
-      ConHeader,
       MainRight
     },
   }
