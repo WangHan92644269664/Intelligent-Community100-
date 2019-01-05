@@ -1,12 +1,12 @@
 <template>
   <div class="sidebar" >
-    <h5>党建</h5>
-    <el-menu class="sidebar-el-menu" :default-active="onRoutes" active-text-color="#1951C1" unique-opened router style="height: 100%">
+    <p style="background: #008aff;color:#fff;height: 70px;line-height: 70px;font-size:20px;font-weight: bolder;margin: 0;">党建平台</p>
+    <el-menu class="sidebar-el-menu" :default-active="onRoutes"  unique-opened router>
       <template v-for="item in items">
         <template v-if="item.subs">
           <el-submenu :index="item.index" :key="item.index">
             <template slot="title" class="first">
-              <i class="iconfont icon-home"></i><span slot="title">{{item.title}}</span>
+             <span slot="title">{{item.title}}</span>
             </template>
             <template v-for="subItem in item.subs">
               <el-submenu v-if="subItem.subs" :index="subItem.index" :key="subItem.index">
@@ -25,7 +25,7 @@
         </template>
         <template v-else>
           <el-menu-item :index="item.index" :key="item.index">
-            <i class="iconfont icon-home"></i><span slot="title">{{item.title}}</span>
+           <span slot="title">{{item.title}}</span>
           </el-menu-item>
         </template>
       </template>
@@ -41,24 +41,24 @@
         items:[
           {
             index:'1',
-            title:'党建中心',
+            title:'党务中心',
             subs:[
               {
                 index:'#1-1',
                 title:'党组织管理',
                 subs:[
                   {
-                      index:'#1-1-1',
-                    title:'党组织管理1'
+                      index:'organ_list',
+                    title:'党组织列表'
                   },
                   {
-                    index:'#1-1-2',
-                    title:'党组织管理2'
+                    index:'outstanding_organ',
+                    title:'优秀党组织'
                   }
                 ],
               },
               {
-                index:'#1-2',
+                index:'party_posts',
                 title:'党内职务管理'
               },
               {
@@ -80,43 +80,43 @@
                 ],
               },
               {
-                index:'#1-4',
-                title:'党员发展纪实'
+                index:'party_develop',
+                title:'党员发展全纪实'
               },
               {
                 index:'#1-5',
                 title:'党员关系转移',
                 subs:[
                   {
-                    index:'#1-5-1',
-                    title:'党员关系转移1'
+                    index:'relation_into',
+                    title:'党员关系转入'
                   },
                   {
-                    index:'#1-5-2',
-                    title:'党员关系转移2'
+                    index:'#relationOut',
+                    title:'党员关系转出'
                   }
                 ],
               },
               {
                 index:'#1-6',
-                title:'活动党员',
+                title:'流动党员',
                 subs:[
                   {
-                    index:'#1-6-1',
-                    title:'活动党员1'
+                    index:'flowInto',
+                    title:'流动党员转入'
                   },
                   {
-                    index:'#1-6-2',
-                    title:'活动党员2'
+                    index:'#flowOut',
+                    title:'流动党员转出'
                   }
                 ],
               },
               {
-                index:'#1-7',
+                index:'fee',
                 title:'党费缴纳记录'
               },
               {
-                index:'#1-8',
+                index:'birthday',
                 title:'政治生日'
               },
             ],
@@ -144,15 +144,15 @@
                 ],
               },
               {
-                index:'#2-3',
+                index:'study_base',
                 title:'题库管理'
               },
               {
-                index:'#2-4',
+                index:'study_exam',
                 title:'考试中心'
               },
               {
-                index:'#2-5',
+                index:'study_note',
                 title:'学习笔记'
               },
             ]
@@ -180,22 +180,8 @@
                 ]
               },
               {
-                index:'#3-2',
+                index:'#origan',
                 title:'组织生活'
-              },
-              {
-                index:'#3-3',
-                title:'主题党日',
-                subs:[
-                  {
-                    index:'#3-3-1',
-                    title:'主题党日1'
-                  },
-                  {
-                    index:'#3-3-2',
-                    title:'主题党日2'
-                  },
-                ]
               },
               {
                 index:'#3-4',
@@ -234,20 +220,6 @@
                 ]
               },
               {
-                index:'#3-6',
-                title:'志愿者服务',
-                subs:[
-                  {
-                    index:'#3-6-1',
-                    title:'志愿者服务1'
-                  },
-                  {
-                    index:'#3-6-2',
-                    title:'志愿者服务2'
-                  },
-                ]
-              },
-              {
                 index:'#3-7',
                 title:'民主评议',
               },
@@ -266,39 +238,52 @@
     }
   }
 </script>
+<style>
+.el-submenu__title{
+color:#c9c9c9;
+font-weight: bolder;
+}
+.el-menu-item[data-v-92eb0f0e], .el-submenu__title[data-v-92eb0f0e]{
+color:#777!important;
+line-height: 34px!important;
+height: 34px!important;
+}
+.sidebar-el-menu>li.el-submenu{
+  text-align: left!important;
+  border-bottom: 2px solid #3a3a3a;
+}
+</style>
 <style scoped>
-  .sidebar{
-    display: block;
+  ul{
     position: absolute;
-    left: 20px;
-    top: 70px;
     bottom: 0;
+    top: 140px;
+    width: 160px;
+    left: 0;
+    background: #202020;
   }
-  .sidebar-el-menu:not(.el-menu--collapse){
-    width: 200px;
-  }
-  .sidebar ul>li{
-    text-align: left!important;
-    border-bottom: 2px solid #f0f0f0;
-  }
-  .sidebar::-webkit-scrollbar{
-    width: 0;
-  }
-  .sidebar h5{
-    background: #1D5BDA;
-    color:#fff;
-    text-align: center!important;
-    line-height: 50px;
-    height: 50px;
-  }
-  .sidebar ul>li>div span{
-    font-weight: bolder;
-    margin-left: 10px;
+  .el-submenu .el-menu-item{
+    min-width: 160px;
   }
   .el-menu-item.is-active {
-    color: #1951C1;
-    background: #EBF0FA;
+    color: #0077ff!important;
+    background: #eef2fa;
     font-weight: bolder;
-    border-left: 2px solid #1951C1;
+    border-left: 2px solid #0077ff;
   }
+  .el-menu-item, .el-submenu__title{
+    height: 60px;
+    line-height: 60px;
+    color:#c9c9c9;
+    font-size:14px
+  }
+  .submenu li:nth-of-type(1){
+    text-align: center;
+  }
+
+
+  .el-submenu__title{
+    padding-left: 0!important;
+  }
+
 </style>

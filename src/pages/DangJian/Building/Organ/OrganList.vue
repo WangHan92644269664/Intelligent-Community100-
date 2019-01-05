@@ -1,24 +1,20 @@
 <template>
   <el-container>
-    <!--主体内容的中部的侧边栏组件-->
     <ConMainAside :name="name" :data="data"></ConMainAside>
-    <el-main>
-      <!--主体内容的右边的内容组件-->
-      <MainRight :rightTitle="rightTitle"></MainRight>
-    </el-main>
+    <MainRight></MainRight>
   </el-container>
 </template>
 
 <script>
   import ConMainAside from '../../../../components/ConMainAside'
-  import MainRight from '../../../../components/dangjian/Activity/ActivityMainRight'
+  import MainRight from '../../../../components/dangjian/Building/OrganListMain'
 
   export default {
     name: "Three",
     data() {
       return {
         name: '党组织',
-        rightTitle:'组织会议列表',
+        rightTitle:'文章管理列表',
         data: [
           {
             label: '高新区区委',
@@ -66,7 +62,14 @@
 </script>
 
 <style scoped>
- .el-main{
-   padding: 0;
- }
+  /*主体内容*/
+  .el-header {
+    background-color: #fff !important;
+    height: 40px !important;
+    line-height: 38px;
+    color: #aaa;
+  }
+  .el-main{
+    padding: 0;
+  }
 </style>

@@ -8,7 +8,7 @@
 </template>
 
 <script>
-  import MainRight from '../../../components/zhengwu/WisdomMainRight'
+  import MainRight from '../../../components/zhengwu/WisdomHealthMain'
 
   export default {
     name: "Three",

@@ -21,10 +21,21 @@ import WorkingEssayColumn from '../pages/Working/Advertise/Column'
 import Data from '../pages/Data/Data'
 import Gis from '../pages/GIS/GIS'
 import Dangjian from '../pages/DangJian/DangJian'
+import DangjianFlowInto from '../pages/DangJian/Building/Flow/FlowInto'
+import DangjianOrganList from '../pages/DangJian/Building/Organ/OrganList'
+import DangjianOrganOutstanding from '../pages/DangJian/Building/Organ/OrganOutstanding'
+import DangjianRelationInto from '../pages/DangJian/Building/Relation/RelationInto'
+import DangjianBirthday from '../pages/DangJian/Building/Birthday'
+import DangjianFee from '../pages/DangJian/Building/Fee'
+import DangjianPartyDevelop from '../pages/DangJian/Building/PartyDevelop'
+import DangjianPartyPosts from '../pages/DangJian/Building/PartyPosts'
 import DangjianOutstanding from '../pages/DangJian/Building/MemberMange/OutstandingParty'
 import Organization from '../pages/DangJian/Activity/Three/Organization'
 import BuildingPeople from '../pages/DangJian/Building/MemberMange/PartyList'
 import StudySetting from '../pages/DangJian/Study/ProjectSetting/ProjectSetting'
+import StudyBase from '../pages/DangJian/Study/ProjectSetting/StudyBase'
+import StudyExam from '../pages/DangJian/Study/ProjectSetting/StudyExam'
+import StudyNote from '../pages/DangJian/Study/ProjectSetting/StudyNote'
 import StudyColumn from '../pages/DangJian/Study/ProjectSetting/StudyColumn'
 import BrandConstruction from '../pages/DangJian/Activity/Brand/Construction'
 import BrandDynamic from '../pages/DangJian/Activity/Brand/Dynamic'
@@ -281,6 +292,27 @@ export default new Router({
           },
         },
         {
+          path:'/dangjian/activity/three/study_base',
+          component:StudyBase,
+          meta:{
+            showHeader:true
+          },
+        },{
+          path:'/dangjian/activity/three/study_exam',
+          component:StudyExam,
+          meta:{
+            showHeader:true
+          },
+        },{
+          path:'/dangjian/activity/three/study_note',
+          component:StudyNote,
+          meta:{
+            showHeader:true
+          },
+        },
+
+
+        {
           path:'/dangjian/activity/three/setting',
           component:StudySetting,
           meta:{
@@ -325,6 +357,62 @@ export default new Router({
         {
           path:'/dangjian/activity/three/first_log',
           component:FirstLog,
+          meta:{
+            showHeader:true
+          },
+        },
+        {
+          path:'/dangjian/activity/three/flowInto',
+          component:DangjianFlowInto,
+          meta:{
+            showHeader:true
+          },
+        },
+        {
+          path:'/dangjian/activity/three/organ_list',
+          component:DangjianOrganList,
+          meta:{
+            showHeader:true
+          },
+        },
+        {
+          path:'/dangjian/activity/three/outstanding_organ',
+          component:DangjianOrganOutstanding,
+          meta:{
+            showHeader:true
+          },
+        },
+        {
+          path:'/dangjian/activity/three/relation_into',
+          component:DangjianRelationInto,
+          meta:{
+            showHeader:true
+          },
+        },
+        {
+          path:'/dangjian/activity/three/birthday',
+          component: DangjianBirthday,
+          meta:{
+            showHeader:true
+          },
+        },
+        {
+          path:'/dangjian/activity/three/fee',
+          component:DangjianFee,
+          meta:{
+            showHeader:true
+          },
+        },
+        {
+          path:'/dangjian/activity/three/party_develop',
+          component:DangjianPartyDevelop,
+          meta:{
+            showHeader:true
+          },
+        },
+        {
+          path:'/dangjian/activity/three/party_posts',
+          component:DangjianPartyPosts,
           meta:{
             showHeader:true
           },

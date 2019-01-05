@@ -1,9 +1,5 @@
 <template>
   <el-container>
-    <el-header>
-      <!--引入主体内容的标题组件-->
-      <ConHeader :title=title></ConHeader>
-    </el-header>
     <el-main>
         <MainRight :rightTitle="rightTitle"></MainRight>
     </el-main>
@@ -70,10 +66,7 @@
 </script>
 
 <style scoped>
-  .el-header {
-    background-color: #fff !important;
-    height: 40px !important;
-    line-height: 38px;
-    color: #aaa;
-  }
+.el-main{
+  padding: 0;
+}
 </style>

@@ -2,7 +2,7 @@
   <div>
     <el-row class="mainRight">
       <el-col :span="24" class="borderBottom">
-        老人信息列表
+        服务档案列表
       </el-col>
     </el-row>
     <el-row style="padding-left: 30px;padding-top: 20px;background: #fff;">
@@ -17,7 +17,7 @@
           <el-form-item label="出生年月:">
             <el-input v-model="formInline.date"></el-input>
           </el-form-item>
-          <el-form-item>
+          <el-form-item label="身份证号:">
             <el-input v-model="formInline.info" placeholder="民族/身份证号/婚姻状态/学历" disabled></el-input>
           </el-form-item>
           <el-form-item class="search">
@@ -54,36 +54,34 @@
         width="250">
       </el-table-column>
       <el-table-column
-        prop="nation"
-        label="民族"
-        width="200">
+        prop="photo"
+        label="电话"
+        width="180">
       </el-table-column>
       <el-table-column
         prop="id"
         label="身份证"
         width="200">
       </el-table-column>
+
       <el-table-column
-        prop="photo"
-        label="电话"
-        width="180">
-      </el-table-column>
-      <el-table-column
-        prop="education"
-        label="学历"
+        prop="kind"
+        label="服务类型"
         width="120">
       </el-table-column>
       <el-table-column
         prop="title"
-        label="计划描述"
+        label="服务标题"
         width="200">
       </el-table-column>
       <el-table-column
         fixed="right"
         label="操作"
-        width="200">
+        width="300">
         <template slot-scope="scope">
-          <el-button @click="handleClick(scope.row)" plain size="small">详情</el-button>
+          <el-button @click="handleClick(scope.row)"size="small" >详情</el-button>
+          <el-button @click="handleClick(scope.row)" size="small">编辑</el-button>
+          <el-button @click="handleClick(scope.row)"size="small">删除</el-button>
         </template>
       </el-table-column>
     </el-table>
@@ -94,7 +92,7 @@
             @size-change="handleSizeChange"
             @current-change="handleCurrentChange"
             :current-page="currentPage4"
-            :page-sizes="[1,2,3,4,5,6,7,8,9,10,11,12]"
+            :page-sizes="[5,10]"
             :page-size="10"
             :page-count="2"
             layout="prev, pager,next, jumper, total, sizes"
@@ -124,58 +122,52 @@
             name: '黄并肩',
             sex: '男',
             date: '2018-11-17 11:34:16',
-            nation: '汉族',
             id:'*******10000',
             photo: '15455545555',
-            education:'本科',
-            title: '护路护线功能模块开发',
+            kind:'医院治疗',
+            title: '紧急救治',
           },{
             name: '黄并肩',
             sex: '男',
             date: '2018-11-17 11:34:16',
-            nation: '汉族',
             id:'*******10000',
             photo: '15455545555',
-            education:'本科',
-            title: '护路护线功能模块开发',
+            kind:'一键呼叫',
+            title: '呼叫帮助',
           }, {
             name: '黄并肩',
             sex: '男',
             date: '2018-11-17 11:34:16',
-            nation: '汉族',
             id:'*******10000',
             photo: '15455545555',
-            education:'',
-            title: '护路护线功能模块开发',
+            kind:'上门治疗',
+            title: '上门救治',
           }, {
             name: '黄并肩',
             sex: '男',
             date: '2018-11-17 11:34:16',
-            nation: '汉族',
             id:'*******10000',
             photo: '15455545555',
-            education:'',
-            title: '护路护线功能模块开发',
+            kind:'上门治疗',
+            title: '上门救治',
           },
           {
             name: '黄并肩',
             sex: '男',
             date: '2018-11-17 11:34:16',
-            nation: '汉族',
             id:'*******10000',
             photo: '15455545555',
-            education:'',
-            title: '护路护线功能模块开发',
+            kind:'上门治疗',
+            title: '上门喂药',
           },
           {
             name: '黄并肩',
             sex: '男',
             date: '2018-11-17 11:34:16',
-            nation: '汉族',
             id:'*******10000',
             photo: '15455545555',
-            education:'',
-            title: '护路护线功能模块开发',
+            kind:'医院治疗',
+            title: '医院服务',
           },
         ],
       }
@@ -202,5 +194,15 @@
   .cell .el-button:first-child{
     background: none;
     border:1px solid #999
+  }
+  .cell .el-button:nth-child(2){
+    background: none;
+    border:1px solid #ff813d;
+    color:#ff813d
+  }
+  .cell .el-button:nth-child(3){
+    background: none;
+    border:1px solid #008aff;
+    color:#008aff;
   }
 </style>

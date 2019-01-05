@@ -1,28 +1,19 @@
 <template>
-  <div>
-    <el-row class="mainRight">
-      <el-col :span="24" class="borderBottom">
-        健康档案列表
-      </el-col>
+  <div class="mainRight">
+    <el-row class="borderBottom">
+      <el-col :span="24">{{rightTitle}}</el-col>
     </el-row>
     <el-row style="padding-left: 30px;padding-top: 20px;background: #fff;">
       <el-col :span="24" style="text-align: left;">
         <el-form :inline="true" :model="formInline" class="demo-form-inline">
-          <el-form-item label="姓名:">
-            <el-input v-model="formInline.name"></el-input>
+          <el-form-item label="时间:">
+            <el-input v-model="formInline.time"></el-input>
           </el-form-item>
-          <el-form-item label="性别:">
-            <el-select v-model="formInline.sex" placeholder="请选择">
-              <el-option label="男" value="male"></el-option>
-              <el-option label="女" value="female"></el-option>
-            </el-select>
-          </el-form-item>
-          <el-form-item label="身份证号:">
-            <el-input v-model="formInline.id" ></el-input>
+          <el-form-item label="标题:">
+            <el-input v-model="formInline.title"></el-input>
           </el-form-item>
           <el-form-item class="search">
             <el-button type="primary" size="small"><img :src="search" alt="" style="margin-right: 8px;">查询</el-button>
-            <el-button type="primary" size="small"><img :src="reset" alt="" style="margin-right: 8px;">重置</el-button>
             <el-button type="primary" size="small"><img :src="add" alt="" class="add">添加</el-button>
           </el-form-item>
         </el-form>
@@ -39,52 +30,51 @@
       </el-table-column>
       <el-table-column
         fixed
-        prop="name"
-        label="姓名"
+        prop="id"
+        label="编号"
+        width="150">
+      </el-table-column>
+      <el-table-column
+        prop="title"
+        label="标题"
+        show-overflow-tooltip
         width="200">
       </el-table-column>
       <el-table-column
-        prop="sex"
-        label="性别"
-        width="120">
+        prop="name"
+        label="缩略图"
+        width="150">
+        <template slot-scope="scope">
+          <img :src="scope.row.name" alt="" style="width: 90px;height: 40px;">
+        </template>
+      </el-table-column>
+      <el-table-column
+        prop="head"
+        label="所属栏目"
+        width="200">
+      </el-table-column>
+      <el-table-column
+        prop="people"
+        label="添加人"
+        width="150">
       </el-table-column>
       <el-table-column
         prop="date"
-        label="出生日期"
-        width="250">
-      </el-table-column>
-      <el-table-column
-        prop="photo"
-        label="联系电话"
-        width="180">
-      </el-table-column>
-      <el-table-column
-        prop="id"
-        label="身份证号码"
-        width="200">
-      </el-table-column>
-      <el-table-column
-        prop="content"
-        label="测量内容"
-        width="250">
-      </el-table-column>
-      <el-table-column
-        prop="value"
-        label="测量值"
-        width="150">
+        label="添加时间"
+        width="300">
       </el-table-column>
       <el-table-column
         fixed="right"
         label="操作"
-        width="300">
+        width="250">
         <template slot-scope="scope">
           <el-button @click="handleClick(scope.row)"size="small" >详情</el-button>
           <el-button @click="handleClick(scope.row)" size="small">编辑</el-button>
-          <el-button @click="handleClick(scope.row)"size="small">删除</el-button>
+          <el-button @click="handleClick(scope.row)"size="small">移除</el-button>
         </template>
       </el-table-column>
     </el-table>
-    <el-row style="background: #fff;padding-bottom:40px;margin-top:90px;">
+    <el-row style="background: #fff;padding-bottom:40px;margin-top: 40px;">
       <el-col :span="24">
         <div class="block">
           <el-pagination
@@ -93,9 +83,8 @@
             :current-page="currentPage4"
             :page-sizes="[5,10]"
             :page-size="10"
-            :page-count="2"
             layout="prev, pager,next, jumper, total, sizes"
-            :total="11">
+            :total="6">
           </el-pagination>
         </div>
       </el-col>
@@ -105,70 +94,71 @@
 
 <script>
   export default {
+    props:{
+      rightTitle:String
+    },
     data() {
       return {
-        search:require('../images/search.png'),
-        add:require('../images/add.png'),
-        reset:require('../images/reset.png'),
-        formInline: {
-          name: '',
-         sex: '',
-          id:''
-        },
+        search:require('../../images/search.png'),
+        add:require('../../images/add.png'),
         currentPage4: 1,
         tableData: [
           {
-            name: '黄并肩',
-            sex: '男',
-            date: '2018-11-17 11:34:16',
-            content:'血尿酸测量',
-            id:'*******10000',
+            id: '6',
+            name: require('../../images/advertise.jpg'),
+            title: '智慧大厅简介',
+            people: '超级管理员',
+            head:'智慧大厅简介',
+            date:'2017-11-24 12:21:10',
             photo: '15455545555',
-            value:'3.36',
-          },{
-            name: '黄并肩',
-            sex: '男',
-            date: '2018-11-17 11:34:16',
-            content:'血尿酸测量',
-            id:'*******10000',
+          },   {
+            id: '6',
+            name: require('../../images/advertise.jpg'),
+            title: '智慧大厅简介',
+            people: '超级管理员',
+            head:'智慧大厅简介',
+            date:'2017-11-24 12:21:10',
             photo: '15455545555',
-            value:'3.36',
-          }, {
-            name: '黄并肩',
-            sex: '男',
-            date: '2018-11-17 11:34:16',
-            content:'血尿酸测量',
-            id:'*******10000',
+          },  {
+            id: '6',
+            name: require('../../images/advertise.jpg'),
+            title: '智慧大厅简介',
+            people: '超级管理员',
+            head:'智慧大厅简介',
+            date:'2017-11-24 12:21:10',
             photo: '15455545555',
-            value:'3.36',
-          }, {
-            name: '黄并肩',
-            sex: '男',
-            date: '2018-11-17 11:34:16',
-            content:'血尿酸测量',
-            id:'*******10000',
+          },  {
+            id: '6',
+            name: require('../../images/advertise.jpg'),
+            title: '智慧大厅简介',
+            people: '超级管理员',
+            head:'智慧大厅简介',
+            date:'2017-11-24 12:21:10',
             photo: '15455545555',
-            value:'3.36',
           },
           {
-            name: '黄并肩',
-            sex: '男',
-            date: '2018-11-17 11:34:16',
-            content:'血尿酸测量',
-            id:'*******10000',
+            id: '6',
+            name: require('../../images/advertise.jpg'),
+            title: '智慧大厅简介',
+            people: '超级管理员',
+            head:'智慧大厅简介',
+            date:'2017-11-24 12:21:10',
             photo: '15455545555',
-            value:'3.36',
           },
           {
-            name: '黄并肩',
-            sex: '男',
-            date: '2018-11-17 11:34:16',
-            content:'血尿酸测量',
-            id:'*******10000',
+            id: '6',
+            name: require('../../images/advertise.jpg'),
+            title: '智慧大厅简介',
+            people: '超级管理员',
+            head:'智慧大厅简介',
+            date:'2017-11-24 12:21:10',
             photo: '15455545555',
-            value:'3.36',
           },
         ],
+        formInline: {
+          title: '',
+          time: '',
+        },
       }
     },
     methods: {
@@ -183,9 +173,7 @@
       },
       handleCurrentChange(val) {
         console.log(`当前页: ${val}`);
-      },
-    },
-    mounted() {
+      }
     }
   }
 </script>

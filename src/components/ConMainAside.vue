@@ -1,10 +1,10 @@
 <template>
-    <div class="mainLeft" style="height:710px;width: 300px">
+    <div class="mainLeft" style="height:790px;width: 300px">
       <el-row class="borderBottom">
         <el-col :span="21">{{name}}</el-col>
         <el-col :span="2" style="color:#FF6400;"><img :src="add" alt=""></el-col>
       </el-row>
-      <el-tree :data="data" :props="defaultProps" @node-click="handleNodeClick" default-expand-all></el-tree>
+      <el-tree :data="data" :props="defaultProps" @node-click="handleNodeClick" ></el-tree>
     </div>
 </template>
 

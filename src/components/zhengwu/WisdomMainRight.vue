@@ -94,7 +94,7 @@
             @size-change="handleSizeChange"
             @current-change="handleCurrentChange"
             :current-page="currentPage4"
-            :page-sizes="[1,2,3,4,5,6,7,8,9,10,11,12]"
+            :page-sizes="[5,10]"
             :page-size="10"
             :page-count="2"
             layout="prev, pager,next, jumper, total, sizes"

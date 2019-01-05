@@ -23,6 +23,8 @@ export default {
   .el-main{
     background:#fff;
     box-shadow:1px 1px 20px rgba(76,76,76,.2);
+    border:none;
+    padding: 0;
   }
 .el-table thead{
   color:#6e6e6e;

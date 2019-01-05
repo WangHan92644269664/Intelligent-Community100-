@@ -1,5 +1,5 @@
 <template>
-  <div class="mainRight" >
+  <div class="mainRight">
     <el-row class="borderBottom">
       <el-col :span="24">{{rightTitle}}</el-col>
     </el-row>
@@ -9,13 +9,13 @@
           <el-form-item label="性别:">
             <el-select v-model="formInline.sex" placeholder="请选择">
               <el-option label="男" value="male"></el-option>
-              <el-option label="女" value="female"></el-option>
+              <el-option label="女" value="demale"></el-option>
             </el-select>
           </el-form-item>
-          <el-form-item label="出生日期:">
-            <el-input v-model="formInline.time"  placeholder="yyyyMMdd"></el-input>
+          <el-form-item label="出生年月:">
+            <el-input v-model="formInline.date"></el-input>
           </el-form-item>
-          <el-form-item label="关键字:">
+          <el-form-item label="关键词:">
             <el-input v-model="formInline.key" placeholder="姓名/身份证"></el-input>
           </el-form-item>
           <el-form-item class="search">
@@ -28,10 +28,13 @@
     <el-table
       :data="tableData"
       border
-      height="450px"
+      style="width:96%;margin:0 auto"
     >
       <el-table-column
-        fixed
+        type="selection"
+        width="55">
+      </el-table-column>
+      <el-table-column
         prop="name"
         label="姓名"
         width="200">
@@ -39,42 +42,39 @@
       <el-table-column
         prop="sex"
         label="性别"
-        sortable
         width="150">
       </el-table-column>
-      <el-table-column
-        prop="date"
-        label="出生日期"
-        width="250">
-      </el-table-column>
+        <el-table-column
+          prop="date"
+          label="出生日期"
+          width="300">
+        </el-table-column>
       <el-table-column
         prop="nation"
         label="民族"
-        width="150">
+        width="200">
       </el-table-column>
       <el-table-column
         prop="id"
         label="身份证号"
-        sortable
         width="300">
       </el-table-column>
       <el-table-column
-        prop="area"
-        label="所属地区"
-        width="200">
+        prop="organ"
+        label="所属组织"
+        width="300">
       </el-table-column>
       <el-table-column
         fixed="right"
         label="操作"
-        width="300">
+        width="250">
         <template slot-scope="scope">
-          <el-button @click="handleClick(scope.row)"size="small" >详情</el-button>
-          <el-button @click="handleClick(scope.row)" size="small">编辑</el-button>
-          <el-button @click="handleClick(scope.row)"size="small">移除</el-button>
+          <el-button @click="handleClick(scope.row)"size="small" >查看</el-button>
+          <el-button @click="handleClick(scope.row)"size="small">删除</el-button>
         </template>
       </el-table-column>
     </el-table>
-    <el-row style="background: #fff;margin-top:100px;">
+    <el-row style="background: #fff;padding-bottom:40px;margin-top: 280px;">
       <el-col :span="24">
         <div class="block">
           <el-pagination
@@ -84,7 +84,7 @@
             :page-sizes="[5,10]"
             :page-size="10"
             layout="prev, pager,next, jumper, total, sizes"
-            :total="17">
+            :total="6">
           </el-pagination>
         </div>
       </el-col>
@@ -94,79 +94,49 @@
 
 <script>
   export default {
-    props: {
-      rightTitle: String
+    props:{
+      rightTitle:String
     },
     data() {
       return {
-        search:require('../images/search.png'),
-        add:require('../images/add.png'),
+        search:require('../../images/search.png'),
+        add:require('../../images/add.png'),
         currentPage4: 1,
         tableData: [
           {
-            name: '王晗',
+            name:'世博',
+            sex:'男',
+            date:'1994-10-08',
+            nation:'汉',
+            id:'**********7776',
+            organ:'开发区一号街道工委'
+          },   {
+            name:'汪涵',
+            sex:'男',
+            date:'1994-10-08',
+            nation:'汉',
+            id:'**********7776',
+            organ:'开发区一号街道工委'
+          },  {
+            name:'梦露',
             sex:'女',
-            date:'19951004',
-            nation:'汉族',
-            id:'4114214554555545',
-            area:'管城回族区中兴南路',
-            zip: 200333
-          },   {
-            name: '方立群',
+            date:'1994-10-08',
+            nation:'汉',
+            id:'**********7776',
+            organ:'开发区一号街道工委'
+          },  {
+            name:'世博',
             sex:'男',
-            date:'19951004',
-            nation:'汉族',
-            id:'4114214554555545',
-            area:'管城回族区中兴南路',
-            zip: 200333
-          },    {
-            name: '白恩施',
-            sex:'男',
-            date:'19951004',
-            nation:'汉族',
-            id:'4114214554555545',
-            area:'管城回族区中兴南路',
-            zip: 200333
-          },   {
-            name: '张树要',
-            sex:'男',
-            date:'19951004',
-            nation:'汉族',
-            id:'4114214554555545',
-            area:'管城回族区中兴南路',
-            zip: 200333
+            date:'1994-10-08',
+            nation:'汉',
+            id:'**********7776',
+            organ:'开发区一号街道工委'
           },
-          {
-            name: '方文轩',
-            sex:'男',
-            date:'19951004',
-            nation:'汉族',
-            id:'4114214554555545',
-            area:'管城回族区中兴南路',
-            zip: 200333
-          },
-          {
-            name: '刘华龙',
-            sex:'男',
-            date:'19951004',
-            nation:'汉族',
-            id:'4114214554555545',
-            area:'管城回族区中兴南路',
-            zip: 200333
-          },
-          {
-            name: '王德川',
-            sex:'男',
-            date:'19951004',
-            nation:'汉族',
-            id:'4114214554555545',
-            area:'管城回族区中兴南路',
-            zip: 200333
-          },
+
         ],
         formInline: {
-         sex: '',
-          time: '',
+          sex: '',
+          date: '',
           key:''
         },
       }
@@ -183,7 +153,7 @@
       },
       handleCurrentChange(val) {
         console.log(`当前页: ${val}`);
-      },
+      }
     }
   }
 </script>
@@ -193,11 +163,6 @@
     border:1px solid #999
   }
   .cell .el-button:nth-child(2){
-    background: none;
-    border:1px solid #ff813d;
-    color:#ff813d
-  }
-  .cell .el-button:nth-child(3){
     background: none;
     border:1px solid #008aff;
     color:#008aff;
