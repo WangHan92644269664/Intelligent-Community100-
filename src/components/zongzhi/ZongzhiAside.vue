@@ -1,6 +1,6 @@
 <template>
   <el-menu  class="submenu" :default-active="activeIndex" unique-opened router>
-    <el-menu-item index="#" class="leftTitle">综治</el-menu-item>
+    <el-menu-item index="#" class="leftTitle">综治平台</el-menu-item>
     <el-submenu index="1">
       <template slot="title">综治组织</template>
       <el-menu-item-group>
