@@ -60,67 +60,87 @@
           <el-row class="data-row">
             <el-row>
               <el-col :span="8">
-                <div class="face-data">
-                  人脸识别数据
-                </div>
+                <div class="face-data">人脸识别数据</div>
                 <div class="data-number">
-                  <span><b>2</b><b>6</b><b>5</b><b>3</b></span>
+                  <span>
+                    <b>2</b>
+                    <b>6</b>
+                    <b>5</b>
+                    <b>3</b>
+                  </span>
                   <span class="unit">人次</span>
                 </div>
               </el-col>
               <el-col :span="8">
-                <div class="door-key-data">
-                  门禁数据
-                </div>
+                <div class="door-key-data">门禁数据</div>
                 <div class="data-number">
-                  <span><b>2</b><b>9</b><b>5</b><b>6</b></span>
+                  <span>
+                    <b>2</b>
+                    <b>9</b>
+                    <b>5</b>
+                    <b>6</b>
+                  </span>
                   <span class="unit">次</span>
                 </div>
               </el-col>
               <el-col :span="8">
-                <div class="car-key-data">
-                  车辆进出数据
-                </div>
+                <div class="car-key-data">车辆进出数据</div>
                 <div class="data-number">
-                  <span><b>2</b><b>4</b><b>9</b></span>
+                  <span>
+                    <b>2</b>
+                    <b>4</b>
+                    <b>9</b>
+                  </span>
                   <span class="unit">辆</span>
                 </div>
               </el-col>
             </el-row>
             <el-col class="data-common" :span="4">
-              <div class="data-common-div data-right">总人数
+              <div class="data-common-div data-right">
+                总人数
                 <br>
-                <span>1008</span><span class="unit1">人</span>
+                <span>1008</span>
+                <span class="unit1">人</span>
               </div>
             </el-col>
             <el-col class="data-common" :span="4">
-              <div class="data-common-div data-right">建筑物
+              <div class="data-common-div data-right">
+                建筑物
                 <br>
-                <span>20</span><span class="unit1">栋</span>
+                <span>20</span>
+                <span class="unit1">栋</span>
               </div>
             </el-col>
             <el-col class="data-common" :span="4">
-              <div class="data-common-div data-right">部件
+              <div class="data-common-div data-right">
+                部件
                 <br>
-                <span>10</span><span class="unit1">件</span>
+                <span>10</span>
+                <span class="unit1">件</span>
               </div>
             </el-col>
             <el-col class="data-common" :span="4">
-              <div class="data-common-div data-right">走访
+              <div class="data-common-div data-right">
+                走访
                 <br>
-                <span>10</span><span class="unit1">件</span>
+                <span>10</span>
+                <span class="unit1">件</span>
               </div>
             </el-col>
             <el-col class="data-common" :span="4">
-              <div class="data-common-div data-right">事件
+              <div class="data-common-div data-right">
+                事件
                 <br>
-                <span>15</span><span class="unit1">件</span>
+                <span>15</span>
+                <span class="unit1">件</span>
               </div>
             </el-col>
             <el-col class="data-common" :span="4">
-              <div class="data-common-div data-right">组织
+              <div class="data-common-div data-right">
+                组织
                 <br>
-                <span>12</span><span class="unit1">个</span>
+                <span>12</span>
+                <span class="unit1">个</span>
               </div>
             </el-col>
           </el-row>
@@ -134,7 +154,7 @@
           <Table/>
         </div>
         <div class="chart-common chart-5">
-          <PieChart :pieTitle ="pieTitle1" :pieData="pieData1"  :pieLegendData="pieLegendData1" :pieColors="pieColor1"/>
+          <Pie3DChart class="pie3DChart" :id="id" :option="option"/>
         </div>
         <div class="chart-common chart-6">
           <EchartsConponent
@@ -159,10 +179,11 @@
 import EchartsConponent from "../../components/Data/EchartsComponent";
 import MapChina from "../../components/Data/MapChina";
 import Table from "../../components/Data/TableComponent";
-import PieChart from "../../components/Data/PieCompontent";
+import Pie3DChart from "../../components/Data/Pie3DChart";
 import DataRouter from "../../components/Data/DataRouter";
 import BiliChart from "../../components/Data/BiliChart";
-import BuildingTypeChart from "../../components/Data/BuildingTypeChart"
+import BuildingTypeChart from "../../components/Data/BuildingTypeChart";
+
 export default {
   name: "Data",
   data() {
@@ -208,13 +229,89 @@ export default {
       circleLeftColor5: "#ff7ab2",
       circleRightColor5: "#bd4d5b",
       circleBorderColor5: "#bd4d5b",
-      pieTitle1:"重点事件比例分布",
-      pieData1:[{ value: 335, name: "待延期审核" },{ value: 310, name: "待结案" },{ value: 234, name: "待核查" },{ value: 135, name: "待处理" },{ value: 1548, name: "待派遣" },{ value: 1548, name: "待接收" }],
-      pieLegendData1:["待延期审核", "待结案", "待核查", "待处理", "待派遣","待接收"],
-      pieColor1:["#c83f6b","#8d7de0","#00b4e9","#fbd884","#e490a7","#ff8b4e","#0ab06e"]
+      pieTitle1: "重点事件比例分布",
+      pieData1: [
+        { value: 335, name: "待延期审核" },
+        { value: 310, name: "待结案" },
+        { value: 234, name: "待核查" },
+        { value: 135, name: "待处理" },
+        { value: 1548, name: "待派遣" },
+        { value: 1548, name: "待接收" }
+      ],
+      pieLegendData1: [
+        "待延期审核",
+        "待结案",
+        "待核查",
+        "待处理",
+        "待派遣",
+        "待接收"
+      ],
+      pieColor1: [
+        "#c83f6b",
+        "#8d7de0",
+        "#00b4e9",
+        "#fbd884",
+        "#e490a7",
+        "#ff8b4e",
+        "#0ab06e"
+      ],
+      id: "test",
+      option: {
+        colors:["#c73e6a","#e192a8","#ff8b4e","#fbd884","#08b170","#00b6e8","#8d7ce4"],
+        chart: {
+          backgroundColor: null,
+          type: "pie", //饼图
+          options3d: {
+            enabled: true, //使用3d功能
+            alpha: 60, //延y轴向内的倾斜角度
+            beta: 0
+          },
+        },
+        title: {
+          text: "重点事件比例分布", //图表的标题文字
+          style:{
+            color:'#fff',
+            
+          },
+          align:'left'
+        },
+        plotOptions: {
+          pie: {
+            allowPointSelect: true, //每个扇块能否选中
+            cursor: "pointer", //鼠标指针
+            depth: 15, //饼图的厚度
+            dataLabels: {
+              enabled: true //是否显示饼图的线形tip
+            },
+          }
+        },
+        series: [
+          {
+            type: "pie",
+            // name: "测试用1", //统一的前置词,非必须
+            data: [
+              ["待接收", 12], //模块名和所占比，也可以{name: '测试1',y: 12}
+              ["待派遣", 23],
+              ["待处理", 19],
+              ["已废弃", 29],
+              ["待核查", 29],
+              ["待结案", 29],
+              ["待延期审核", 29],
+            ]
+          }
+        ]
+      }
     };
   },
-  components: { EchartsConponent, MapChina, Table, PieChart, DataRouter, BiliChart ,BuildingTypeChart},
+  components: {
+    EchartsConponent,
+    MapChina,
+    Table,
+    Pie3DChart,
+    DataRouter,
+    BiliChart,
+    BuildingTypeChart
+  },
   mounted() {
     var _this = this;
     //页面加载时赋值id全屏高度
@@ -224,9 +321,7 @@ export default {
     window.onresize = function() {
       // 定义窗口大小变更通知事件
       _this.screenHeight = document.documentElement.clientHeight; //窗口高度
-      console.log(_this.screenHeight);
     };
-    console.log(_this.screenHeight);
     //echart操作
     const vm = this;
     vm.$nextTick(() => {});
@@ -238,7 +333,9 @@ export default {
       oIframe.style.height = Number(val) + "px"; //'120'是页面布局调整，可去除
     }
   },
-  created() {},
+  created() {
+
+  },
   methods: {}
 };
 </script>
@@ -315,6 +412,7 @@ ul {
 }
 .chart-common {
   height: 31%;
+  /* background:#fff; */
   background: url("../../assets/images/data/common_chart_bg.png") no-repeat;
   background-size: 100% 100%;
   width: 90%;
@@ -382,27 +480,28 @@ ul {
 .data-row {
   width: 90%;
   height: 40%;
-  color:#fff;
-  margin:1% auto;
+  color: #fff;
+  margin: 1% auto;
 }
-.door-key-data, .face-data, .car-key-data{
-  font-size:16px;
+.door-key-data,
+.face-data,
+.car-key-data {
+  font-size: 16px;
 }
-.data-number{
-  margin-top:10px;
+.data-number {
+  margin-top: 10px;
 }
-.data-number b{
-  color:#00a7ff;
-  border:1px solid #0c3467;
+.data-number b {
+  color: #00a7ff;
+  border: 1px solid #0c3467;
   font-size: 28px;
-  padding:0 6px;
-
+  padding: 0 6px;
 }
-.unit{
+.unit {
   font-size: 14px;
-  color:#00a7ff;
+  color: #00a7ff;
 }
-.unit1{
+.unit1 {
   font-size: 14px !important;
 }
 /* 右侧公告 */
@@ -421,5 +520,6 @@ ul {
   width: 90%;
   margin: 0 auto;
 }
+
 </style>
 

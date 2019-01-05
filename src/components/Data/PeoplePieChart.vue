@@ -14,8 +14,8 @@ export default {
       default: () => []
     },
     pieColor: {
-      type: Array,
-      default: () => []
+      type: String,
+      default: () => ""
     },
     pieTitle: {
       type: String,

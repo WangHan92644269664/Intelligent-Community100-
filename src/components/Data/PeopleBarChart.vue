@@ -148,6 +148,7 @@ export default {
     vm.$nextTick(() => {
       vm.drawChart();
     });
+   
   },
   created: () => {}
 };

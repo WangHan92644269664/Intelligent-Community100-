@@ -421,7 +421,6 @@ export default new Router({
     {
       path:'/data/shequ',
       component:DataShequ
-    },
-
+    }
   ]
 })

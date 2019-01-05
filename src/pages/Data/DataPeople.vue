@@ -20,7 +20,7 @@
           />
         </div>
         <div class="chart-common chart-3">
-          <DataPieChart :pieData="pieData1" :pieColor ="pieColor1" :pieTitle ="pieTitle1"/>
+          <Pie3D :id="id" :option="option"/>
         </div>
       </el-col>
       <el-col class="main-content" :span="8">
@@ -38,7 +38,7 @@
           />
         </div>
         <div class="chart-common chart-3">
-           <DataPieChart :pieData="pieData2" :pieColor ="pieColor2" :pieTitle ="pieTitle2"/>
+          <DataPieChart :pieData="pieData2" :pieColor="pieColor2" :pieTitle="pieTitle2"/>
         </div>
       </el-col>
       <el-col class="main-content" :span="8">
@@ -56,7 +56,7 @@
           />
         </div>
         <div class="chart-common chart-6">
-           <DataPieChart :pieData="pieData3" :pieColor ="pieColor3" :pieTitle ="pieTitle3"/>
+          <DataPieChart :pieData="pieData3" :pieColor="pieColor3" :pieTitle="pieTitle3"/>
         </div>
       </el-col>
     </el-row>
@@ -66,7 +66,8 @@
 <script>
 import PeopleBar from "../../components/Data/PeopleBarChart";
 import DataRouter from "../../components/Data/DataRouter";
-import DataPieChart from "../../components/Data/PeoplePieChart"
+import DataPieChart from "../../components/Data/PeoplePieChart";
+import Pie3D from "../../components/Data/Pie3DChart"
 export default {
   name: "Data",
   data() {
@@ -96,65 +97,103 @@ export default {
       colorZero3: "rgba(173,0,252,1)",
       colorHalf3: "rgba(173,0,252,.5)",
       colorAll3: "rgba(173,0,252,0)",
-      pieData1:[
-              {
-                value: 335,
-                name: "男性",
-                
-              },
-              {
-                value: 310,
-                name: "女性"
-              }
-            ],
-            pieColor1:'#017eff',
-            pieTitle1:'人口婚姻分布',
-            pieData2:[
-              {
-                value: 335,
-                name: "未婚",
-                
-              },
-              {
-                value: 310,
-                name: "已婚"
-              },
-              {
-                value: 450,
-                name: "已婚"
-              }
-            ],
-            pieColor2:'#8d3600',
-            pieTitle2:'人口民族分布',
-            pieData3:[
-              {
-                value: 335,
-                name: "汉族",
-                
-              },
-              {
-                value: 310,
-                name: "回族"
-              },
-              {
-                value: 450,
-                name: "藏族"
-              },
-              {
-                value: 450,
-                name: "蒙古族"
-              },
-              {
-                value: 450,
-                name: "维吾尔族"
-              }
-            ],
-            pieColor3:'#6b1f1f',
-            pieTitle3:'人口民族分布'
-     
+      pieData1: [
+        {
+          value: 335,
+          name: "男性"
+        },
+        {
+          value: 310,
+          name: "女性"
+        }
+      ],
+      pieColor1: "#017eff",
+      pieTitle1: "人口婚姻分布",
+      pieData2: [
+        {
+          value: 335,
+          name: "未婚"
+        },
+        {
+          value: 310,
+          name: "已婚"
+        },
+        {
+          value: 450,
+          name: "已婚"
+        }
+      ],
+      pieColor2: "#8d3600",
+      pieTitle2: "人口民族分布",
+      pieData3: [
+        {
+          value: 335,
+          name: "汉族"
+        },
+        {
+          value: 310,
+          name: "回族"
+        },
+        {
+          value: 450,
+          name: "藏族"
+        },
+        {
+          value: 450,
+          name: "蒙古族"
+        },
+        {
+          value: 450,
+          name: "维吾尔族"
+        }
+      ],
+      pieColor3: "#6b1f1f",
+      pieTitle3: "人口民族分布",
+      id: "test",
+      option: {
+        colors:["#017eff","#d3227a","#ff8b4e","#fbd884","#08b170","#00b6e8","#8d7ce4"],
+        chart: {
+          backgroundColor: null,
+          type: "pie", //饼图
+          options3d: {
+            enabled: true, //使用3d功能
+            alpha: 60, //延y轴向内的倾斜角度
+            beta: 0
+          },
+        },
+        title: {
+          text: "人口性别分布", //图表的标题文字
+          style:{
+            color:'#fff',
+            
+          },
+          align:'left'
+        },
+        plotOptions: {
+          pie: {
+            allowPointSelect: true, //每个扇块能否选中
+            cursor: "pointer", //鼠标指针
+            depth: 15, //饼图的厚度
+            dataLabels: {
+              enabled: true //是否显示饼图的线形tip
+            },
+          }
+        },
+        series: [
+          {
+            type: "pie",
+            // name: "测试用1", //统一的前置词,非必须
+            data: [
+              ["男性", 12], //模块名和所占比，也可以{name: '测试1',y: 12}
+              ["女性", 23],
+              
+            ]
+          }
+        ]
+      }
     };
   },
-  components: { PeopleBar, DataRouter,DataPieChart },
+  components: { PeopleBar, DataRouter, DataPieChart,Pie3D },
   mounted() {
     var _this = this;
     //页面加载时赋值id全屏高度
@@ -242,17 +281,16 @@ ul {
   width: 95%;
   margin: 1% auto;
   height: 55%;
-  padding:2px;
+  padding: 2px;
 }
-.chart-common h5{
+.chart-common h5 {
   height: 40px;
-  background:url('../../assets/images/data/ziyemian_nav.png') no-repeat;
+  background: url("../../assets/images/data/ziyemian_nav.png") no-repeat;
   background-size: 100% 100%;
   text-align: left;
   line-height: 40px;
-  color:#fff;
-  padding-left:20px;
-
+  color: #fff;
+  padding-left: 20px;
 }
 .bili-left {
   text-align: right;
