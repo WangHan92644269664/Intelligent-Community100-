@@ -11,7 +11,7 @@
 
 <script>
   import ConHeader from '../../../components/ContainerHeader'
-  import ImportMain from '../../../components/zongzhi/SociatyImportMain'
+  import ImportMain from '../../../components/zongzhi/Society/SociatyImportMain'
 
   export default {
     props: {

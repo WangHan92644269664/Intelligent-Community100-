@@ -47,6 +47,11 @@ import ZongZhi from '../pages/ZongZhi/ZongZhi'
 import ZongZhiOrigin from '../pages/ZongZhi/Organization/Organization'
 import ZongZhiGroup from '../pages/ZongZhi/Organization/Group'
 import ZongZhiSpecial from '../pages/ZongZhi/Special/Special'
+import SocietyCheckRenovate from '../pages/ZongZhi/Society/CheckRenovate'
+import SocietyImportantEvent from '../pages/ZongZhi/Society/ImportantEvent'
+import SocietyLifeBase from '../pages/ZongZhi/Society/LifeBase'
+import SocietyLifeCommit from '../pages/ZongZhi/Society/LifeCommit'
+import SocietyLogisticsSafety from '../pages/ZongZhi/Society/LogisticsSafety'
 import ImportantArea from '../pages/ZongZhi/Society/ImportantArea'
 import ZongZhiSchool from '../pages/ZongZhi/Campus/School'
 import ZongZhiProtect from '../pages/ZongZhi/Protect/ProtectRoad'
@@ -460,12 +465,48 @@ export default new Router({
           }
         },
         {
-          path: '/zongzhi/socity/important',
+          path: '/zongzhi/socity/important_event',
+          component:SocietyImportantEvent,
+          meta: {
+            showHeader: true
+          }
+        },
+        {
+          path: '/zongzhi/socity/life_base',
+          component:SocietyLifeBase,
+          meta: {
+            showHeader: true
+          }
+        },
+        {
+          path: '/zongzhi/socity/check_renovate',
+          component:SocietyCheckRenovate,
+          meta: {
+            showHeader: true
+          }
+        },
+        {
+          path: '/zongzhi/socity/life_commit',
+          component:SocietyLifeCommit,
+          meta: {
+            showHeader: true
+          }
+        },
+        {
+          path: '/zongzhi/socity/important_area',
           component: ImportantArea,
           meta: {
             showHeader: true
           }
         },
+        {
+          path: '/zongzhi/socity/logistics_safety',
+          component:SocietyLogisticsSafety,
+          meta: {
+            showHeader: true
+          }
+        },
+
         {
           path: '/zongzhi/dispute/found',
           component: DisputeFoundReport,
