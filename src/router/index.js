@@ -61,6 +61,10 @@ import DataPeople from '../pages/Data/DataPeople'
 import DataActual from '../pages/Data/DataActual'
 import DataZongzhi from '../pages/Data/DataZongzhi'
 import DataShequ from '../pages/Data/DataCommunity'
+import GISZhian from '../pages/GIS/GISZhian'
+import GISStreet from '../pages/GIS/GISStreet'
+import GISCommunity from '../pages/GIS/GISCommunity'
+import GISCar from '../pages/GIS/GISCar'
 
 Vue.use(Router)
 
@@ -73,6 +77,34 @@ export default new Router({
     {
       path:'/gis',
       component:Gis,
+      meta:{
+        showHeader:true
+      }
+    },
+    {
+      path:'/gis/zhian',
+      component:GISZhian,
+      meta:{
+        showHeader:true
+      },
+    },
+    {
+      path:'/gis/street',
+      component:GISStreet,
+      meta:{
+        showHeader:true
+      },
+    },
+    {
+      path:'/gis/community',
+      component:GISCommunity,
+      meta:{
+        showHeader:true
+      },
+    },
+    {
+      path:'/gis/car',
+      component:GISCar,
       meta:{
         showHeader:true
       },

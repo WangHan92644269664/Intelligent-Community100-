@@ -178,7 +178,7 @@ export default {
   width: 100%;
   background: #fff;
   border-radius: 5px;
-  margin-bottom: 2%;
+  margin-bottom: 3%;
   margin-left: 2%;
   padding-left: 8%;
   padding-top: 2%;
