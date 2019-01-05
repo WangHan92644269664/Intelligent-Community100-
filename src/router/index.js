@@ -67,7 +67,10 @@ export default new Router({
     },
     {
       path:'/gis',
-      component:Gis
+      component:Gis,
+      meta:{
+        showHeader:true
+      },
     },
     {
       path:'/zhengwu',

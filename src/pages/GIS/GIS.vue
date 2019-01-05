@@ -5,7 +5,7 @@
         <h2 class="gis-title">GIS 地图</h2>
       </div>
       <div class="left-con">
-        <GisLeft/>
+        <GisAside></GisAside>
       </div>
       <div class="building">
         <div class="building-first">
@@ -40,6 +40,7 @@
 
 <script>
 import GisLeft from "../../components/GIS/GisLeft";
+import GisAside from "../../components/GIS/GISAside"
 export default {
   name: "Gis",
   data() {
@@ -47,7 +48,7 @@ export default {
       screenHeight: document.documentElement.clientHeight //屏幕高度
     };
   },
-  components: { GisLeft },
+  components: { GisLeft,GisAside },
   mounted() {
     var _this = this;
     //页面加载时赋值id全屏高度
