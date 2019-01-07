@@ -26,7 +26,7 @@
         name: "ContainerAside",
       data(){
           return{
-            activeIndex:'/zhengwu/three'
+            activeIndex:'/zhengwu/poverty/record'
           }
       },
       methods:{

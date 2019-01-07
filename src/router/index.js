@@ -241,7 +241,7 @@ export default new Router({
         },
         {
           path:'/zhengwu',
-          redirect:'/zhengwu/three'
+          redirect:'/zhengwu/poverty/record'
         }
       ]
     },

@@ -14,7 +14,7 @@
         <el-menu-item index="#">低保人员</el-menu-item>
         <el-menu-item index="#">闲散青少年</el-menu-item>
         <el-menu-item index="#">空巢老人</el-menu-item>
-        <el-menu-item index="#">>失业人员</el-menu-item>
+        <el-menu-item index="#">失业人员</el-menu-item>
         <el-menu-item index="#">伤残军人</el-menu-item>
         <el-menu-item index="#">留守人员</el-menu-item>
         <el-menu-item index="#">社区纠正人员</el-menu-item>
@@ -62,7 +62,7 @@
         name: "ContainerAside",
       data(){
           return {
-            activeIndex:'/working/plan/my'
+            activeIndex:'/grid/actual_people/all'
           }
       }
     }
