@@ -58,7 +58,7 @@
         <template slot-scope="scope">
           <el-button @click="handleClick(scope.row)"size="small" >详情</el-button>
           <el-button @click="handleClick(scope.row)" size="small">编辑</el-button>
-          <el-button @click="handleClick(scope.row)"size="small">删除</el-button>
+          <el-button @click="deleteRow(scope.$index,tableData)"size="small">删除</el-button>
         </template>
       </el-table-column>
     </el-table>
@@ -149,7 +149,11 @@
       },
       indexMethod(index){
         return index+5
-      }
+      },
+      //删除所选中的一行
+      deleteRow(index,rows){
+        rows.splice(index,1)
+      },
     }
   }
 </script>

@@ -74,7 +74,7 @@
         <template slot-scope="scope">
           <el-button @click="handleClick(scope.row)"size="small" >详情</el-button>
           <el-button @click="handleClick(scope.row)" size="small">编辑</el-button>
-          <el-button @click="handleClick(scope.row)"size="small">移除</el-button>
+          <el-button @click="deleteRow(scope.$index,tableData)"size="small">移除</el-button>
         </template>
       </el-table-column>
     </el-table>
@@ -108,7 +108,8 @@
           name: '',
         },
         currentPage4: 1,
-        tableData: [{
+        tableData: [
+          {
           network: '舜泰办事处',
           school: '顺泰幼儿园',
           id:'AS000002',
@@ -165,6 +166,10 @@
       },
       handleCurrentChange(val) {
         console.log(`当前页: ${val}`);
+      },
+      //删除所选中的一行
+      deleteRow(index,rows){
+        rows.splice(index,1)
       },
     },
     mounted() {

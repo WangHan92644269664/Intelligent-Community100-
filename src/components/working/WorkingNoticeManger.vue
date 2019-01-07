@@ -85,7 +85,7 @@
         <template slot-scope="scope">
           <el-button @click="handleClick(scope.row)" plain size="small">详情</el-button>
           <el-button @click="handleClick(scope.row)" type="info" size="small">编辑</el-button>
-          <el-button type="success" size="small">删除</el-button>
+          <el-button type="success" @click="deleteRow(scope.$index,tableData)" size="small">删除</el-button>
         </template>
       </el-table-column>
     </el-table>
@@ -120,7 +120,8 @@
           key: '',
         },
         currentPage4: 1,
-        tableData: [{
+        tableData: [
+          {
           id: '12',
           title: '公告',
           name: '超级管理员',
@@ -232,6 +233,10 @@
       handleCurrentChange(val) {
         console.log(`当前页: ${val}`);
       },
+      //删除所选中的一行
+      deleteRow(index,rows){
+        rows.splice(index,1)
+      },
     },
     mounted() {
     }
@@ -239,4 +244,18 @@
 </script>
 
 <style scoped>
+  .cell .el-button:first-child{
+    background: none;
+    border:1px solid #999
+  }
+  .cell .el-button:nth-child(2){
+    background: none;
+    border:1px solid #ff813d;
+    color:#ff813d
+  }
+  .cell .el-button:nth-child(3){
+    background: none;
+    border:1px solid #008aff;
+    color:#008aff;
+  }
 </style>

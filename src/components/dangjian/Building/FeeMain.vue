@@ -70,7 +70,7 @@
         width="250">
         <template slot-scope="scope">
           <el-button @click="handleClick(scope.row)"size="small" >查看</el-button>
-          <el-button @click="handleClick(scope.row)"size="small">删除</el-button>
+          <el-button @click="deleteRow(scope.$index,tableData)"size="small">删除</el-button>
         </template>
       </el-table-column>
     </el-table>
@@ -168,7 +168,11 @@
       },
       handleCurrentChange(val) {
         console.log(`当前页: ${val}`);
-      }
+      },
+      //删除所选中的一行
+      deleteRow(index,rows){
+        rows.splice(index,1)
+      },
     }
   }
 </script>

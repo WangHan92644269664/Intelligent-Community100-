@@ -85,7 +85,7 @@
         <template slot-scope="scope">
           <el-button @click="handleClick(scope.row)" plain size="small">详情</el-button>
           <el-button @click="handleClick(scope.row)" type="info" size="small">编辑</el-button>
-          <el-button type="success" size="small">删除</el-button>
+          <el-button type="success" @click="deleteRow(scope.$index,tableData)" size="small">删除</el-button>
           <el-button @click="handleClick(scope.row)" plain size="small">居住信息</el-button>
         </template>
       </el-table-column>
@@ -97,7 +97,7 @@
             @size-change="handleSizeChange"
             @current-change="handleCurrentChange"
             :current-page="currentPage4"
-            :page-sizes="[1,2,3,4,5,6,7,8,9,10,11,12]"
+            :page-sizes="[5,10]"
             :page-size="10"
             :page-count="2"
             layout="prev, pager,next, jumper, total, sizes"
@@ -117,7 +117,8 @@
         add:require('../images/add.png'),
         reset:require('../images/reset.png'),
         currentPage4: 1,
-        tableData: [{
+        tableData: [
+          {
           id: '918',
           name: '王晗',
           sex: '男',
@@ -194,7 +195,11 @@
       },
       handleCurrentChange(val) {
         console.log(`当前页: ${val}`);
-      }
+      },
+      //删除所选中的一行
+      deleteRow(index,rows){
+        rows.splice(index,1)
+      },
     }
   }
 </script>

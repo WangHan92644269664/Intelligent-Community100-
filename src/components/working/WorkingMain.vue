@@ -49,6 +49,8 @@
     <el-table
       :data="tableData"
       border
+      highlight-current-row
+      @current-change="handleCurrentChange"
       style="width:96%;margin:0 auto"
     >
       <el-table-column
@@ -71,41 +73,61 @@
         prop="people"
         sortable
         label="审核人"
-        width="120">
+        width="200">
       </el-table-column>
         <el-table-column
-          prop="finish"
+          prop="tag"
           label="完成程度"
-          width="150">
+          width="150"
+          column-key="tag"
+          :filters="[{text:'未审核',value:'未审核'},{text:'正在进行',value:'正在进行'},{text:'还未开始',value:'还未开始'}]"
+          align="center"
+        >
+          <template slot-scope="scope">
+            <span :class="{red:scope.row.tag==='还未开始',blue:scope.row.tag==='正在进行'}">
+              {{scope.row.tag}}
+            </span>
+          </template>
         </el-table-column>
       <el-table-column
         prop="before"
         label="开始时间"
-        width="200">
+        column-key="tag"
+        width="300">
+        <template slot-scope="scope">
+          <span :class="{red:scope.row.tag==='还未开始'}">
+            {{scope.row.before}}
+          </span>
+        </template>
       </el-table-column>
       <el-table-column
         prop="end"
         label="完成时间"
-        width="200">
-      </el-table-column>
-      <el-table-column
-        prop="photo"
-        label="电话"
-        width="150">
-      </el-table-column>
-      <el-table-column
-        prop="title"
-        label="计划描述"
-        width="200">
+        column-key="tag"
+        width="300">
+        <template slot-scope="scope">
+          <span :class="{red:scope.row.tag==='还未开始',blue:scope.row.tag==='正在进行'}">
+            {{scope.row.end}}
+          </span>
+        </template>
       </el-table-column>
       <el-table-column
         fixed="right"
         label="操作"
-        width="350">
+        column-key="tag"
+        width="300">
         <template slot-scope="scope">
-          <el-button @click="handleClick(scope.row)"size="small" >详情</el-button>
-          <el-button @click="handleClick(scope.row)" size="small">编辑</el-button>
-          <el-button @click="handleClick(scope.row)"size="small">移除</el-button>
+          <template v-if="scope.row.tag==='未审核'">
+            <el-button @click="selectRow(scope.row)"size="small" class="selectUndo">查看</el-button>
+          </template>
+         <template v-else-if="scope.row.tag==='正在进行'">
+           <el-button @click="editRow(scope.row)" size="small" class="selectDoing">正在进行</el-button>
+         </template>
+         <template v-else>
+           <el-button @click="editRow(scope.$index,tableData)"size="small" class="selectUn1">开始</el-button>
+           <el-button @click="editRow(scope.$index,tableData)"size="small" class="selectUn2">编辑</el-button>
+           <el-button @click="deleteRow(scope.$index,tableData)"size="small" class="selectUn3">删除</el-button>
+         </template>
         </template>
       </el-table-column>
     </el-table>
@@ -150,91 +172,101 @@
           id: '11',
           name: '护路护线功能模块开发',
           people: '超级管理员',
-          finish: '未审核',
+          tag: '未审核',
           before: '2018-11-17 11:34:16',
           end: '2018-11-19 11:34:16',
-          photo: '15455545555',
-          title: '护路护线功能模块开发',
         }, {
           id: '8',
           name: '部件管理模块开发',
           people: '超级管理员',
-          finish: '正在进行',
+          tag: '还未开始',
           before: '2018-11-17 11:34:16',
           end: '2018-11-24 11:34:16',
-          photo: '15455545555',
-          title: '护路护线功能模块开发',
         }, {
           id: '4',
           name: '户籍管理模块开发',
           people: '超级管理员',
-          finish: '正在进行',
+          tag: '正在进行',
           before: '2018-11-17 11:34:16',
           end: '2018-11-24 11:34:16',
-          title: '护路护线功能模块开发',
-          photo: '15455545555',
         }, {
           id: '10',
           name: '校园安全功能模块开发',
           people: '超级管理员',
-          finish: '正在进行',
+          tag: '正在进行',
           before: '2018-11-17 11:34:16',
           end: '2018-11-24 11:34:16',
-          title: '护路护线功能模块开发',
-          photo: '15455545555',
         },
           {
             id: '5',
             name: '实有人口功能模块开发',
             people: '超级管理员',
-            finish: '还未开始',
+            tag: '还未开始',
             before: '2018-11-17 11:34:16',
             end: '2018-11-24 11:34:16',
-            title: '护路护线功能模块开发',
-            photo: '15455545555',
           },
           {
             id: '7',
             name: '社区民意模块开发',
             people: '超级管理员',
-            finish: '还未开始',
+            tag: '还未开始',
             before: '2018-11-17 11:34:16',
             end: '2018-11-24 11:34:16',
-            title: '护路护线功能模块开发',
-            photo: '15455545555',
           },
         ],
       }
     },
     methods: {
-      onSubmit() {
-        console.log('submit!');
-      },
-      handleClick(row) {
+      //查看当前所选中的一行
+      selectRow(row) {
         console.log(row);
       },
+      //编辑当前选中的一行
+      editRow(row){
+        console.log(row)
+      },
+      //删除所选中的一行
+      deleteRow(index,rows){
+        rows.splice(index,1)
+      },
+      //处理当前的页码数
       handleSizeChange(val) {
         console.log(`每页 ${val} 条`);
       },
       handleCurrentChange(val) {
-        console.log(`当前页: ${val}`);
+       this.currentRow=val;
+       console.log(val)
       },
     },
-    mounted() {
-    }
   }
 </script>
 <style scoped>
-  .cell .el-button:first-child{
+  .red{
+    color:red
+  }
+  .blue{
+    color:#01b160;
+  }
+  .selectUndo{
     background: none;
     border:1px solid #999
   }
-  .cell .el-button:nth-child(2){
+  .selectDoing{
+    background: none;
+    border:1px solid #01b160;
+    color:#01b160;
+  }
+  .selectUn1{
+    background: none;
+    border:1px solid red;
+    color:red;
+  }
+  .selectUn2{
     background: none;
     border:1px solid #ff813d;
-    color:#ff813d
+    color:#ff813d;
   }
-  .cell .el-button:nth-child(3){
+  .selectUn3{
     background: none;
     border:1px solid #008aff;
     color:#008aff;
