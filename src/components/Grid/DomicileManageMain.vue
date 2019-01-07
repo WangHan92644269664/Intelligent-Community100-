@@ -2,30 +2,24 @@
   <div>
     <el-row  class="mainRight">
       <el-col :span="24" class="borderBottom">
-        日志审核列表
+        户籍管理列表
       </el-col>
     </el-row>
     <el-row style="padding-left: 30px;padding-top: 20px;background: #fff;">
       <el-col :span="24" style="text-align: left;">
         <el-form :inline="true" :model="formInline" class="demo-form-inline">
-          <el-form-item label="总结类型:">
-            <el-select v-model="formInline.people" placeholder="请选择">
-              <el-option label="日报" value="day"></el-option>
-              <el-option label="周报" value="week"></el-option>
+          <el-form-item label="所属房屋:">
+            <el-input v-model="formInline.house" ></el-input>
+          </el-form-item>
+          <el-form-item label="户别:">
+            <el-select v-model="formInline.kind" placeholder="请选择">
+              <el-option label="非农家庭户口" value="非农家庭户口"></el-option>
             </el-select>
           </el-form-item>
-          <el-form-item label="提交日期:">
-            <el-input v-model="formInline.date" placeholder="请输入时间段"></el-input>
-          </el-form-item>
-          <el-form-item label="审核状态:">
-            <el-select v-model="formInline.status" placeholder="请选择">
-              <el-option label="未审核" value="undo"></el-option>
-              <el-option label="已审核" value="doing"></el-option>
-            </el-select>
+          <el-form-item label="万能搜索:">
+            <el-input v-model="formInline.search" placeholder="户号/户主/省份证/户籍地详址"></el-input>
           </el-form-item>
           <el-form-item class="search">
-            <el-button type="primary" size="small"><img :src="search" alt="" style="margin-right: 8px;">查询</el-button>
-            <el-button type="primary" size="small"><img :src="reset" alt="" style="margin-right: 8px;">重置</el-button>
             <el-button type="primary" size="small"><img :src="add" alt="" class="add">添加</el-button>
           </el-form-item>
         </el-form>
@@ -44,39 +38,34 @@
       <el-table-column
         sortable
         prop="id"
-        label="审核编号"
-        width="120">
-      </el-table-column>
-      <el-table-column
-        prop="name"
-        label="标题"
+        label="户号"
         width="200">
       </el-table-column>
       <el-table-column
         prop="kind"
-        label="提交状态"
-        width="120">
-      </el-table-column>
-
-      <el-table-column
-        prop="date"
-        label="提交时间"
+        label="户别"
         width="250">
       </el-table-column>
       <el-table-column
-        prop="people"
-        label="提交人"
+        prop="housing"
+        label="户主"
         width="200">
       </el-table-column>
+
       <el-table-column
-        prop="photo"
-        label="电话"
-        width="180">
+        prop="house"
+        label="所属房屋"
+        width="120">
       </el-table-column>
       <el-table-column
-        prop="title"
-        label="计划描述"
-        width="200">
+        prop="card"
+        label="身份证"
+        width="300">
+      </el-table-column>
+      <el-table-column
+        prop="address"
+        label="户籍详址"
+        width="250">
       </el-table-column>
       <el-table-column
         fixed="right"
@@ -89,7 +78,7 @@
         </template>
       </el-table-column>
     </el-table>
-    <el-row style="background: #fff;padding-bottom:40px;margin-top:360px;">
+    <el-row style="background: #fff;padding-bottom:40px;margin-top:100px;">
       <el-col :span="24">
         <div class="block">
           <el-pagination
@@ -114,14 +103,68 @@
       return {
         search:require('../images/search.png'),
         add:require('../images/add.png'),
-        reset:require('../images/reset.png'),
         formInline: {
-          people: '',
-          date: '',
-          info:''
+          house:'',
+          kind:'',
+          search:''
         },
         currentPage4: 1,
         tableData: [
+          {
+            id:'154552468',
+            kind:'非农家庭户口',
+            housing:'胡天的',
+            house:'102',
+            card:'**************5134',
+            address:'软件园一号'
+          },
+          {
+            id:'154552468',
+            kind:'非农家庭户口',
+            housing:'胡天的',
+            house:'102',
+            card:'**************5134',
+            address:'软件园一号'
+          },
+          {
+            id:'154552468',
+            kind:'非农家庭户口',
+            housing:'胡天的',
+            house:'102',
+            card:'**************5134',
+            address:'软件园一号'
+          },{
+            id:'154552468',
+            kind:'非农家庭户口',
+            housing:'胡天的',
+            house:'102',
+            card:'**************5134',
+            address:'软件园一号'
+          },
+          {
+            id:'154552468',
+            kind:'非农家庭户口',
+            housing:'胡天的',
+            house:'102',
+            card:'**************5134',
+            address:'软件园一号'
+          },
+          {
+            id:'154552468',
+            kind:'非农家庭户口',
+            housing:'胡天的',
+            house:'102',
+            card:'**************5134',
+            address:'软件园一号'
+          },
+          {
+            id:'154552468',
+            kind:'非农家庭户口',
+            housing:'胡天的',
+            house:'102',
+            card:'**************5134',
+            address:'软件园一号'
+          },
         ],
       }
     },

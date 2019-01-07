@@ -24,7 +24,7 @@
           <el-form-item label="门牌号:">
             <el-input v-model="formInline.id" placeholder="请输入"></el-input>
           </el-form-item>
-          <el-form-item label="只能搜索:">
+          <el-form-item label="智能搜索:">
             <el-input v-model="formInline.search" placeholder="房主姓名/身份证号"></el-input>
           </el-form-item>
           <el-form-item class="search">

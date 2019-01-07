@@ -2,30 +2,24 @@
   <div>
     <el-row  class="mainRight">
       <el-col :span="24" class="borderBottom">
-        日志审核列表
+        部件列表
       </el-col>
     </el-row>
     <el-row style="padding-left: 30px;padding-top: 20px;background: #fff;">
       <el-col :span="24" style="text-align: left;">
         <el-form :inline="true" :model="formInline" class="demo-form-inline">
-          <el-form-item label="总结类型:">
-            <el-select v-model="formInline.people" placeholder="请选择">
-              <el-option label="日报" value="day"></el-option>
-              <el-option label="周报" value="week"></el-option>
-            </el-select>
+          <el-form-item label="部件名称:">
+            <el-input v-model="formInline.name" ></el-input>
           </el-form-item>
-          <el-form-item label="提交日期:">
-            <el-input v-model="formInline.date" placeholder="请输入时间段"></el-input>
-          </el-form-item>
-          <el-form-item label="审核状态:">
-            <el-select v-model="formInline.status" placeholder="请选择">
-              <el-option label="未审核" value="undo"></el-option>
-              <el-option label="已审核" value="doing"></el-option>
+          <el-form-item label="部件类型:">
+            <el-select v-model="formInline.kind" placeholder="请选择">
+              <el-option label="路灯" value="路灯"></el-option>
+              <el-option label="健身器材" value="健身器材"></el-option>
+              <el-option label="宣传栏" value="宣传栏"></el-option>
             </el-select>
           </el-form-item>
           <el-form-item class="search">
             <el-button type="primary" size="small"><img :src="search" alt="" style="margin-right: 8px;">查询</el-button>
-            <el-button type="primary" size="small"><img :src="reset" alt="" style="margin-right: 8px;">重置</el-button>
             <el-button type="primary" size="small"><img :src="add" alt="" class="add">添加</el-button>
           </el-form-item>
         </el-form>
@@ -44,52 +38,41 @@
       <el-table-column
         sortable
         prop="id"
-        label="审核编号"
-        width="120">
+        label="编号"
+        width="200">
+      </el-table-column>
+      <el-table-column
+        prop="network"
+        label="所属网格"
+        width="300">
       </el-table-column>
       <el-table-column
         prop="name"
-        label="标题"
-        width="200">
-      </el-table-column>
-      <el-table-column
-        prop="kind"
-        label="提交状态"
-        width="120">
+        label="部件名称"
+        width="250">
       </el-table-column>
 
       <el-table-column
-        prop="date"
-        label="提交时间"
+        prop="kind"
+        label="部件类型"
         width="250">
       </el-table-column>
       <el-table-column
-        prop="people"
-        label="提交人"
-        width="200">
-      </el-table-column>
-      <el-table-column
-        prop="photo"
-        label="电话"
-        width="180">
-      </el-table-column>
-      <el-table-column
-        prop="title"
-        label="计划描述"
-        width="200">
+        prop="isFlag"
+        label="是否标记"
+        width="300">
       </el-table-column>
       <el-table-column
         fixed="right"
         label="操作"
-        width="300">
+        width="250">
         <template slot-scope="scope">
-          <el-button @click="handleClick(scope.row)"size="small" >详情</el-button>
           <el-button @click="handleClick(scope.row)" size="small">编辑</el-button>
           <el-button @click="handleClick(scope.row)"size="small">移除</el-button>
         </template>
       </el-table-column>
     </el-table>
-    <el-row style="background: #fff;padding-bottom:40px;margin-top:360px;">
+    <el-row style="background: #fff;padding-bottom:40px;margin-top:120px;">
       <el-col :span="24">
         <div class="block">
           <el-pagination
@@ -114,14 +97,61 @@
       return {
         search:require('../images/search.png'),
         add:require('../images/add.png'),
-        reset:require('../images/reset.png'),
         formInline: {
-          people: '',
-          date: '',
-          info:''
+         name:'',
+          kind:''
         },
         currentPage4: 1,
         tableData: [
+          {
+            id:'A001',
+            network:'平西路社区',
+            name:'路灯一号',
+            kind:'路灯',
+            isFlag:'未标记',
+          },
+          {
+            id:'A001',
+            network:'平西路社区',
+            name:'路灯一号',
+            kind:'路灯',
+            isFlag:'未标记',
+          },
+          {
+            id:'A001',
+            network:'平西路社区',
+            name:'路灯一号',
+            kind:'路灯',
+            isFlag:'已标记',
+          },
+          {
+            id:'A001',
+            network:'平西路社区',
+            name:'路灯一号',
+            kind:'路灯',
+            isFlag:'未标记',
+          },
+          {
+            id:'A001',
+            network:'平西路社区',
+            name:'路灯一号',
+            kind:'路灯',
+            isFlag:'已标记',
+          },
+          {
+            id:'A001',
+            network:'平西路社区',
+            name:'路灯一号',
+            kind:'路灯',
+            isFlag:'未标记',
+          },
+          {
+            id:'A001',
+            network:'平西路社区',
+            name:'路灯一号',
+            kind:'路灯',
+            isFlag:'已标记',
+          },
         ],
       }
     },
@@ -146,17 +176,14 @@
 </style>
 <style scoped>
  .cell .el-button:first-child{
-    background: none;
-   border:1px solid #999
-  }
- .cell .el-button:nth-child(2){
    background: none;
    border:1px solid #ff813d;
    color:#ff813d
- }
- .cell .el-button:nth-child(3){
+  }
+ .cell .el-button:nth-child(2){
    background: none;
    border:1px solid #008aff;
    color:#008aff;
  }
+
 </style>

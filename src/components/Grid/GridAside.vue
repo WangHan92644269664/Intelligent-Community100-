@@ -25,15 +25,15 @@
       <template slot="title">实有人口管理</template>
       <el-menu-item-group>
         <el-menu-item index="/grid/actual_people/all">全部人口</el-menu-item>
-        <el-menu-item index="#">户籍人口</el-menu-item>
-        <el-menu-item index="#">常住人口</el-menu-item>
-        <el-menu-item index="#">流动人口</el-menu-item>
-        <el-menu-item index="#">外出人口</el-menu-item>
-        <el-menu-item index="#">空挂人口</el-menu-item>
-        <el-menu-item index="#">未落户人口</el-menu-item>
-        <el-menu-item index="#">境外人口</el-menu-item>
-        <el-menu-item index="#">闲散青少年</el-menu-item>
-        <el-menu-item index="#">空巢老人</el-menu-item>
+        <el-menu-item index="#3">户籍人口</el-menu-item>
+        <el-menu-item index="#4">常住人口</el-menu-item>
+        <el-menu-item index="#5">流动人口</el-menu-item>
+        <el-menu-item index="#6">外出人口</el-menu-item>
+        <el-menu-item index="#7">空挂人口</el-menu-item>
+        <el-menu-item index="#8">未落户人口</el-menu-item>
+        <el-menu-item index="#9">境外人口</el-menu-item>
+        <el-menu-item index="#10">闲散青少年</el-menu-item>
+        <el-menu-item index="#11">空巢老人</el-menu-item>
       </el-menu-item-group>
     </el-submenu>
     <el-submenu index="/grid/actual_house">
@@ -46,8 +46,8 @@
     <el-submenu index="#">
       <template slot="title">实有建筑管理</template>
       <el-menu-item-group>
-        <el-menu-item index="#">实有建筑管理</el-menu-item>
-        <el-menu-item index="#">出租房</el-menu-item>
+        <el-menu-item index="#1">实有建筑管理</el-menu-item>
+        <el-menu-item index="#2">出租房</el-menu-item>
       </el-menu-item-group>
     </el-submenu>
     <el-menu-item index="/grid/social_public">社情民意</el-menu-item>

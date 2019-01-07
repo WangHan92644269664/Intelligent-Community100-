@@ -130,7 +130,7 @@ export default new Router({
           meta: {
             showHeader: true
           }
-        }, 
+        },
         {
           path: '/gis/zhian',
           component: GISZhian,
@@ -158,6 +158,10 @@ export default new Router({
           meta: {
             showHeader: true
           }
+        },
+        {
+          path:'/gis',
+          redirect:'/gis/map'
         }
       ]
     },
@@ -746,17 +750,6 @@ export default new Router({
           meta:{
             showHeader:true
           },
-          children:[
-            {
-              path:'/working/plan/my',
-              component:WorkingPlan,
-              meta:{
-                showHeader:true
-              },
-            },
-
-
-          ]
         },
         {
           path:'/grid/actual_people/all',
@@ -788,7 +781,7 @@ export default new Router({
         },
         {
           path:'/grid/domicile_manage',
-          component:WorkingNoticeMange,
+          component:GridDomicileManage,
           meta:{
             showHeader:true
           },
@@ -796,24 +789,6 @@ export default new Router({
         {
           path:'/grid/unit_manage',
           component:GridUnitManage,
-          meta:{
-            showHeader:true
-          },
-          children:[
-            {
-              path:'/working/logmanage/log',
-              component:GridDomicileManage,
-              meta:{
-                showHeader:true
-              },
-            },
-
-          ],
-
-        },
-        {
-          path:'/working/logmanage/audit',
-          component:WorkingLogAudit,
           meta:{
             showHeader:true
           },
