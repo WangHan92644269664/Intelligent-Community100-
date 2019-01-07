@@ -39,7 +39,6 @@
           </el-form-item>
           <el-form-item class="search">
             <el-button type="primary" size="small"><img :src="search" alt="" style="margin-right: 8px;">查询</el-button>
-            <el-button type="primary" size="small"><img :src="reset" alt="" style="margin-right: 8px;">重置</el-button>
             <el-button type="primary" size="small"><img :src="add" alt="" class="add">添加</el-button>
           </el-form-item>
         </el-form>
@@ -131,7 +130,6 @@
       return {
         search:require('../images/search.png'),
         add:require('../images/add.png'),
-        reset:require('../images/reset.png'),
         formInline: {
           people: '',
           finish: '',

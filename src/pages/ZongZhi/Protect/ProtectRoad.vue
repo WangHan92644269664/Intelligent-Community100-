@@ -7,7 +7,7 @@
 </template>
 
 <script>
-  import ProtectRoadMain from '../../../components/zongzhi/ProtectRoadMain'
+  import ProtectRoadMain from '../../../components/zongzhi/Protect/ProtectRoadMain'
 
   export default {
     components: {

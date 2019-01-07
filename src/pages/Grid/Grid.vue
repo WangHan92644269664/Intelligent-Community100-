@@ -1,13 +1,35 @@
 <template>
-
+  <el-container>
+    <!--主体内容的侧边栏-->
+    <el-aside width="160px" style="height: 100%">
+      <!--左侧侧边栏组件-->
+      <GridAside></GridAside>
+    </el-aside>
+    <el-container style="margin:35px;">
+      <!--子路由显示的地方-->
+      <router-view/>
+    </el-container>
+  </el-container>
 </template>
 
 <script>
-    export default {
-        name: "Grid"
-    }
-</script>
 
+  import GridAside from '../../components/Grid/GridAside'
+  export default {
+    data() {
+      return {
+      }
+    },
+    components: {
+      GridAside
+    },
+    methods: {
+      onSubmit() {
+        console.log('submit!');
+      },
+    }
+  }
+</script>
 <style scoped>
 
 </style>

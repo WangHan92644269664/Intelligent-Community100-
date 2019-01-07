@@ -1,12 +1,8 @@
 <template>
   <el-container>
-    <el-header height="40px">
-      <!--引入主体内容的标题组件-->
-      <ConHeader :title=title></ConHeader>
-    </el-header>
+    <!--主体内容的中部的侧边栏组件-->
+    <ConMainAside :name="name" :data="data"></ConMainAside>
     <el-main>
-      <!--主体内容的中部的侧边栏组件-->
-      <ConMainAside :name="name" :data="data"></ConMainAside>
       <!--主体内容的右边的内容组件-->
       <MainRight :rightTitle="rightTitle"></MainRight>
     </el-main>
@@ -14,14 +10,12 @@
 </template>
 
 <script>
-  import ConHeader from '../../../components/ContainerHeader'
   import ConMainAside from '../../../components/ConMainAside'
-  import MainRight from '../../../components/zongzhi/OrganizationMain'
+  import MainRight from '../../../components/zongzhi/Organization/OrganizationMain'
 
   export default {
     data() {
       return {
-        title: '综治机构',
         name:'综治机构列表',
         data: [
           {
@@ -104,7 +98,6 @@
       }
     },
     components: {
-      ConHeader,
       ConMainAside,
       MainRight
     }
@@ -112,9 +105,4 @@
 </script>
 
 <style scoped>
-  .el-header {
-    background: #fff;
-    height: 38px;
-    line-height: 38px;
-  }
 </style>

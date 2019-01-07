@@ -65,7 +65,4 @@
 </script>
 
 <style scoped>
-  .el-main{
-    padding: 0;
-  }
 </style>

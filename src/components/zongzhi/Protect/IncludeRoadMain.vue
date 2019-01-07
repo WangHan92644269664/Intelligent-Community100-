@@ -2,17 +2,14 @@
   <div>
     <el-row class="mainRight">
       <el-col :span="24" class="borderBottom">
-        护路护线列表
+        涉及线路案(事)件列表
       </el-col>
     </el-row>
     <el-row style="padding-left: 30px;padding-top: 20px;background: #fff;">
       <el-col :span="24" style="text-align: left;">
         <el-form :inline="true" :model="formInline" class="demo-form-inline">
-          <el-form-item label="名称:">
-            <el-input v-model="formInline.name" ></el-input>
-          </el-form-item>
-          <el-form-item label="隶属单位名称:">
-            <el-input v-model="formInline.dept" ></el-input>
+          <el-form-item label="发生起止日期:">
+            <el-input v-model="formInline.date" placeholder="请输入"></el-input>
           </el-form-item>
           <el-form-item class="search">
             <el-button type="primary" size="small"><img :src="search" alt="" style="margin-right: 8px;">查询</el-button>
@@ -38,44 +35,35 @@
       </el-table-column>
       <el-table-column
         fixed
+        prop="id"
+        label="所属线路"
+        width="250">
+      </el-table-column>
+      <el-table-column
+        fixed
         prop="id2"
         label="编号"
+        width="150">
+      </el-table-column>
+      <el-table-column
+        prop="id3"
+        label="案件编号"
         width="200">
       </el-table-column>
       <el-table-column
         prop="name"
-        label="名称"
-        width="200">
-      </el-table-column>
-      <el-table-column
-        prop="deptName"
-        label="隶属单位名称"
+        label="案件名称"
         width="150">
       </el-table-column>
       <el-table-column
-        prop="address"
-        label="隶属单位详址"
+        prop="date"
+        label="发生日期"
         width="200">
       </el-table-column>
       <el-table-column
-        prop="phone"
-        label="隶属单位联系方式"
+        prop="nature"
+        label="案件性质"
         width="150">
-      </el-table-column>
-      <el-table-column
-        prop="headName"
-        label="隶属单位负责人姓名"
-        width="200">
-      </el-table-column>
-      <el-table-column
-        prop="secName"
-        label="安保负责人姓名"
-        width="150">
-      </el-table-column>
-      <el-table-column
-        prop="zip"
-        label="邮编"
-        width="120">
       </el-table-column>
       <el-table-column
         fixed="right"
@@ -112,97 +100,72 @@
   export default {
     data() {
       return {
-        search:require('../images/search.png'),
-        add:require('../images/add.png'),
+        search:require('../../images/search.png'),
+        add:require('../../images/add.png'),
         formInline: {
-          dept: '',
-          name: '',
+         date:''
         },
         currentPage4: 1,
         tableData: [{
           id: '开发区',
           id2:'2',
-          name: '武夷山路',
-          deptName:'济南市交通监管局',
-          address: '山东省济南市市区',
-          phone:'0512-52244654',
-          headName: '王天',
-          secName: '赵斌',
-          zip: 200333
+          id3:'sj001',
+          name: '三辆车追尾',
+          date:'2018-04-25',
+          nature:'其他',
         }, {
           id: '高新区',
           id2:'4',
-          name: '黑龙江路',
-          deptName:'济南市交通监管局',
-          address: '山东省济南市市区',
-          phone:'0512-52244654',
-          headName: '王天',
-          secName: '赵斌',
-          zip: 200333
+          id3:'sj001',
+          name: '三辆车追尾',
+          date:'2018-04-25',
+          nature:'其他',
         }, {
           id: '花园路3号网格',
           id2:'6',
-          name: '平西路',
-          deptName:'济南市交通监管局',
-          address: '山东省济南市市区',
-          phone:'0512-52244654',
-          headName: '王天',
-          secName: '赵斌',
-          zip: 200333
+          id3:'sj001',
+          name: '三辆车追尾',
+          date:'2018-04-25',
+          nature:'其他',
         }, {
           id: '花园路5号网格',
           id2:'8',
-          name: '舜华东路',
-          deptName:'济南市交通监管局',
-          address: '山东省济南市市区',
-          phone:'0512-52244654',
-          headName: '王天',
-          secName: '赵斌',
-          zip: 200333
+          id3:'sj001',
+          name: '三辆车追尾',
+          date:'2018-04-25',
+          nature:'其他',
         },
           {
             id: '平西4号网格',
             id2:'1',
-            name: '舜华路',
-            deptName:'济南市交通监管局',
-            address: '山东省济南市市区',
-            phone:'0512-52244654',
-            headName: '王天',
-            secName: '赵斌',
-            zip: 200333
+            id3:'sj001',
+            name: '三辆车追尾',
+            date:'2018-04-25',
+            nature:'其他',
           },
           {
             id: '开发区一号网格',
             id2:'3',
-            name: '天津路',
-            deptName:'济南市交通监管局',
-            address: '山东省济南市市区',
-            phone:'0512-52244654',
-            headName: '王天',
-            secName: '赵斌',
-            zip: 200333
+            id3:'sj001',
+            name: '三辆车追尾',
+            date:'2018-04-25',
+            nature:'其他',
           },
           {
             id: '中海4号网格',
             id2:'5',
-            name: '市话路',
-            deptName:'济南市交通监管局',
-            address: '山东省济南市市区',
-            phone:'0512-52244654',
-            headName: '王天',
-            secName: '赵斌',
-            zip: 200333
+            id3:'sj001',
+            name: '三辆车追尾',
+            date:'2018-04-25',
+            nature:'其他',
           },
           {
             id: '花园路4号网格',
             id2:'7',
-            name: '舜华西路',
-            deptName:'济南市交通监管局',
-            address: '山东省济南市市区',
-            phone:'0512-52244654',
-            headName: '王天',
-            secName: '赵斌',
-            zip: 200333
+            id3:'sj001',
+            name: '三辆车追尾',
+            date:'2018-04-25',
+            nature:'其他',
           }
         ],
       }

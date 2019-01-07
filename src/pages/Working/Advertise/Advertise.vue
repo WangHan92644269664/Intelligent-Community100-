@@ -65,14 +65,4 @@
 </script>
 
 <style scoped>
-  /*主体内容*/
-  .el-header {
-    background-color: #fff !important;
-    height: 40px !important;
-    line-height: 38px;
-    color: #aaa;
-  }
-  .el-main{
-    padding: 0;
-  }
 </style>
