@@ -17,6 +17,7 @@
     data() {
       return {
         name:'综治机构列表',
+        rightTitle:'综治机构列表',
         data: [
           {
             label: '综治机构-综治委',
