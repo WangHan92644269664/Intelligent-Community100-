@@ -93,6 +93,7 @@ import DataShequ from '../pages/Data/DataCommunity'
 
 //GIS
 import Gis from '../pages/GIS/GIS'
+import GISMap from '../pages/GIS/GISPage/GISMap'
 import GISZhian from '../pages/GIS/GISPage/GISZhian'
 import GISStreet from '../pages/GIS/GISPage/GISStreet'
 import GISCommunity from '../pages/GIS/GISPage/GISCommunity'
@@ -121,35 +122,44 @@ export default new Router({
       component:Gis,
       meta:{
         showHeader:true
-      }
-    },
-    {
-      path:'/gis/zhian',
-      component:GISZhian,
-      meta:{
-        showHeader:true
       },
-    },
-    {
-      path:'/gis/street',
-      component:GISStreet,
-      meta:{
-        showHeader:true
-      },
-    },
-    {
-      path:'/gis/community',
-      component:GISCommunity,
-      meta:{
-        showHeader:true
-      },
-    },
-    {
-      path:'/gis/car',
-      component:GISCar,
-      meta:{
-        showHeader:true
-      },
+      children: [
+        {
+          path: '/gis/map',
+          component: GISMap,
+          meta: {
+            showHeader: true
+          }
+        }, 
+        {
+          path: '/gis/zhian',
+          component: GISZhian,
+          meta: {
+            showHeader: true
+          }
+        },
+        {
+          path: '/gis/street',
+          component: GISStreet,
+          meta: {
+            showHeader: true
+          }
+        },
+        {
+          path: '/gis/community',
+          component: GISCommunity,
+          meta: {
+            showHeader: true
+          }
+        },
+        {
+          path: '/gis/car',
+          component: GISCar,
+          meta: {
+            showHeader: true
+          }
+        }
+      ]
     },
     {
       path:'/zhengwu',
