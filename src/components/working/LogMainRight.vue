@@ -118,7 +118,6 @@
       return {
         search:require('../images/search.png'),
         add:require('../images/add.png'),
-        reset:require('../images/reset.png'),
         formInline: {
           people: '',
           date: '',

@@ -103,10 +103,9 @@
         label="操作"
         width="350">
         <template slot-scope="scope">
-          <el-button @click="handleClick(scope.row)" plain size="small">详情</el-button>
-          <el-button @click="handleClick(scope.row)" type="info" size="small">编辑</el-button>
-          <el-button type="success" size="small">删除</el-button>
-          <el-button @click="handleClick(scope.row)" plain size="small">居住信息</el-button>
+          <el-button @click="handleClick(scope.row)"size="small" >详情</el-button>
+          <el-button @click="handleClick(scope.row)" size="small">编辑</el-button>
+          <el-button @click="handleClick(scope.row)"size="small">移除</el-button>
         </template>
       </el-table-column>
     </el-table>
@@ -226,4 +225,18 @@
   }
 </script>
 <style scoped>
+  .cell .el-button:first-child{
+    background: none;
+    border:1px solid #999
+  }
+  .cell .el-button:nth-child(2){
+    background: none;
+    border:1px solid #ff813d;
+    color:#ff813d
+  }
+  .cell .el-button:nth-child(3){
+    background: none;
+    border:1px solid #008aff;
+    color:#008aff;
+  }
 </style>

@@ -1,7 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+
 import ZhengWu from '../pages/ZhengWu/ZhengWu'
 import Three from '../pages/ZhengWu/Three/Three'
+//工作
 import ProvertyPeople from '../pages/ZhengWu/Poverty/PovertyPeople'
 import ProvertyRecord from '../pages/ZhengWu/Poverty/PovertyRecord'
 import ProvertyPolicy from '../pages/ZhengWu/Poverty/PovertyPolicy'
@@ -18,8 +20,7 @@ import WorkingLogAudit from '../pages/Working/Log/LogAudit'
 import WorkingAdvertise from '../pages/Working/Advertise/Advertise'
 import WorkinEssayCarousel from '../pages/Working/Advertise/Carousel'
 import WorkingEssayColumn from '../pages/Working/Advertise/Column'
-import Data from '../pages/Data/Data'
-import Gis from '../pages/GIS/GIS'
+//党建
 import Dangjian from '../pages/DangJian/DangJian'
 import DangjianFlowInto from '../pages/DangJian/Building/Flow/FlowInto'
 import DangjianOrganList from '../pages/DangJian/Building/Organ/OrganList'
@@ -43,28 +44,69 @@ import BrandLog from '../pages/DangJian/Activity/Brand/Log'
 import FirstSetting from '../pages/DangJian/Activity/First/Setting'
 import FirstDynamic from '../pages/DangJian/Activity/First/Dynamic'
 import FirstLog from '../pages/DangJian/Activity/First/Log'
+
+//综治
+//综治----综治组织
 import ZongZhi from '../pages/ZongZhi/ZongZhi'
 import ZongZhiOrigin from '../pages/ZongZhi/Organization/Organization'
 import ZongZhiGroup from '../pages/ZongZhi/Organization/Group'
-import ZongZhiSpecial from '../pages/ZongZhi/Special/Special'
+import ZongZhiLong from '../pages/ZongZhi/Organization/Long'
+//综治----特殊人群
+import ZongZhiSpecialAids from '../pages/ZongZhi/Special/Aids'
+import ZongZhiSpecialCorrect from '../pages/ZongZhi/Special/Correct'
+import ZongZhiSpecialDrugs from '../pages/ZongZhi/Special/Drugs'
+import ZongZhiSpecialPsychosis from '../pages/ZongZhi/Special/Psychosis'
+import ZongZhiSpecialRelease from '../pages/ZongZhi/Special/Release'
+//综治----社会治安
 import SocietyCheckRenovate from '../pages/ZongZhi/Society/CheckRenovate'
 import SocietyImportantEvent from '../pages/ZongZhi/Society/ImportantEvent'
 import SocietyLifeBase from '../pages/ZongZhi/Society/LifeBase'
 import SocietyLifeCommit from '../pages/ZongZhi/Society/LifeCommit'
 import SocietyLogisticsSafety from '../pages/ZongZhi/Society/LogisticsSafety'
 import ImportantArea from '../pages/ZongZhi/Society/ImportantArea'
-import ZongZhiSchool from '../pages/ZongZhi/Campus/School'
+//综治----校园安全
+import ZongZhiCampusSchool from '../pages/ZongZhi/Campus/School'
+import ZongZhiCampusAround from '../pages/ZongZhi/Campus/Around'
+import ZongZhiCampusTeachSafe from '../pages/ZongZhi/Campus/TeachSafe'
+//综治----护路护线
 import ZongZhiProtect from '../pages/ZongZhi/Protect/ProtectRoad'
+import ZongZhiIncludeRoad from '../pages/ZongZhi/Protect/IncludeRoad'
+//综治----事件/矛盾纠纷
+import DisputeAcceptSend from '../pages/ZongZhi/Dispute/AcceptSend'
+import DisputeDealFeedback from '../pages/ZongZhi/Dispute/DealFeedback'
+import DisputeDeferAudit from '../pages/ZongZhi/Dispute/DeferAudit'
+import DisputeEventCheck from '../pages/ZongZhi/Dispute/EventCheck'
+import DisputeFinishAnalysis from '../pages/ZongZhi/Dispute/FinishAnalysis'
+import DisputeTaskCheck from '../pages/ZongZhi/Dispute/TaskCheck'
 import DisputeFoundReport from '../pages/ZongZhi/Dispute/FoundReport'
+//综治----信访管理
+import BelieveAccount from '../pages/ZongZhi/Believe/Account'
+import BelievePetitionManage from '../pages/ZongZhi/Believe/PetitionManage'
+
+//大数据
+import Data from '../pages/Data/Data'
 import DataDoor from '../pages/Data/DataDoor'
 import DataPeople from '../pages/Data/DataPeople'
 import DataActual from '../pages/Data/DataActual'
 import DataZongzhi from '../pages/Data/DataZongzhi'
 import DataShequ from '../pages/Data/DataCommunity'
+
+//GIS
+import Gis from '../pages/GIS/GIS'
 import GISZhian from '../pages/GIS/GISZhian'
 import GISStreet from '../pages/GIS/GISStreet'
 import GISCommunity from '../pages/GIS/GISCommunity'
 import GISCar from '../pages/GIS/GISCar'
+
+//网格
+import Grid from '../pages/Grid/Grid'
+import GridActualHouseManage from '../pages/Grid/ActualHouse/Manage'
+import GridActualHouseRental from '../pages/Grid/ActualHouse/Rental'
+import GridActualPeopleAll from '../pages/Grid/ActualPeople/All'
+import GridCardChild from '../pages/Grid/Card/Child'
+import GridDomicileManage from '../pages/Grid/Domicile/Manage'
+import GridSocialPublic from '../pages/Grid/Social/Public'
+import GridUnitManage from '../pages/Grid/Unit/Manage'
 
 Vue.use(Router)
 
@@ -471,6 +513,7 @@ export default new Router({
         showHeader:true
       },
       children:[
+        //综治组织
         {
           path:'/zongzhi',
           redirect: '/zongzhi/organ/institution'
@@ -483,19 +526,56 @@ export default new Router({
           }
         },
         {
+          path:'/zongzhi/organ/network/long',
+          component:ZongZhiLong,
+          meta:{
+            showHeader:true
+          }
+        },
+        {
           path:'/zongzhi/organ/group',
           component:ZongZhiGroup,
           meta:{
             showHeader:true
           }
         },
+        //特殊人群
         {
           path:'/zongzhi/special/release',
-          component:ZongZhiSpecial,
+          component:ZongZhiSpecialRelease,
           meta:{
             showHeader:true
           }
         },
+        {
+          path:'/zongzhi/special/correct',
+          component: ZongZhiSpecialCorrect,
+          meta:{
+            showHeader:true
+          }
+        },
+        {
+          path:'/zongzhi/special/drugs',
+          component:ZongZhiSpecialDrugs,
+          meta:{
+            showHeader:true
+          }
+        },
+        {
+          path:'/zongzhi/special/psychosis',
+          component:ZongZhiSpecialPsychosis,
+          meta:{
+            showHeader:true
+          }
+        },
+        {
+          path:'/zongzhi/special/aids',
+          component:ZongZhiSpecialAids,
+          meta:{
+            showHeader:true
+          }
+        },
+        //社会治安
         {
           path: '/zongzhi/socity/important_event',
           component:SocietyImportantEvent,
@@ -538,7 +618,7 @@ export default new Router({
             showHeader: true
           }
         },
-
+        //事件/矛盾纠纷
         {
           path: '/zongzhi/dispute/found',
           component: DisputeFoundReport,
@@ -547,18 +627,190 @@ export default new Router({
           },
         },
         {
-          path:'/zongzhi/campus/school',
-          component:ZongZhiSchool,
+          path: '/zongzhi/dispute/accept_send',
+          component: DisputeAcceptSend,
+          meta: {
+            showHeader: true
+          },
+        },
+        {
+          path: '/zongzhi/dispute/deal_feedback',
+          component: DisputeDealFeedback,
+          meta: {
+            showHeader: true
+          },
+        },
+        {
+          path: '/zongzhi/dispute/task_check',
+          component: DisputeTaskCheck,
+          meta: {
+            showHeader: true
+          },
+        },
+        {
+          path: '/zongzhi/dispute/finish_analysis',
+          component: DisputeFinishAnalysis,
+          meta: {
+            showHeader: true
+          },
+        },
+        {
+          path: '/zongzhi/dispute/defer_audit',
+          component: DisputeDeferAudit,
+          meta: {
+            showHeader: true
+          },
+        },
+        {
+          path: '/zongzhi/dispute/event_check',
+          component: DisputeEventCheck,
+          meta: {
+            showHeader: true
+          },
+        },
+        //信访管理
+        {
+          path:'/zongzhi/believe/account',
+          component:BelieveAccount,
           meta:{
             showHeader:true
           }
         },
+        {
+          path:'/zongzhi/believe/petition_manage',
+          component:BelievePetitionManage,
+          meta:{
+            showHeader:true
+          }
+        },
+        //校园安全
+        {
+          path:'/zongzhi/campus/school',
+          component:ZongZhiCampusSchool,
+          meta:{
+            showHeader:true
+          }
+        },
+        {
+          path:'/zongzhi/campus/around',
+          component:ZongZhiCampusAround,
+          meta:{
+            showHeader:true
+          }
+        },
+        {
+          path:'/zongzhi/campus/teachers_safe',
+          component:ZongZhiCampusTeachSafe,
+          meta:{
+            showHeader:true
+          }
+        },
+        //护路护线
         {
           path:'/zongzhi/protect/road',
           component:ZongZhiProtect,
           meta:{
             showHeader:true
           }
+        },
+        {
+          path:'/zongzhi/include/road',
+          component:ZongZhiIncludeRoad,
+          meta:{
+            showHeader:true
+          }
+        }
+      ]
+    },
+    //网格平台
+    {
+      path:'/grid',
+      component:Grid,
+      meta:{
+        showHeader:true
+      },
+      children:[
+        {
+          path:'/grid/people/child',
+          component:GridCardChild,
+          meta:{
+            showHeader:true
+          },
+          children:[
+            {
+              path:'/working/plan/my',
+              component:WorkingPlan,
+              meta:{
+                showHeader:true
+              },
+            },
+
+
+          ]
+        },
+        {
+          path:'/grid/actual_people/all',
+          component:GridActualPeopleAll,
+          meta:{
+            showHeader:true
+          },
+        },
+        {
+          path:'/grid/actual_house/manage',
+          component:GridActualHouseManage,
+          meta:{
+            showHeader:true
+          },
+        },
+        {
+          path:'/grid/actual_house/rental',
+          component:GridActualHouseRental,
+          meta:{
+            showHeader:true
+          },
+        },
+        {
+          path:'/grid/social_public',
+          component:GridSocialPublic,
+          meta:{
+            showHeader:true
+          },
+        },
+        {
+          path:'/grid/domicile_manage',
+          component:WorkingNoticeMange,
+          meta:{
+            showHeader:true
+          },
+        },
+        {
+          path:'/grid/unit_manage',
+          component:GridUnitManage,
+          meta:{
+            showHeader:true
+          },
+          children:[
+            {
+              path:'/working/logmanage/log',
+              component:GridDomicileManage,
+              meta:{
+                showHeader:true
+              },
+            },
+
+          ],
+
+        },
+        {
+          path:'/working/logmanage/audit',
+          component:WorkingLogAudit,
+          meta:{
+            showHeader:true
+          },
+        },
+        {
+          path:'/grid',
+          redirect:'/grid/actual_house/manage'
         }
       ]
     },

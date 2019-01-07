@@ -10,42 +10,22 @@
           <template slot="title">网络队伍</template>
           <el-menu-item-group>
             <el-menu-item index="/zongzhi/organ/network/long">楼栋长</el-menu-item>
-            <el-menu-item index="22">综治领导责任制</el-menu-item>
+            <el-menu-item index="#22">综治领导责任制</el-menu-item>
           </el-menu-item-group>
         </el-submenu>
-      </el-menu-item-group>
-    </el-submenu>
-    <el-submenu index="2">
-      <template slot="title">综治视联网信息中心</template>
-      <el-menu-item-group>
-        <el-menu-item index="21">综治视联网信息中心1</el-menu-item>
-        <el-menu-item index="22">综治视联网信息中心2</el-menu-item>
       </el-menu-item-group>
     </el-submenu>
     <el-submenu index="3">
       <template slot="title">特殊人群</template>
       <el-menu-item-group>
         <el-menu-item index="/zongzhi/special/release">刑满释放人员</el-menu-item>
-        <el-menu-item index="222">社区矫正人员</el-menu-item>
-        <el-menu-item index="223">吸毒人员</el-menu-item>
-        <el-menu-item index="334">精神病人员</el-menu-item>
-        <el-menu-item index="224">艾滋病危险人员</el-menu-item>
+        <el-menu-item index="/zongzhi/special/correct">社区矫正人员</el-menu-item>
+        <el-menu-item index="/zongzhi/special/drugs">吸毒人员</el-menu-item>
+        <el-menu-item index="/zongzhi/special/psychosis">精神病人员</el-menu-item>
+        <el-menu-item index="/zongzhi/special/aids">艾滋病危险人员</el-menu-item>
       </el-menu-item-group>
     </el-submenu>
-    <el-submenu index="4">
-      <template slot="title">重点青少年</template>
-      <el-menu-item-group>
-        <el-menu-item index="41">重点青少年1</el-menu-item>
-        <el-menu-item index="42">重点青少年2</el-menu-item>
-      </el-menu-item-group>
-    </el-submenu>
-    <el-submenu index="5">
-      <template slot="title">两断组织</template>
-      <el-menu-item-group>
-        <el-menu-item index="51">两断组织1</el-menu-item>
-        <el-menu-item index="25">两断组织2</el-menu-item>
-      </el-menu-item-group>
-    </el-submenu>
+      <el-menu-item index="#/zongzhi/special/release">重点青少年人员</el-menu-item>
     <el-submenu index="6">
       <template slot="title">社会治安</template>
       <el-menu-item-group>
@@ -57,33 +37,39 @@
         <el-menu-item index="/zongzhi/socity/important_event">重特大案(事)件</el-menu-item>
       </el-menu-item-group>
     </el-submenu>
-    <el-submenu index="7">
-      <template slot="title">信访管理</template>
+    <el-submenu index="9">
+      <template slot="title">校园安全</template>
       <el-menu-item-group>
-        <el-menu-item index="71">信访管理1</el-menu-item>
-        <el-menu-item index="72">信访管理2</el-menu-item>
+        <el-menu-item index="/zongzhi/campus/school">学校</el-menu-item>
+        <el-menu-item index="/zongzhi/campus/around">校园周边重点人员</el-menu-item>
+        <el-menu-item index="/zongzhi/campus/teachers_safe">涉及师生安全的案件</el-menu-item>
       </el-menu-item-group>
     </el-submenu>
     <el-submenu index="8">
       <template slot="title">事件/矛盾纠纷</template>
       <el-menu-item-group>
         <el-menu-item index="/zongzhi/dispute/found">发现上报</el-menu-item>
-        <el-menu-item index="2-2">事件/矛盾纠纷2</el-menu-item>
+        <el-menu-item index="/zongzhi/dispute/accept_send">受理派遣</el-menu-item>
+        <el-menu-item index="/zongzhi/dispute/deal_feedback">处理反馈</el-menu-item>
+        <el-menu-item index="/zongzhi/dispute/task_check">任务核查</el-menu-item>
+        <el-menu-item index="/zongzhi/dispute/finish_analysis">结案分析</el-menu-item>
+        <el-menu-item index="/zongzhi/dispute/defer_audit">延期审核</el-menu-item>
+        <el-menu-item index="/zongzhi/dispute/event_check">事件查询</el-menu-item>
       </el-menu-item-group>
     </el-submenu>
-    <el-submenu index="9">
-      <template slot="title">校园安全</template>
-      <el-menu-item-group>
-        <el-menu-item index="/zongzhi/campus/school">学校</el-menu-item>
-        <el-menu-item index="92">校园周边重点人员</el-menu-item>
-        <el-menu-item index="93">涉及师生安全的案件</el-menu-item>
-      </el-menu-item-group>
-    </el-submenu>
+
     <el-submenu index="11">
       <template slot="title">护路护线</template>
       <el-menu-item-group>
         <el-menu-item index="/zongzhi/protect/road">护路护线</el-menu-item>
-        <el-menu-item index="94">涉及线、路案(事)件</el-menu-item>
+        <el-menu-item index="/zongzhi/include/road">涉及线、路案(事)件</el-menu-item>
+      </el-menu-item-group>
+    </el-submenu>
+    <el-submenu index="7">
+      <template slot="title">信访管理</template>
+      <el-menu-item-group>
+        <el-menu-item index="/zongzhi/believe/account">上访户</el-menu-item>
+        <el-menu-item index="/zongzhi/believe/petition_manage">信访管理</el-menu-item>
       </el-menu-item-group>
     </el-submenu>
   </el-menu>
