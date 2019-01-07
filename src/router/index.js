@@ -23,24 +23,16 @@ import Gis from '../pages/GIS/GIS'
 import Dangjian from '../pages/DangJian/DangJian'
 import DangjianFlowInto from '../pages/DangJian/Building/Flow/FlowInto'
 import DangjianOrganList from '../pages/DangJian/Building/Organ/OrganList'
-import DangjianOrganOutstanding from 
-
-'../pages/DangJian/Building/Organ/OrganOutstanding'
-import DangjianRelationInto from 
-
-'../pages/DangJian/Building/Relation/RelationInto'
+import DangjianOrganOutstanding from '../pages/DangJian/Building/Organ/OrganOutstanding'
+import DangjianRelationInto from '../pages/DangJian/Building/Relation/RelationInto'
 import DangjianBirthday from '../pages/DangJian/Building/Birthday'
 import DangjianFee from '../pages/DangJian/Building/Fee'
 import DangjianPartyDevelop from '../pages/DangJian/Building/PartyDevelop'
 import DangjianPartyPosts from '../pages/DangJian/Building/PartyPosts'
-import DangjianOutstanding from 
-
-'../pages/DangJian/Building/MemberMange/OutstandingParty'
+import DangjianOutstanding from '../pages/DangJian/Building/MemberMange/OutstandingParty'
 import Organization from '../pages/DangJian/Activity/Three/Organization'
 import BuildingPeople from '../pages/DangJian/Building/MemberMange/PartyList'
-import StudySetting from 
-
-'../pages/DangJian/Study/ProjectSetting/ProjectSetting'
+import StudySetting from '../pages/DangJian/Study/ProjectSetting/ProjectSetting'
 import StudyBase from '../pages/DangJian/Study/ProjectSetting/StudyBase'
 import StudyExam from '../pages/DangJian/Study/ProjectSetting/StudyExam'
 import StudyNote from '../pages/DangJian/Study/ProjectSetting/StudyNote'
@@ -54,7 +46,6 @@ import FirstLog from '../pages/DangJian/Activity/First/Log'
 import ZongZhi from '../pages/ZongZhi/ZongZhi'
 import ZongZhiOrigin from '../pages/ZongZhi/Organization/Organization'
 import ZongZhiGroup from '../pages/ZongZhi/Organization/Group'
-import ZongZhiSpecial from '../pages/ZongZhi/Special/Special'
 import SocietyCheckRenovate from '../pages/ZongZhi/Society/CheckRenovate'
 import SocietyImportantEvent from '../pages/ZongZhi/Society/ImportantEvent'
 import SocietyLifeBase from '../pages/ZongZhi/Society/LifeBase'
@@ -69,11 +60,11 @@ import DataPeople from '../pages/Data/DataPeople'
 import DataActual from '../pages/Data/DataActual'
 import DataZongzhi from '../pages/Data/DataZongzhi'
 import DataShequ from '../pages/Data/DataCommunity'
-import GISMap from '../pages/GIS/GIS/GISMap'
-import GISZhian from '../pages/GIS/GIS/GISZhian'
-import GISStreet from '../pages/GIS/GIS/GISStreet'
-import GISCommunity from "../pages/GIS/GIS/GISCommunity"
-import GISCar from "../pages/GIS/GIS/GISCar"
+import GISMap from '../pages/GIS/GISPage/GISMap'
+import GISZhian from '../pages/GIS/GISPage/GISZhian'
+import GISStreet from '../pages/GIS/GISPage/GISStreet'
+import GISCommunity from "../pages/GIS/GISPage/GISCommunity"
+import GISCar from "../pages/GIS/GISPage/GISCar"
 
 
 Vue.use(Router)
@@ -508,13 +499,7 @@ export default new Router({
             showHeader: true
           }
         },
-        {
-          path: '/zongzhi/special/release',
-          component: ZongZhiSpecial,
-          meta: {
-            showHeader: true
-          }
-        },
+      
         {
           path: '/zongzhi/socity/important_event',
           component: SocietyImportantEvent,
