@@ -1,16 +1,16 @@
 <template>
   <div class="content" id="content" ref="homePage">
-    <h2 class="title-h2">大数据平台实有人口</h2>
+    <h2 class="title-h2">大数据平台实有数据</h2>
     <div class="top-link">
       <DataRouter></DataRouter>
     </div>
     <el-row class="main-con main-content">
       <el-col class="main-content" :span="8">
         <div class="chart-common chart-2">
+          <h5>建筑物类型分布</h5>
           <ActualBar
             :chartData="chartData1"
             :chartYdata="chartYdata1"
-            :chartTitle="chartTitle1"
             :yName="yName1"
             :xName="xName1"
             :colorZero="colorZero1"
@@ -19,16 +19,18 @@
           />
         </div>
         <div class="chart-common chart-3">
+          <h5>非公经济类型分布</h5>
           <PieJianbian :jianbianColor="jianbianColor1"/>
         </div>
       </el-col>
       <el-col class="main-content" :span="8">
         <div class="chart-common chart-2">
+          <h5>学生各学年消费细则分析</h5>
           <ActualCircle :circleData="circleData1"/>
         </div>
         <div class="chart-common chart-3">
+          <h5>部件类型分布</h5>
           <PieCharts
-            :pieTitle="pieTitle2"
             :pieData="pieData2"
             :pieLegendData="pieLegendData2"
             :pieColors="pieColor2"
@@ -37,14 +39,15 @@
       </el-col>
       <el-col class="main-content" :span="8">
         <div class="chart-common chart-5">
+          <h5>住房情况分布</h5>
           <PieCharts
-            :pieTitle="pieTitle1"
             :pieData="pieData1"
             :pieLegendData="pieLegendData1"
             :pieColors="pieColor1"
           />
         </div>
         <div class="chart-common chart-6">
+          <h5>社会组织类型分类</h5>
           <PieJianbian :jianbianColor="jianbianColor2"/>
         </div>
       </el-col>
@@ -64,8 +67,8 @@ export default {
   data() {
     return {
       screenHeight: document.documentElement.clientHeight, //屏幕高度
-      chartData1: ["常住人口", "外出人口", "境外人口", "未落户人口"],
-      chartYdata1: [1800, 1500, 1000, 1200],
+      chartData1: ["自建", "商务楼", "商住", "公园", "景点", "街道办"],
+      chartYdata1: [6, 3, 5, 2, 3, 2],
       chartTitle1: "人口类型分布",
       yName1: "(数量)",
       xName1: "(类型)",
@@ -221,8 +224,17 @@ ul {
   width: 95%;
   margin: 1% auto;
   height: 55%;
+  padding:4px;
 }
-
+.chart-common h5 {
+  height: 40px;
+  background: url("../../assets/images/data/ziyemian_nav.png") no-repeat;
+  background-size: 100% 100%;
+  text-align: left;
+  line-height: 40px;
+  color: #fff;
+  padding-left: 20px;
+}
 .bili-left {
   text-align: right;
   padding-right: 20px;
@@ -245,7 +257,7 @@ ul {
   text-align: left;
 }
 .chart-common div {
-  height: 100%;
+  height: calc(100% - 50px);
   margin-bottom: 1%;
 }
 .mapChart {

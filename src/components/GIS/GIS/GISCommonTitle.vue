@@ -13,7 +13,7 @@ export default {
 <style scoped>
 div{
     width:100%;
-    /* height: 40px; */
+    height: 40px;
 }
  h5{
      text-align: center;

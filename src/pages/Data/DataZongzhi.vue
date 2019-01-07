@@ -7,9 +7,11 @@
     <el-row class="main-con main-content">
       <el-col class="main-content" :span="8">
         <div class="chart-common chart-2">
+          <h5>群防群治队伍类型分布</h5>
            <RosePieChart :roseData="roseData1" :legendData="legendData1" :roseColors="roseColors1"/>
         </div>
         <div class="chart-common chart-3">
+          <h5>特殊人员分布</h5>
           <PeopleBar
             :chartData="chartData1"
             :chartYdata="chartYdata1"
@@ -24,9 +26,11 @@
       </el-col>
       <el-col class="main-content" :span="8">
         <div class="chart-common chart-2">
+          <h5>综治队伍类型分布</h5>
           <RosePieChart :roseData="roseData2" :legendData="legendData2" :roseColors="roseColors2"/>
         </div>
         <div class="chart-common chart-3">
+          <h5>学校办学类型分布</h5>
           <PeopleBar
             :chartData="chartData2"
             :chartYdata="chartYdata2"
@@ -41,9 +45,11 @@
       </el-col>
       <el-col class="main-content" :span="8">
         <div class="chart-common chart-5">
+          <h5>社区治安设计区域类型分布</h5>
           <RosePieChart :roseData="roseData3" :legendData="legendData3" :roseColors="roseColors3"/>
         </div>
         <div class="chart-common chart-6">
+          <h5>线路类型分布</h5>
           <PeopleBar
             :chartData="chartData3"
             :chartYdata="chartYdata3"
@@ -251,6 +257,16 @@ ul {
   width: 95%;
   margin: 1% auto;
   height: 55%;
+  padding:4px;
+}
+.chart-common h5 {
+  height: 40px;
+  background: url("../../assets/images/data/ziyemian_nav.png") no-repeat;
+  background-size: 100% 100%;
+  text-align: left;
+  line-height: 40px;
+  color: #fff;
+  padding-left: 20px;
 }
 
 .bili-left {
@@ -275,7 +291,7 @@ ul {
   text-align: left;
 }
 .chart-common div {
-  height: 100%;
+  height: calc(100% - 50px);
   margin-bottom: 1%;
 }
 .mapChart {

@@ -58,12 +58,7 @@ export default {
       // 绘制图表
       var colorList = ["#00aed1", "#837ae7", "#f29200", "#00FEB5", "#7081DB", "#FDFEFF", "#2385E0"];
       myChart.setOption({
-        title: {
-          text: "学生各学年消费细则分析",
-          textStyle: {
-            color: "#fff"
-          }
-        },
+        
         tooltip: {
           trigger: "item",
           formatter: "{b}: {c} ({d}%)"

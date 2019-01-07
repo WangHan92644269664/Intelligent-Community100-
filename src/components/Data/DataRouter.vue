@@ -4,8 +4,8 @@
       <el-col :span="12">
         <ul class="top-link-left">
           <li class="back-index" >
-            <i></i>
-            返回首页
+            <router-link  to="/">返回首页</router-link>
+           
           </li>
           <li class="link-other">
           <router-link  to="/data">门户页</router-link>
@@ -30,7 +30,9 @@ export default {
   data() {
     return {};
   },
-  methods: {},
+  methods: {
+    
+  },
   computed: {}
 };
 </script>

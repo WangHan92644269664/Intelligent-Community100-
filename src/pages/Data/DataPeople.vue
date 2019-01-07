@@ -11,7 +11,6 @@
           <PeopleBar
             :chartData="chartData1"
             :chartYdata="chartYdata1"
-            :chartTitle="chartTitle1"
             :yName="yName1"
             :xName="xName1"
             :colorZero="colorZero1"
@@ -20,6 +19,7 @@
           />
         </div>
         <div class="chart-common chart-3">
+            <h5>人口性别分布</h5>
           <Pie3D :id="id" :option="option"/>
         </div>
       </el-col>
@@ -29,7 +29,6 @@
           <PeopleBar
             :chartData="chartData2"
             :chartYdata="chartYdata2"
-            :chartTitle="chartTitle2"
             :yName="yName2"
             :xName="xName2"
             :colorZero="colorZero2"
@@ -38,7 +37,8 @@
           />
         </div>
         <div class="chart-common chart-3">
-          <DataPieChart :pieData="pieData2" :pieColor="pieColor2" :pieTitle="pieTitle2"/>
+          <h5>人口婚姻分布</h5>
+          <DataPieChart :pieData="pieData2" :pieColor="pieColor2" />
         </div>
       </el-col>
       <el-col class="main-content" :span="8">
@@ -47,7 +47,6 @@
           <PeopleBar
             :chartData="chartData3"
             :chartYdata="chartYdata3"
-            :chartTitle="chartTitle3"
             :yName="yName3"
             :xName="xName3"
             :colorZero="colorZero3"
@@ -56,7 +55,8 @@
           />
         </div>
         <div class="chart-common chart-6">
-          <DataPieChart :pieData="pieData3" :pieColor="pieColor3" :pieTitle="pieTitle3"/>
+         <h5>人口民族分布</h5>
+          <DataPieChart :pieData="pieData3" :pieColor="pieColor3"/>
         </div>
       </el-col>
     </el-row>
@@ -83,7 +83,6 @@ export default {
       colorAll1: "rgba(0,224,252,0)",
       chartData2: ["其他", "研究生", "本科"],
       chartYdata2: [3000, 2600, 2400],
-      chartTitle2: "人口学历分布",
       yName2: "(党员)",
       xName2: "(年龄)",
       colorZero2: "rgba(0,126,255,1)",
@@ -91,7 +90,6 @@ export default {
       colorAll2: "rgba(0,126,255,0)",
       chartData3: ["1-18", "18-30", "30-40", "40-50", "60-70", "70以上"],
       chartYdata3: [1000, 300, 500, 1000, 500, 600],
-      chartTitle3: "人口年龄分布",
       yName3: "(数量)",
       xName3: "(类型)",
       colorZero3: "rgba(173,0,252,1)",
@@ -162,7 +160,7 @@ export default {
           },
         },
         title: {
-          text: "人口性别分布", //图表的标题文字
+          text: "", //图表的标题文字
           style:{
             color:'#fff',
             

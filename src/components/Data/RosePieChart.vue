@@ -58,10 +58,6 @@ export default {
       // 绘制图表
       myChart.setOption({
         color: this.roseColors,
-        title: {
-          text: "重点事件状态分布",
-          x: "left"
-        },
         tooltip: {
           trigger: "item",
           formatter: "{a} <br/>{b} : {c} ({d}%)"
@@ -70,7 +66,10 @@ export default {
           orient: "vertical",
           x: "right",
           y: "top",
-          data: this.legendData
+          data: this.legendData,
+          textStyle:{
+            color:'#fff'
+          }
         },
         calculable: true,
         series: [
