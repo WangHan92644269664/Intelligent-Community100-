@@ -18,6 +18,7 @@
     data() {
       return {
         name:'网格列表',
+        rightTitle:'精神病人员',
         data: [
           {
             label: '高新区',

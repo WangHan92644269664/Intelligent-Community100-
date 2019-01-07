@@ -5,12 +5,6 @@
     </el-row>
     <el-row style="padding-left: 30px;padding-top: 20px;background: #fff;">
       <el-col :span="24" style="text-align: left;">
-        <el-form-item label="笔记类型:">
-          <el-select v-model="formInline.kind" placeholder="请选择">
-            <el-option label="党章学习" value="undo"></el-option>
-            <el-option label="政治学习" value="do"></el-option>
-          </el-select>
-        </el-form-item>
         <el-form :inline="true" :model="formInline" class="demo-form-inline">
           <el-form-item label="笔记标题:">
             <el-input v-model="formInline.name" ></el-input>

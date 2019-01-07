@@ -16,7 +16,7 @@
               <el-option label="2018-9" value="2018-9"></el-option>
             </el-select>
           </el-form-item>
-          <el-form-item label>
+          <el-form-item label="万能搜索:">
             <el-input v-model="formInline.search"  placeholder="万能搜索"></el-input>
           </el-form-item>
           <el-form-item class="search">
@@ -70,6 +70,8 @@
 export default {
   data() {
     return {
+      search:require('../../images/search.png'),
+      add:require('../../images/add.png'),
       formInline: {
         from: "",
         search:"",

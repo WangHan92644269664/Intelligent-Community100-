@@ -1,5 +1,5 @@
 <template>
-  <el-menu class="submenu"  unique-opened router>
+  <el-menu class="submenu"  :default-active="activeIndex" unique-opened router>
     <el-menu-item index="#" class="leftTitle">安防平台</el-menu-item>
     <el-menu-item class="gis-map" index="/gis/map">
       <span slot="title">GIS地图</span>

@@ -13,6 +13,7 @@
   export default {
     data() {
       return {
+        rightTitle:'整栋楼'
       }
     },
     components: {

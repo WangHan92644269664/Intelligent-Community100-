@@ -320,7 +320,7 @@ export default new Router({
               },
             },
 
-          ],
+                    ],
 
         },
         {

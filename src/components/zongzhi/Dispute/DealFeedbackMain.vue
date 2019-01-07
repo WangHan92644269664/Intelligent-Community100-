@@ -66,6 +66,8 @@
   export default {
     data() {
       return {
+        search:require('../../images/search.png'),
+        add:require('../../images/add.png'),
         formInline: {
           network:'',
           search:"",

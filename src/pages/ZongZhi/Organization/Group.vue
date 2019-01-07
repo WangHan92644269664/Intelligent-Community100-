@@ -18,6 +18,7 @@
     data() {
       return {
         name:'群防群治组织列表',
+        rightTitle:'群防群治组织列表',
         data: [
           {
             label: '群防群治-专职巡防队伍',
