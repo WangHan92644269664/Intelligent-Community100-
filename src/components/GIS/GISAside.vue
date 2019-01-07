@@ -1,19 +1,19 @@
 <template>
-  <el-menu class="submenu" :default-active="activeIndex" unique-opened router>
+  <el-menu class="submenu"  unique-opened router>
     <el-menu-item index="#" class="leftTitle">安防平台</el-menu-item>
-    <el-menu-item index="/gis">
+    <el-menu-item class="gis-map" index="/gis/map">
       <span slot="title">GIS地图</span>
     </el-menu-item>
-    <el-menu-item index="/gis/zhian">
+    <el-menu-item class="gis-zhian" index="/gis/zhian">
       <span slot="title">社会治安</span>
     </el-menu-item>
-    <el-menu-item index="/gis/street">
+    <el-menu-item class="gis-street" index="/gis/street">
       <span slot="title">智慧街道</span>
     </el-menu-item>
-    <el-menu-item index="/gis/community">
+    <el-menu-item class="gis-community" index="/gis/community">
       <span slot="title">智慧社区</span>
     </el-menu-item>
-    <el-menu-item index="/gis/car">
+    <el-menu-item class="gis-car" index="/gis/car">
       <span slot="title">车辆识别门禁</span>
     </el-menu-item>
   </el-menu>
@@ -23,9 +23,9 @@
 export default {
   data() {
     return {
-      activeIndex: "/gis"
+      activeIndex: "/gis/map"
     };
-  }
+  },
 };
 </script>
 <style>
@@ -43,12 +43,10 @@ export default {
 ul {
   position: absolute;
   bottom: 0;
-  top: 0px;
+  top: 70px;
   width: 160px;
   left: 0;
   background: #202020;
-}
-.submenu {
 }
 .submenu li.leftTitle {
   background: #008aff;
@@ -91,5 +89,9 @@ ul {
 }
 .el-menu-item:focus, .el-menu-item:hover{
     background:#121212;
+}
+.el-menu-item.is-active{
+    background:#121212;
+    border-left:0;
 }
 </style>

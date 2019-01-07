@@ -1,21 +1,18 @@
 <template>
-  <div>
-    <div class="content" id="content">
-      <div class="left-con">
-        <GisAside></GisAside>
-      </div>
+  <el-container>
+    <div class="content" >
       <div class="content-right">
         <div class="content-right-info">
           <div class="left-info">
-            <GisLeft/>
+              <leftInfo/>
           </div>
           <div class="title">
-            <h2 class="gis-title">GIS 地图4</h2>
+            <h2 class="gis-title">GIS 地图</h2>
           </div>
 
           <div class="building">
             <div class="building-first">
-              <img src="../../assets/images/gis/1.png" alt>
+              <img src="../../../assets/images/gis/1.png" alt>
               <div
                 class="building-border"
                 @mouseover="buildHover"
@@ -25,7 +22,7 @@
             </div>
           </div>
           <div class="peopleInfo">
-            <img src="../../assets/images/gis/info.png" alt>
+            <img src="../../../assets/images/gis/info.png" alt>
             <div class="seePeople"></div>
             <div class="info-cancel" @click="cancelInfo"></div>
           </div>
@@ -41,39 +38,21 @@
         </div>
       </div>
     </div>
-  </div>
+  </el-container>
 </template>
 
 <script>
-import GisLeft from "../../components/GIS/GisLeft";
-import GisAside from "../../components/GIS/GISAside";
+import leftInfo from '../../../components/GIS/GisLeft'
 export default {
-  name: "Gis",
+  name: "GISMap",
+  props: {},
+  components: {leftInfo},
   data() {
     return {
-      screenHeight: document.documentElement.clientHeight //屏幕高度
     };
   },
-  components: { GisLeft, GisAside },
   mounted() {
-    var _this = this;
-    //页面加载时赋值id全屏高度
-    var oIframe = document.getElementById("content");
-    oIframe.style.height = document.documentElement.clientHeight - 70 + "px";
-    // 加载时echarts的高度
-    window.onresize = function() {
-      // 定义窗口大小变更通知事件
-      _this.screenHeight = document.documentElement.clientHeight; //窗口高度
-      console.log(_this.screenHeight);
-    };
-    console.log(_this.screenHeight);
-  },
-  watch: {
-    screenHeight: function(val) {
-      //监听屏幕高度变化
-      var oIframe = document.getElementById("content");
-      oIframe.style.height = Number(val) - 70 + "px"; //'120'是页面布局调整，可去除
-    }
+  
   },
   created() {},
   methods: {
@@ -89,12 +68,16 @@ export default {
     cancelInfo() {
       $(".peopleInfo").css("display", "none");
     }
-  }
+  },
+ 
+ 
+  
 };
 </script>
-
+<style>
+</style>
 <style scoped>
-#content {
+.content {
   width: 100%;
   height: 100%;
   margin: 0 auto;
@@ -126,23 +109,18 @@ export default {
   height: 100%;
 }
 .content-right {
-  width: calc(100% - 160px);
+  width: 100%;
   float: left;
   height: 100%;
-  padding: 30px;
 }
 .content-right-info {
   width: 100%;
   height: 100%;
-  background: url("../../assets/images/gis/bg.png") no-repeat;
+  background: url("../../../assets/images/gis/bg.png") no-repeat;
   background-size: 100% 100%;
   position: relative;
 }
-.left-info {
-  width: 20%;
-  height: 100%;
-  position:absolute;
-}
+
 .big-data {
   color: #fff;
   position: absolute;
@@ -211,7 +189,11 @@ export default {
   position: absolute;
   width: 13%;
   height: 200px;
-  /* background:green; */
+
   top: 20px;
+}
+.left-info{
+    width:20%;
+    position: absolute;
 }
 </style>
