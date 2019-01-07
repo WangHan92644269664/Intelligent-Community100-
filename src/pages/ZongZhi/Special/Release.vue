@@ -18,6 +18,7 @@
     data() {
       return {
         name:'网格列表',
+        rightTitle:'网格列表',
         data: [
           {
             label: '高新区',
