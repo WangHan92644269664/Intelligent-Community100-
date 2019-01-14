@@ -74,7 +74,7 @@
   }
   .el-menu-item.is-active {
     color: #0077ff!important;
-    background: #eef2fa;
+    background:#121212;
     font-weight: bolder;
     border-left: 2px solid #0077ff;
   }
@@ -94,5 +94,8 @@
   .submenu>li i{
     margin-right: 10px;
     color:#555
+  }
+  .el-menu-item:focus, .el-menu-item:hover{
+    background:#121212;
   }
 </style>

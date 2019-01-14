@@ -7,7 +7,7 @@
         </el-col>
         <el-col :xl="14" :lg="16"  style="text-align: center;margin:0 auto;" id="two">
           <el-menu
-            :default-active="activeIndex"
+            :default-active="active"
             class="el-menu-demo"
             mode="horizontal"
             @select="handleSelect"
@@ -47,14 +47,14 @@
     name: "Header",
     data() {
       return {
-        activeIndex: '/working',
+        active: '',
         header:require('./images/header.jpg'),
         left:require('./images/nav_icon.png')
       };
     },
     methods: {
       handleSelect(key, keyPath) {
-        console.log(key, keyPath);
+        // console.log(key, keyPath);
       },
       handleCommand(command) {
         if(command == 'loginout'){
@@ -63,6 +63,10 @@
         }
       },
     },
+    mounted(){
+      //解决页面刷新导航不高亮的问题
+      this.active=this.$route.matched[0].path;
+    }
   }
 </script>
 
