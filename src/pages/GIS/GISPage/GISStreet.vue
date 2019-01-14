@@ -4,63 +4,55 @@
     <div class="main">
       <el-col class="common-height" :span="5">
         <div class="chart-common">
-          <GISAreaChart
-            :GISAreaData="GISAreaData1"
-            :GISAreaXdata="GISAreaXdata1"
-            :areaTitleColor="areaTitleColor1"
-            :normalColor="normalColor1"
-            :areaTitle="areaTitle1"
+          <GISBarChart
+            :barCTitle="barCTitleL1"
+            :barCseries="barCseriesL1"
+            :gisBXdata="gisBXdataL1"
+            :gisBlenged="gisBlengedL1"
+            :barTitleColor="barTitleColorL1"
           />
         </div>
         <div class="chart-common">
           <GISBarChart
-            :barCTitle="barCTitle1"
-            :barCseries="barCseries1"
-            :gisBXdata="gisBXdata1"
-            :gisBlenged="gisBlenged1"
-            :barTitleColor="barTitleColor1"
+            :barCTitle="barCTitleL2"
+            :barCseries="barCseriesL2"
+            :gisBXdata="gisBXdataL2"
+            :gisBlenged="gisBlengedL2"
+            :barTitleColor="barTitleColorL2"
           />
         </div>
         <div class="chart-common">
           <GISBarChart
-            :barCTitle="barCTitle2"
-            :barCseries="barCseries2"
-            :gisBXdata="gisBXdata2"
-            :gisBlenged="gisBlenged2"
-            :barTitleColor="barTitleColor2"
+            :barCTitle="barCTitleL3"
+            :barCseries="barCseriesL3"
+            :gisBXdata="gisBXdataL3"
+            :gisBlenged="gisBlengedL3"
+            :barTitleColor="barTitleColorL3"
           />
         </div>
       </el-col>
       <el-col class="img-tab common-height" :span="14">
-       <ImgTab></ImgTab>
+        <ImgTab></ImgTab>
       </el-col>
       <el-col class="common-height" :span="5">
         <div class="chart-common">
-          <GISAreaChart
-            :GISAreaData="GISAreaData2"
-            :GISAreaXdata="GISAreaXdata2"
-            :areaTitleColor="areaTitleColor2"
-            :normalColor="normalColor2"
-            :areaTitle="areaTitle2"
-          />
+          <HengxiangChart/>
         </div>
         <div class="chart-common">
-          <!-- 暂用 -->
-          <GISBarChart
-            :barCTitle="barCTitle4"
-            :barCseries="barCseries4"
-            :gisBXdata="gisBXdata4"
-            :gisBlenged="gisBlenged4"
-            :barTitleColor="barTitleColor4"
+          <GisPieChart
+            :pieData="seriesR2"
+            :pieTitle="titleR2"
+            :pieColors="pieColorR2"
+            :pieTitleColor="pieTitleColorR2"
           />
         </div>
         <div class="chart-common">
           <GISBarChart
-            :barCTitle="barCTitle3"
-            :barCseries="barCseries3"
-            :gisBXdata="gisBXdata3"
-            :gisBlenged="gisBlenged3"
-            :barTitleColor="barTitleColor3"
+            :barCTitle="barCTitleR3"
+            :barCseries="barCseriesR3"
+            :gisBXdata="gisBXdataR3"
+            :gisBlenged="gisBlengedR3"
+            :barTitleColor="barTitleColorR3"
           />
         </div>
       </el-col>
@@ -73,156 +65,94 @@ import echarts from "echarts";
 import CommonTitle from "../../../components/GIS/GIS/GISCommonTitle";
 import GISAreaChart from "../../../components/GIS/GIS/GISAreaChart";
 import GISBarChart from "../../../components/GIS/GIS/GISBarChart";
-import GISLineChart from "../../../components/GIS/GIS/GISLineChart";
-import ImgTab from "../../../components/GIS/GIS/ImgTab";
+import GisPieChart from "../../../components/GIS/GIS/GisCircleChart";
+import HengxiangChart from "../../../components/GIS/GIS/HengxiangBarChart";
+import ImgTab from "../../../components/GIS/GIS/ImgTabStreet";
 export default {
   data() {
     return {
-      title: "社区周边街道治安",
-      areaTitle1: "昨天街道车辆密度数据图",
-      GISAreaData1: [50, 38, 20, 40, 58, 55, 51],
-      GISAreaXdata1: [
-        "20:00",
-        "0:00",
-        "4:00",
-        "8:00",
-        "12:00",
-        "16:00",
-        "20:00"
-      ],
-      areaTitleColor1: "rgba(245,29,69,1)",
-      normalColor1: "rgba(245,29,69,.1)",
-      areaTitle2: "今日街道车辆密度数据图",
-      GISAreaData2: [50, 38, 20, 40, 58, 55, 51],
-      GISAreaXdata2: [
-        "20:00",
-        "0:00",
-        "4:00",
-        "8:00",
-        "12:00",
-        "16:00",
-        "20:00"
-      ],
-      areaTitleColor2: "rgba(0,119,255,1)",
-      normalColor2: "rgba(0,119,255,.1)",
-      barCTitle1: "三天内车辆密度数据对比",
-      barCseries1: [
+      title:'社区主干道实时监控',
+      barCTitleL1: "本周街道卫生情况监测数据",
+      barCseriesL1: [
         {
-          name: "今天",
-          type: "bar",
-          data: [10, 30, 15, 10, 25, 17, 10],
-          itemStyle: {
-            normal: {
-              color: "rgba(245,29,69,1)"
-            }
-          }
-        },
-        {
-          name: "昨天",
-          type: "bar",
-          data: [10, 30, 15, 10, 25, 17, 10],
-          itemStyle: {
-            normal: {
-              color: "rgba(34,90,221,1)"
-            }
-          }
-        },
-        {
-          name: "前天",
-          type: "bar",
-          data: [10, 30, 15, 10, 25, 17, 10],
-          itemStyle: {
-            normal: {
-              color: "rgba(240,198,32,1)"
-            }
-          }
-        }
-      ],
-      gisBXdata1: ["周一", "周二", "周三", "周四", "周五", "周六", "周日"],
-      gisBlenged1: ["今天", "昨天", "前天"],
-      barTitleColor1: "rgba(0,119,255,1)",
-      barCTitle2: "本周周边街道交通事故数据",
-      barCseries2: [
-        {
-          name: "前天",
-          type: "bar",
-          data: [30, 15, 39, 30, 39, 43, 10],
-          itemStyle: {
-            normal: {
-              color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
-                {
-                  offset: 0,
-                  color: "rgba(126,88,194,.5)"
-                },
-                {
-                  offset: 1,
-                  color: "rgba(126,88,194,1)"
-                }
-              ]),
-              opacity: 1
-            }
-          }
-        }
-      ],
-      gisBXdata2: ["周一", "周二", "周三", "周四", "周五", "周六", "周日"],
-      gisBlenged2: ["今天", "昨天", "前天"],
-      barTitleColor2: "rgba(0,119,255,1)",
-      barCTitle3: "本周社区周边街道堵车率",
-      barCseries3: [
-        {
-          name: "前天",
-          type: "bar",
-          data: [30, 15, 39, 30, 39, 43, 10],
-          itemStyle: {
-            normal: {
-              color: function(params) {
-                var colorList = [
-                  "rgba(255,132,0,1)",
-                  "rgba(255,132,0,.5)",
-                  "rgba(255,132,0,1)",
-                  "rgba(255,132,0,.5)",
-                  "rgba(255,132,0,1)",
-                  "rgba(255,132,0,.5)",
-                  "rgba(255,132,0,1)"
-                ];
-                return colorList[params.dataIndex];
-              }
-            }
-          }
-        }
-      ],
-      gisBXdata3: ["周一", "周二", "周三", "周四", "周五", "周六", "周日"],
-      gisBlenged3: ["今天", "昨天", "前天"],
-      barTitleColor3: "rgba(0,119,255,1)",
-      barCTitle4: "本周社区周边街道堵车率",
-      barCseries4: [
-        {
-          name: "前天",
-          type: "line",
-          data: [30, 15, 39, 30, 39, 43, 10],
-          itemStyle: {
-            normal: {
-              color: "#f0166d"
-            }
-          }
-        },
-        {
-          name: "前天",
+          name: "本周",
           type: "line",
           data: [10, 25, 19, 20, 19, 13, 40],
           itemStyle: {
             normal: {
-              color: "#0077ff"
+              color: "#8f6eca"
             }
           }
         }
       ],
-      gisBXdata4: ["周一", "周二", "周三", "周四", "周五", "周六", "周日"],
-      gisBlenged4: ["今天", "昨天", "前天"],
-      barTitleColor4: "rgba(0,119,255,1)"
+      gisBXdataL1: ["周一", "周二", "周三", "周四", "周五", "周六", "周日"],
+      gisBlengedL1: [""],
+      barTitleColorL1: "#ec407b",
+      barCTitleL2: "本周社区主要街道堵车率",
+      barCseriesL2: [
+        {
+          name: "本周",
+          type: "line",
+          data: [10, 25, 19, 20, 19, 13, 40],
+          itemStyle: {
+            normal: {
+              color: "#ec407b"
+            }
+          }
+        }
+      ],
+      gisBXdataL2: ["周一", "周二", "周三", "周四", "周五", "周六", "周日"],
+      gisBlengedL2: [""],
+      barTitleColorL2: "#ec407b",
+      barCTitleL3: "本周社区异常情况监测数据",
+      barCseriesL3: [
+        {
+          name: "本周",
+          type: "line",
+          data: [10, 25, 19, 20, 19, 13, 40],
+          itemStyle: {
+            normal: {
+              color: "#fec300"
+            }
+          }
+        }
+      ],
+      gisBXdataL3: ["周一", "周二", "周三", "周四", "周五", "周六", "周日"],
+      gisBlengedL3: [""],
+      barTitleColorL3: "#fec300",
+      barCTitleR3: "本周社区异常情况监测数据",
+      barCseriesR3: [
+        {
+          name: "本周",
+          type: "line",
+          data: [10, 25, 19, 20, 19, 13, 40],
+          itemStyle: {
+            normal: {
+              color: "#0071f3"
+            }
+          }
+        }
+      ],
+      gisBXdataR3: ["周一", "周二", "周三", "周四", "周五", "周六", "周日"],
+      gisBlengedR3: [""],
+      barTitleColorR3: "#0071f3",
+      seriesR2: [
+        { value: 335, name: "通勤路" },
+        { value: 310, name: "南街" },
+        { value: 234, name: "环区主道" }
+      ],
+      titleR2: "本周主干道预警率",
+      pieColorR2: ["#ff80ab", "#ff4181", "#ea0041"],
+      pieTitleColorR2: "#fd4281"
     };
   },
-  components: { CommonTitle, GISAreaChart, GISBarChart, GISLineChart, ImgTab }
+  components: {
+    CommonTitle,
+    GISBarChart,
+    ImgTab,
+    GisPieChart,
+    HengxiangChart
+  }
 };
 </script>
 
@@ -282,7 +212,7 @@ export default {
   border: 1px solid #000;
   margin: 0 auto;
 }
-.img-tab div{
+.img-tab div {
   height: 100%;
 }
 </style>
