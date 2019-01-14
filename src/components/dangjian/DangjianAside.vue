@@ -1,7 +1,7 @@
 <template>
   <div class="sidebar" >
     <p style="background: #008aff;color:#fff;height: 70px;line-height: 70px;font-size:20px;font-weight: bolder;margin: 0;">党建平台</p>
-    <el-menu class="sidebar-el-menu" :default-active="onRoutes"  unique-opened router>
+    <el-menu class="sidebar-el-menu" :default-active="$route.path" unique-opened router>
       <template v-for="item in items">
         <template v-if="item.subs">
           <el-submenu :index="item.index" :key="item.index">
@@ -232,42 +232,46 @@
 
     },
     computed:{
-      onRoutes(){
-        return this.$route.path.replace('/','');
-      }
-    }
+
+    },
   }
 </script>
 <style>
-.el-submenu__title{
-color:#c9c9c9;
-font-weight: bolder;
-}
-.el-menu-item[data-v-92eb0f0e], .el-submenu__title[data-v-92eb0f0e]{
-color:#777!important;
-line-height: 34px!important;
-height: 34px!important;
-}
-.sidebar-el-menu>li.el-submenu{
-  text-align: left!important;
-  border-bottom: 2px solid #3a3a3a;
-}
+  .el-submenu__title{
+    color:#c9c9c9;
+    font-weight: bolder;
+  }
+  .el-menu-item-group .el-menu-item{
+    color:#777!important;
+    line-height: 34px!important;
+    height: 34px!important;
+  }
 </style>
 <style scoped>
   ul{
     position: absolute;
     bottom: 0;
-    top: 140px;
+    top: 70px;
     width: 160px;
     left: 0;
     background: #202020;
+  }
+  .submenu li.leftTitle{
+    background: #008aff;
+    color:#fff;
+    text-align: center!important;
+    border:none!important;
+    height: 70px;
+    line-height: 70px;
+    font-size: 20px;
+    font-weight: bolder;
   }
   .el-submenu .el-menu-item{
     min-width: 160px;
   }
   .el-menu-item.is-active {
     color: #0077ff!important;
-    background: #eef2fa;
+    background:#121212;
     font-weight: bolder;
     border-left: 2px solid #0077ff;
   }
@@ -280,10 +284,16 @@ height: 34px!important;
   .submenu li:nth-of-type(1){
     text-align: center;
   }
-
-
-  .el-submenu__title{
-    padding-left: 0!important;
+  .submenu>li{
+    text-align: left!important;
+    border-bottom: 2px solid #3a3a3a;
+  }
+  .submenu>li i{
+    margin-right: 10px;
+    color:#555
+  }
+  .el-menu-item:focus, .el-menu-item:hover{
+    background:#121212;
   }
 
 </style>
