@@ -48,7 +48,8 @@ export default {
 </script>
 <style scoped>
 #content{
-  padding:100px 30px 30px;
+  margin-top:70px;
+  padding:30px;
   height: 100%;
   width:100%;
   background:#f4f4f4;
