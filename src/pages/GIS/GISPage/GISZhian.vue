@@ -252,7 +252,7 @@ export default {
 }
 .large-view {
   height: 78%;
-  padding: 20px;
+  padding: 0 20px 20px 20px;
 }
 .large-view img {
   width: 100%;

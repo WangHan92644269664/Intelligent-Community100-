@@ -31,11 +31,16 @@
         </el-col>
         <!-- </div> -->
       </el-col>
-      <el-col style="height:50%"  :span="3"></el-col>
+      <el-col style="height:50%" :span="3"></el-col>
       <br>
       <div class="bottom-con">
         <el-col :span="6" v-for="(item,index) in enterData2" :key="index">
-          <div  @click="change2(item.pathData)" class="enter-con" @mouseover="hover2(index)" @mouseout="out2(index)">
+          <div
+            @click="change2(item.pathData)"
+            class="enter-con"
+            @mouseover="hover2(index)"
+            @mouseout="out2(index)"
+          >
             <img :src="item.icon" alt>
             <p>{{item.name}}</p>
             <span></span>
@@ -47,13 +52,13 @@
 </template>
 
 <script>
-import Bus from '../assets/js/bus' 
+import Bus from "../assets/js/bus";
 export default {
   name: "Data",
   data() {
     return {
       screenHeight: document.documentElement.clientHeight, //屏幕高度
-      active:'',
+      active: "",
       enterData: [
         {
           icon: require("../assets/images/systemType/1.png"),
@@ -85,12 +90,12 @@ export default {
         {
           icon: require("../assets/images/systemType/6.png"),
           name: "政务平台",
-          pathData:"/zhengwu"
+          pathData: "/zhengwu"
         },
         {
           icon: require("../assets/images/systemType/7.png"),
           name: "工作平台",
-          pathData:'working'
+          pathData: "working"
         }
       ]
     };
@@ -277,15 +282,29 @@ export default {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  animation: show-big 0.15s;
+  -webkit-animation:show-big 0.15s;
   /* 阴影 */
-  -moz-box-shadow: 0px 10px 57px rgba(0, 0, 0, 0.43); /* 老的 Firefox */
-  box-shadow: 0px 10px 57px rgba(0, 0, 0, 0.43);
-  /* 过渡 */
-  transition: width .5s, height .5s, background .5s, transform .5s;
-  -moz-transition: width .5s, height .5s, background .5s, -moz-transform .5s;
-  -webkit-transition: width .5s, height .5s, background .5s, -webkit-transform .5s;
-  -o-transition: width .5s, height .5s, line-height .5s, background .5s,
-    -o-transform .5s;
+}
+@keyframes show-big {
+  from {
+    width: 100%;
+    height: 100%;
+  }
+  to {
+    width: 110%;
+    height: 110%;
+  }
+}
+@-webkit-keyframes show-big {
+  from {
+    width: 100%;
+    height: 100%;
+  }
+  to {
+    width: 110%;
+    height: 110%;
+  }
 }
 .enter-con span {
   height: 4px;
@@ -303,7 +322,7 @@ export default {
     padding:30%
   } */
   .enter-con img {
-    width: 30%;
+    /* width: 30%; */
   }
   .enter-con:hover {
     padding-top: 30%;
@@ -331,19 +350,15 @@ export default {
     transform: translate(-50%, -50%);
   }
 }
-@media screen and (max-height: 940px) {
-  /* .enter-con{
-    padding:30%
-  } */
-  .enter-con img {
-    width: 40%;
-    
+@media screen and (min-width: 2560px) {
+  .enter-con{
+    padding:25%
   }
-  .enter-con {
-    padding:10%;
+  .enter-con img {
+    /* width: 30%; */
   }
   .enter-con:hover {
-    /* padding-top: 30%; */
+    padding-top: 30%;
     width: 110%;
     height: 110%;
     background: -webkit-linear-gradient(
@@ -368,41 +383,31 @@ export default {
     transform: translate(-50%, -50%);
   }
 }
-@media screen and (max-height: 800px) {
+@media screen and (max-height: 970px) {
+ 
+  .enter-con img {
+   width:120px;
+   height: 124px;
+  }
+  .enter-con {
+    padding: 7%;
+  }
+  .enter-con:hover {
+  }
+}
+@media screen and (max-height: 840px) {
   /* .enter-con{
     padding:30%
   } */
   .enter-con img {
-    width: 30%;
-    
+    /* width: 30%; */
+    width:100px;
+    height: 108px;
   }
   .enter-con {
-    padding:10%;
+    padding: 10%;
   }
   .enter-con:hover {
-    /* padding-top: 30%; */
-    width: 110%;
-    height: 110%;
-    background: -webkit-linear-gradient(
-      rgb(0, 95, 177),
-      rgb(83, 74, 118)
-    ); /* Safari 5.1 - 6.0 */
-    background: -o-linear-gradient(
-      rgb(0, 95, 177),
-      rgb(83, 74, 118)
-    ); /* Opera 11.1 - 12.0 */
-    background: -moz-linear-gradient(
-      rgb(0, 95, 177),
-      rgb(83, 74, 118)
-    ); /* Firefox 3.6 - 15 */
-    background: linear-gradient(
-      rgb(0, 95, 177),
-      rgb(83, 74, 118)
-    ); /* 标准的语法（必须放在最后） */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
   }
 }
 </style>

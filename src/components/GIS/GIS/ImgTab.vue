@@ -49,7 +49,7 @@ export default {
 <style scoped>
 .large-view {
   height: 78%;
-  padding: 20px;
+  padding: 0 20px 20px 20px;
 }
 .large-view img,
 .small-view img {
