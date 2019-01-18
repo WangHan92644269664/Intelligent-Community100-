@@ -47,11 +47,13 @@
 </template>
 
 <script>
+import Bus from '../assets/js/bus' 
 export default {
   name: "Data",
   data() {
     return {
       screenHeight: document.documentElement.clientHeight, //屏幕高度
+      active:'',
       enterData: [
         {
           icon: require("../assets/images/systemType/1.png"),
@@ -279,11 +281,11 @@ export default {
   -moz-box-shadow: 0px 10px 57px rgba(0, 0, 0, 0.43); /* 老的 Firefox */
   box-shadow: 0px 10px 57px rgba(0, 0, 0, 0.43);
   /* 过渡 */
-  transition: width 1s, height 1s, background 1s, transform 1s;
-  -moz-transition: width 1s, height 1s, background 1s, -moz-transform 1s;
-  -webkit-transition: width 1s, height 1s, background 1s, -webkit-transform 1s;
-  -o-transition: width 1s, height 1s, line-height 1s, background 1s,
-    -o-transform 1s;
+  transition: width .5s, height .5s, background .5s, transform .5s;
+  -moz-transition: width .5s, height .5s, background .5s, -moz-transform .5s;
+  -webkit-transition: width .5s, height .5s, background .5s, -webkit-transform .5s;
+  -o-transition: width .5s, height .5s, line-height .5s, background .5s,
+    -o-transform .5s;
 }
 .enter-con span {
   height: 4px;

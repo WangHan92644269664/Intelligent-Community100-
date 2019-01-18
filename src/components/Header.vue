@@ -51,11 +51,12 @@
 </template>
 
 <script>
+import Bus from '../assets/js/bus' 
 export default {
   name: "Header",
   data() {
     return {
-      active: "",
+      active: '',
       header: require("./images/header.jpg"),
       left: require("./images/nav_icon.png")
     };
@@ -74,6 +75,7 @@ export default {
   mounted() {
     //解决页面刷新导航不高亮的问题
     this.active = this.$route.matched[0].path;
+    let self = this;
     Bus.$on("activeIndex", defaultActive => {
       self.active = defaultActive;
     });
