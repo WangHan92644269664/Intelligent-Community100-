@@ -4,7 +4,7 @@
       <el-col :span="12">
         <ul class="top-link-left">
           <li class="back-index" >
-            <router-link  to="/">返回首页</router-link>
+            <router-link  to="/type">返回首页</router-link>
            
           </li>
           <li class="link-other">

@@ -108,20 +108,29 @@ import GridCardChild from '../pages/Grid/Card/Child'
 import GridDomicileManage from '../pages/Grid/Domicile/Manage'
 import GridSocialPublic from '../pages/Grid/Social/Public'
 import GridUnitManage from '../pages/Grid/Unit/Manage'
-
+import Login from '../pages/Login'
+import SystemType from '../pages/SystemType'
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path:'/data',
-      component:Data
+      path: '/',
+      component: Login
     },
     {
-      path:'/gis',
-      component:Gis,
-      meta:{
-        showHeader:true
+      path: '/type',
+      component: SystemType
+    },
+    {
+      path: '/data',
+      component: Data
+    },
+    {
+      path: '/gis',
+      component: Gis,
+      meta: {
+        showHeader: true
       },
       children: [
         {
@@ -160,110 +169,110 @@ export default new Router({
           }
         },
         {
-          path:'/gis',
-          redirect:'/gis/map'
+          path: '/gis',
+          redirect: '/gis/map'
         }
       ]
     },
     {
-      path:'/zhengwu',
-      component:ZhengWu,
-      meta:{
-        showHeader:true
+      path: '/zhengwu',
+      component: ZhengWu,
+      meta: {
+        showHeader: true
       },
-      children:[
+      children: [
         {
-          path:'/zhengwu/three',
-          component:Three,
-          meta:{
-            showHeader:true
+          path: '/zhengwu/three',
+          component: Three,
+          meta: {
+            showHeader: true
           },
         },
         {
-          path:'/zhengwu/poverty/record',
-          component:ProvertyRecord,
-          meta:{
-            showHeader:true
+          path: '/zhengwu/poverty/record',
+          component: ProvertyRecord,
+          meta: {
+            showHeader: true
           },
         },
         {
-          path:'/zhengwu/poverty/policy',
-          component:ProvertyPolicy,
-          meta:{
-            showHeader:true
+          path: '/zhengwu/poverty/policy',
+          component: ProvertyPolicy,
+          meta: {
+            showHeader: true
           },
         },
         {
-          path:'/zhengwu/poverty',
-          component:ProvertyPeople,
-          meta:{
-            showHeader:true
+          path: '/zhengwu/poverty',
+          component: ProvertyPeople,
+          meta: {
+            showHeader: true
           },
-          children:[
+          children: [
             {
-              path:'/zhengwu/poverty/people',
-              component:ProvertyPeople,
-              meta:{
-                showHeader:true
+              path: '/zhengwu/poverty/people',
+              component: ProvertyPeople,
+              meta: {
+                showHeader: true
               },
             },
           ],
         },
         {
-          path:'/zhengwu/wisdom',
-          component:WisdomOld,
-          meta:{
-            showHeader:true
+          path: '/zhengwu/wisdom',
+          component: WisdomOld,
+          meta: {
+            showHeader: true
           },
-          children:[
+          children: [
             {
-              path:'/zhengwu/wisdom/old',
-              component:WisdomOld,
-              meta:{
-                showHeader:true
+              path: '/zhengwu/wisdom/old',
+              component: WisdomOld,
+              meta: {
+                showHeader: true
               },
             },
           ],
         },
         {
-          path:'/zhengwu/wisdom/health',
-          component:WisdomHealth,
-          meta:{
-            showHeader:true
+          path: '/zhengwu/wisdom/health',
+          component: WisdomHealth,
+          meta: {
+            showHeader: true
           },
         },
         {
-          path:'/zhengwu/wisdom/serve',
-          component:WisdomServe,
-          meta:{
-            showHeader:true
+          path: '/zhengwu/wisdom/serve',
+          component: WisdomServe,
+          meta: {
+            showHeader: true
           },
         },
         {
-          path:'/zhengwu',
-          redirect:'/zhengwu/poverty/record'
+          path: '/zhengwu',
+          redirect: '/zhengwu/poverty/record'
         }
       ]
     },
     {
-      path:'/working',
-      component:Working,
-      meta:{
-        showHeader:true
+      path: '/working',
+      component: Working,
+      meta: {
+        showHeader: true
       },
-      children:[
+      children: [
         {
-          path:'/working/plan',
-          component:WorkingPlan,
-          meta:{
-            showHeader:true
+          path: '/working/plan',
+          component: WorkingPlan,
+          meta: {
+            showHeader: true
           },
-          children:[
+          children: [
             {
-              path:'/working/plan/my',
-              component:WorkingPlan,
-              meta:{
-                showHeader:true
+              path: '/working/plan/my',
+              component: WorkingPlan,
+              meta: {
+                showHeader: true
               },
             },
 
@@ -271,349 +280,349 @@ export default new Router({
           ]
         },
         {
-          path:'/working/plan/dept',
-          component:WorkingDept,
-          meta:{
-            showHeader:true
+          path: '/working/plan/dept',
+          component: WorkingDept,
+          meta: {
+            showHeader: true
           },
         },
         {
-          path:'/working/plan/undo',
-          component:WorkingUndo,
-          meta:{
-            showHeader:true
+          path: '/working/plan/undo',
+          component: WorkingUndo,
+          meta: {
+            showHeader: true
           },
         },
         {
-          path:'/working/essay/column',
-          component:WorkingEssayColumn,
-          meta:{
-            showHeader:true
+          path: '/working/essay/column',
+          component: WorkingEssayColumn,
+          meta: {
+            showHeader: true
           },
         },
         {
-          path:'/working/essay/carousel',
+          path: '/working/essay/carousel',
           component: WorkinEssayCarousel,
-          meta:{
-            showHeader:true
+          meta: {
+            showHeader: true
           },
         },
         {
-          path:'/working/notice',
-          component:WorkingNoticeMange,
-          meta:{
-            showHeader:true
+          path: '/working/notice',
+          component: WorkingNoticeMange,
+          meta: {
+            showHeader: true
           },
         },
         {
-          path:'/working/logmanage',
-          component:WorkingLog,
-          meta:{
-            showHeader:true
+          path: '/working/logmanage',
+          component: WorkingLog,
+          meta: {
+            showHeader: true
           },
-          children:[
+          children: [
             {
-              path:'/working/logmanage/log',
-              component:WorkingLog,
-              meta:{
-                showHeader:true
+              path: '/working/logmanage/log',
+              component: WorkingLog,
+              meta: {
+                showHeader: true
               },
             },
 
-                    ],
+          ],
 
         },
         {
-          path:'/working/logmanage/audit',
-          component:WorkingLogAudit,
-          meta:{
-            showHeader:true
+          path: '/working/logmanage/audit',
+          component: WorkingLogAudit,
+          meta: {
+            showHeader: true
           },
         },
         {
-          path:'/working/advertise',
-          component:WorkingAdvertise,
-          meta:{
-            showHeader:true
+          path: '/working/advertise',
+          component: WorkingAdvertise,
+          meta: {
+            showHeader: true
           },
-          children:[
+          children: [
             {
-              path:'/working/advertise/essay',
-              component:WorkingAdvertise,
-              meta:{
-                showHeader:true
+              path: '/working/advertise/essay',
+              component: WorkingAdvertise,
+              meta: {
+                showHeader: true
               },
             },
           ]
         },
         {
-          path:'/working',
-          redirect:'/working/plan'
+          path: '/working',
+          redirect: '/working/plan'
         }
       ]
     },
     {
       path: '/dangjian',
       component: Dangjian,
-      meta:{
-        showHeader:true
+      meta: {
+        showHeader: true
       },
       children: [
         {
-          path:'/dangjian/activity/three/origan',
-          component:Organization,
-          meta:{
-            showHeader:true
+          path: '/dangjian/activity/three/origan',
+          component: Organization,
+          meta: {
+            showHeader: true
           },
         },
         {
-          path:'/dangjian/activity/three/list',
-          component:BuildingPeople,
-          meta:{
-            showHeader:true
+          path: '/dangjian/activity/three/list',
+          component: BuildingPeople,
+          meta: {
+            showHeader: true
           },
         },
         {
-          path:'/dangjian/activity/three/outstanding',
-          component:DangjianOutstanding,
-          meta:{
-            showHeader:true
+          path: '/dangjian/activity/three/outstanding',
+          component: DangjianOutstanding,
+          meta: {
+            showHeader: true
           },
         },
         {
-          path:'/dangjian/activity/three/column',
-          component:StudyColumn,
-          meta:{
-            showHeader:true
+          path: '/dangjian/activity/three/column',
+          component: StudyColumn,
+          meta: {
+            showHeader: true
           },
         },
         {
-          path:'/dangjian/activity/three/study_base',
-          component:StudyBase,
-          meta:{
-            showHeader:true
+          path: '/dangjian/activity/three/study_base',
+          component: StudyBase,
+          meta: {
+            showHeader: true
           },
-        },{
-          path:'/dangjian/activity/three/study_exam',
-          component:StudyExam,
-          meta:{
-            showHeader:true
+        }, {
+          path: '/dangjian/activity/three/study_exam',
+          component: StudyExam,
+          meta: {
+            showHeader: true
           },
-        },{
-          path:'/dangjian/activity/three/study_note',
-          component:StudyNote,
-          meta:{
-            showHeader:true
+        }, {
+          path: '/dangjian/activity/three/study_note',
+          component: StudyNote,
+          meta: {
+            showHeader: true
           },
         },
 
 
         {
-          path:'/dangjian/activity/three/setting',
-          component:StudySetting,
-          meta:{
-            showHeader:true
+          path: '/dangjian/activity/three/setting',
+          component: StudySetting,
+          meta: {
+            showHeader: true
           },
         },
         {
-          path:'/dangjian/activity/three/construction_party',
-          component:BrandConstruction,
-          meta:{
-            showHeader:true
+          path: '/dangjian/activity/three/construction_party',
+          component: BrandConstruction,
+          meta: {
+            showHeader: true
           },
         },
         {
-          path:'/dangjian/activity/three/dynamic_party',
-          component:BrandDynamic,
-          meta:{
-            showHeader:true
+          path: '/dangjian/activity/three/dynamic_party',
+          component: BrandDynamic,
+          meta: {
+            showHeader: true
           },
         },
         {
-          path:'/dangjian/activity/three/log_party',
-          component:BrandLog,
-          meta:{
-            showHeader:true
+          path: '/dangjian/activity/three/log_party',
+          component: BrandLog,
+          meta: {
+            showHeader: true
           },
         },
         {
-          path:'/dangjian/activity/three/first_setting',
-          component:FirstSetting,
-          meta:{
-            showHeader:true
+          path: '/dangjian/activity/three/first_setting',
+          component: FirstSetting,
+          meta: {
+            showHeader: true
           },
         },
         {
-          path:'/dangjian/activity/three/first_dynamic',
-          component:FirstDynamic,
-          meta:{
-            showHeader:true
+          path: '/dangjian/activity/three/first_dynamic',
+          component: FirstDynamic,
+          meta: {
+            showHeader: true
           },
         },
         {
-          path:'/dangjian/activity/three/first_log',
-          component:FirstLog,
-          meta:{
-            showHeader:true
+          path: '/dangjian/activity/three/first_log',
+          component: FirstLog,
+          meta: {
+            showHeader: true
           },
         },
         {
-          path:'/dangjian/activity/three/flowInto',
-          component:DangjianFlowInto,
-          meta:{
-            showHeader:true
+          path: '/dangjian/activity/three/flowInto',
+          component: DangjianFlowInto,
+          meta: {
+            showHeader: true
           },
         },
         {
-          path:'/dangjian/activity/three/organ_list',
-          component:DangjianOrganList,
-          meta:{
-            showHeader:true
+          path: '/dangjian/activity/three/organ_list',
+          component: DangjianOrganList,
+          meta: {
+            showHeader: true
           },
         },
         {
-          path:'/dangjian/activity/three/outstanding_organ',
-          component:DangjianOrganOutstanding,
-          meta:{
-            showHeader:true
+          path: '/dangjian/activity/three/outstanding_organ',
+          component: DangjianOrganOutstanding,
+          meta: {
+            showHeader: true
           },
         },
         {
-          path:'/dangjian/activity/three/relation_into',
-          component:DangjianRelationInto,
-          meta:{
-            showHeader:true
+          path: '/dangjian/activity/three/relation_into',
+          component: DangjianRelationInto,
+          meta: {
+            showHeader: true
           },
         },
         {
-          path:'/dangjian/activity/three/birthday',
+          path: '/dangjian/activity/three/birthday',
           component: DangjianBirthday,
-          meta:{
-            showHeader:true
+          meta: {
+            showHeader: true
           },
         },
         {
-          path:'/dangjian/activity/three/fee',
-          component:DangjianFee,
-          meta:{
-            showHeader:true
+          path: '/dangjian/activity/three/fee',
+          component: DangjianFee,
+          meta: {
+            showHeader: true
           },
         },
         {
-          path:'/dangjian/activity/three/party_develop',
-          component:DangjianPartyDevelop,
-          meta:{
-            showHeader:true
+          path: '/dangjian/activity/three/party_develop',
+          component: DangjianPartyDevelop,
+          meta: {
+            showHeader: true
           },
         },
         {
-          path:'/dangjian/activity/three/party_posts',
-          component:DangjianPartyPosts,
-          meta:{
-            showHeader:true
+          path: '/dangjian/activity/three/party_posts',
+          component: DangjianPartyPosts,
+          meta: {
+            showHeader: true
           },
         },
         {
-          path:'/dangjian',
+          path: '/dangjian',
           redirect: '/dangjian/activity/three/origan'
         }
       ],
 
     },
     {
-      path:'/zongzhi',
-      component:ZongZhi,
-      meta:{
-        showHeader:true
+      path: '/zongzhi',
+      component: ZongZhi,
+      meta: {
+        showHeader: true
       },
-      children:[
+      children: [
         //综治组织
         {
-          path:'/zongzhi',
+          path: '/zongzhi',
           redirect: '/zongzhi/organ/institution'
         },
         {
-          path:'/zongzhi/organ/institution',
-          component:ZongZhiOrigin,
-          meta:{
-            showHeader:true
+          path: '/zongzhi/organ/institution',
+          component: ZongZhiOrigin,
+          meta: {
+            showHeader: true
           }
         },
         {
-          path:'/zongzhi/organ/network/long',
-          component:ZongZhiLong,
-          meta:{
-            showHeader:true
+          path: '/zongzhi/organ/network/long',
+          component: ZongZhiLong,
+          meta: {
+            showHeader: true
           }
         },
         {
-          path:'/zongzhi/organ/group',
-          component:ZongZhiGroup,
-          meta:{
-            showHeader:true
+          path: '/zongzhi/organ/group',
+          component: ZongZhiGroup,
+          meta: {
+            showHeader: true
           }
         },
         //特殊人群
         {
-          path:'/zongzhi/special/release',
-          component:ZongZhiSpecialRelease,
-          meta:{
-            showHeader:true
+          path: '/zongzhi/special/release',
+          component: ZongZhiSpecialRelease,
+          meta: {
+            showHeader: true
           }
         },
         {
-          path:'/zongzhi/special/correct',
+          path: '/zongzhi/special/correct',
           component: ZongZhiSpecialCorrect,
-          meta:{
-            showHeader:true
+          meta: {
+            showHeader: true
           }
         },
         {
-          path:'/zongzhi/special/drugs',
-          component:ZongZhiSpecialDrugs,
-          meta:{
-            showHeader:true
+          path: '/zongzhi/special/drugs',
+          component: ZongZhiSpecialDrugs,
+          meta: {
+            showHeader: true
           }
         },
         {
-          path:'/zongzhi/special/psychosis',
-          component:ZongZhiSpecialPsychosis,
-          meta:{
-            showHeader:true
+          path: '/zongzhi/special/psychosis',
+          component: ZongZhiSpecialPsychosis,
+          meta: {
+            showHeader: true
           }
         },
         {
-          path:'/zongzhi/special/aids',
-          component:ZongZhiSpecialAids,
-          meta:{
-            showHeader:true
+          path: '/zongzhi/special/aids',
+          component: ZongZhiSpecialAids,
+          meta: {
+            showHeader: true
           }
         },
         //社会治安
         {
           path: '/zongzhi/socity/important_event',
-          component:SocietyImportantEvent,
+          component: SocietyImportantEvent,
           meta: {
             showHeader: true
           }
         },
         {
           path: '/zongzhi/socity/life_base',
-          component:SocietyLifeBase,
+          component: SocietyLifeBase,
           meta: {
             showHeader: true
           }
         },
         {
           path: '/zongzhi/socity/check_renovate',
-          component:SocietyCheckRenovate,
+          component: SocietyCheckRenovate,
           meta: {
             showHeader: true
           }
         },
         {
           path: '/zongzhi/socity/life_commit',
-          component:SocietyLifeCommit,
+          component: SocietyLifeCommit,
           meta: {
             showHeader: true
           }
@@ -627,7 +636,7 @@ export default new Router({
         },
         {
           path: '/zongzhi/socity/logistics_safety',
-          component:SocietyLogisticsSafety,
+          component: SocietyLogisticsSafety,
           meta: {
             showHeader: true
           }
@@ -684,144 +693,140 @@ export default new Router({
         },
         //信访管理
         {
-          path:'/zongzhi/believe/account',
-          component:BelieveAccount,
-          meta:{
-            showHeader:true
+          path: '/zongzhi/believe/account',
+          component: BelieveAccount,
+          meta: {
+            showHeader: true
           }
         },
         {
-          path:'/zongzhi/believe/petition_manage',
-          component:BelievePetitionManage,
-          meta:{
-            showHeader:true
+          path: '/zongzhi/believe/petition_manage',
+          component: BelievePetitionManage,
+          meta: {
+            showHeader: true
           }
         },
         //校园安全
         {
-          path:'/zongzhi/campus/school',
-          component:ZongZhiCampusSchool,
-          meta:{
-            showHeader:true
+          path: '/zongzhi/campus/school',
+          component: ZongZhiCampusSchool,
+          meta: {
+            showHeader: true
           }
         },
         {
-          path:'/zongzhi/campus/around',
-          component:ZongZhiCampusAround,
-          meta:{
-            showHeader:true
+          path: '/zongzhi/campus/around',
+          component: ZongZhiCampusAround,
+          meta: {
+            showHeader: true
           }
         },
         {
-          path:'/zongzhi/campus/teachers_safe',
-          component:ZongZhiCampusTeachSafe,
-          meta:{
-            showHeader:true
+          path: '/zongzhi/campus/teachers_safe',
+          component: ZongZhiCampusTeachSafe,
+          meta: {
+            showHeader: true
           }
         },
         //护路护线
         {
-          path:'/zongzhi/protect/road',
-          component:ZongZhiProtect,
-          meta:{
-            showHeader:true
+          path: '/zongzhi/protect/road',
+          component: ZongZhiProtect,
+          meta: {
+            showHeader: true
           }
         },
         {
-          path:'/zongzhi/include/road',
-          component:ZongZhiIncludeRoad,
-          meta:{
-            showHeader:true
+          path: '/zongzhi/include/road',
+          component: ZongZhiIncludeRoad,
+          meta: {
+            showHeader: true
           }
         }
       ]
     },
     //网格平台
     {
-      path:'/grid',
-      component:Grid,
-      meta:{
-        showHeader:true
+      path: '/grid',
+      component: Grid,
+      meta: {
+        showHeader: true
       },
-      children:[
+      children: [
         {
-          path:'/grid/people/child',
-          component:GridCardChild,
-          meta:{
-            showHeader:true
+          path: '/grid/people/child',
+          component: GridCardChild,
+          meta: {
+            showHeader: true
           },
         },
         {
-          path:'/grid/actual_people/all',
-          component:GridActualPeopleAll,
-          meta:{
-            showHeader:true
+          path: '/grid/actual_people/all',
+          component: GridActualPeopleAll,
+          meta: {
+            showHeader: true
           },
         },
         {
-          path:'/grid/actual_house/manage',
-          component:GridActualHouseManage,
-          meta:{
-            showHeader:true
+          path: '/grid/actual_house/manage',
+          component: GridActualHouseManage,
+          meta: {
+            showHeader: true
           },
         },
         {
-          path:'/grid/actual_house/rental',
-          component:GridActualHouseRental,
-          meta:{
-            showHeader:true
+          path: '/grid/actual_house/rental',
+          component: GridActualHouseRental,
+          meta: {
+            showHeader: true
           },
         },
         {
-          path:'/grid/social_public',
-          component:GridSocialPublic,
-          meta:{
-            showHeader:true
+          path: '/grid/social_public',
+          component: GridSocialPublic,
+          meta: {
+            showHeader: true
           },
         },
         {
-          path:'/grid/domicile_manage',
-          component:GridDomicileManage,
-          meta:{
-            showHeader:true
+          path: '/grid/domicile_manage',
+          component: GridDomicileManage,
+          meta: {
+            showHeader: true
           },
         },
         {
-          path:'/grid/unit_manage',
-          component:GridUnitManage,
-          meta:{
-            showHeader:true
+          path: '/grid/unit_manage',
+          component: GridUnitManage,
+          meta: {
+            showHeader: true
           },
         },
         {
-          path:'/grid',
-          redirect:'/grid/actual_house/manage'
+          path: '/grid',
+          redirect: '/grid/actual_house/manage'
         }
       ]
     },
     {
-      path:'/',
-      redirect:'/working/plan'
+      path: '/data/door',
+      component: DataDoor
     },
     {
-      path:'/data/door',
-      component:DataDoor
+      path: '/data/people',
+      component: DataPeople
     },
     {
-      path:'/data/people',
-      component:DataPeople
+      path: '/data/actual',
+      component: DataActual
     },
     {
-      path:'/data/actual',
-      component:DataActual
+      path: '/data/zongzhi',
+      component: DataZongzhi
     },
     {
-      path:'/data/zongzhi',
-      component:DataZongzhi
-    },
-    {
-      path:'/data/shequ',
-      component:DataShequ
+      path: '/data/shequ',
+      component: DataShequ
     }
   ]
 })

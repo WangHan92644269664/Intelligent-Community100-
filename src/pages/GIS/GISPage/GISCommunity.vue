@@ -26,7 +26,7 @@
           />
         </div>
         <div class="chart-common">
-         
+         <LineArea/>
         </div>
       </el-col>
     </div>
@@ -36,11 +36,9 @@
 <script>
 import echarts from "echarts";
 import CommonTitle from "../../../components/GIS/GIS/GISCommonTitle";
-import GISAreaChart from "../../../components/GIS/GIS/GISAreaChart";
 import GISBarChart from "../../../components/GIS/GIS/GISBarChart";
-import GisPieChart from "../../../components/GIS/GIS/GisCircleChart";
-import HengxiangChart from "../../../components/GIS/GIS/HengxiangBarChart";
 import ImgTab from "../../../components/GIS/GIS/ImgTabCommunity";
+import LineArea from "../../../components/GIS/GIS/GISLineArea"
 export default {
   data() {
     return {
@@ -84,8 +82,7 @@ export default {
     CommonTitle,
     GISBarChart,
     ImgTab,
-    GisPieChart,
-    HengxiangChart
+    LineArea
   }
 };
 </script>

@@ -192,8 +192,12 @@ export default {
 
   top: 20px;
 }
-.left-info{
+.left-info {
     width:20%;
     position: absolute;
+    height: 100%;
+}
+.left-info div{
+  height: 100%;
 }
 </style>

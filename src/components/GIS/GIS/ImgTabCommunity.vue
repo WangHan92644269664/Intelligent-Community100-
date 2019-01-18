@@ -5,20 +5,21 @@
         <el-col style="padding:0;" :span="24" v-for="(item,index) in imgData" :key="index">
           <div @click="imgTab1(index)" class="small-view-area-L">
             <img :src="item.imgSrc" alt>
+            <p class="p-address">{{item.imgInfo}}</p>
           </div>
         </el-col>
       </el-col>
       <el-col class="right" :span="18">
         <div class="large-view" style>
           <div class="large-view-area">
-            <img src="../../../assets/images/gis/street/1.png" alt>
+            <img src="../../../assets/images/gis/community/1.png" alt>
           </div>
         </div>
         <div class="small-view">
           <el-col :span="8" v-for="(item,index) in imgData2" :key="index">
             <div @click="imgTab(index)" class="small-view-area">
               <img :src="item.imgSrc" alt>
-              <p></p>
+              <p class="p-address">{{item.imgInfo}}</p>
             </div>
           </el-col>
         </div>
@@ -33,27 +34,35 @@ export default {
     return {
       imgData: [
         {
-          imgSrc: require("../../../assets/images/gis/community/1.png")
+          imgSrc: require("../../../assets/images/gis/community/1.png"),
+          imgInfo: "社区西北角"
         },
         {
-          imgSrc: require("../../../assets/images/gis/community/2.png")
+          imgSrc: require("../../../assets/images/gis/community/2.png"),
+          imgInfo:"社区西南角"
         },
         {
-          imgSrc: require("../../../assets/images/gis/community/3.png")
+          imgSrc: require("../../../assets/images/gis/community/3.png"),
+          imgInfo:"社区东北角"
         },
         {
-          imgSrc: require("../../../assets/images/gis/community/4.png")
+          imgSrc: require("../../../assets/images/gis/community/4.png"),
+          imgInfo:"社区东南角"
         }
       ],
       imgData2: [
         {
-          imgSrc: require("../../../assets/images/gis/community/5.png")
+          imgSrc: require("../../../assets/images/gis/community/5.png"),
+          imgInfo:"地下停车场"
         },
         {
-          imgSrc: require("../../../assets/images/gis/community/6.png")
+          imgSrc: require("../../../assets/images/gis/community/6.png"),
+          imgInfo:"社区一号便利店"
+        
         },
         {
-          imgSrc: require("../../../assets/images/gis/community/7.png")
+          imgSrc: require("../../../assets/images/gis/community/7.png"),
+          imgInfo:"社区主干道4"
         }
       ]
     };
@@ -108,11 +117,13 @@ export default {
 .small-view-area {
   width: 90%;
   height: 100%;
-  border: 1px solid rgba(0,0,0,0);
+  border: 1px solid rgba(0, 0, 0, 0);
   margin: 0 auto;
 }
-.small-view-area:hover{
-     border: 1px solid #000;
+.small-view-area:hover {
+  border: 1px solid #000;
+  color:rgba(0, 119, 255,1);
+  font-weight: 600;
 }
 .small-view-area img {
   height: 88%;
@@ -126,14 +137,20 @@ export default {
 .left .small-view-area-L {
   width: 90%;
   height: 100%;
-  border: 1px solid rgba(0,0,0,0);
+  border: 1px solid rgba(0, 0, 0, 0);
   margin: 0 auto;
 }
 .left .small-view-area-L:hover {
   border: 1px solid #000;
+  color:rgba(0, 119, 255,1);
+  font-weight: 600;
 }
 .left .small-view-area-L img {
   width: 100%;
   height: 88%;
 }
+.p-address{
+  /* color:rgba(0, 119, 255,1) */
+}
+
 </style>

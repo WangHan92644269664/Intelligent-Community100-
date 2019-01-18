@@ -5,7 +5,7 @@
       <DataRouter></DataRouter>
     </div>
     <el-row class="main-content">
-      <el-col class="main-content" :span="7">
+      <el-col class="main-content1" :span="7">
         <div class="bili-chart">
           <BiliChart></BiliChart>
         </div>
@@ -52,8 +52,8 @@
           />
         </div>
       </el-col>
-      <el-col class="main-content" :span="10">
-        <div class="mapChart" style="height:52.5%;">
+      <el-col class="main-content1" :span="10">
+        <div class="mapChart" style="height:45%;">
           <mapChina/>
         </div>
         <div class="main-content-data" style="height:25%;">
@@ -149,8 +149,8 @@
           <BuildingTypeChart></BuildingTypeChart>
         </div>
       </el-col>
-      <el-col class="main-content" :span="7">
-        <div class="gonggao" style="height:47%;">
+      <el-col class="main-content1" :span="7">
+        <div class="gonggao" style="height:41.5%;">
           <Table/>
         </div>
         <div class="chart-common chart-5">
@@ -411,7 +411,7 @@ ul {
   font-size: 30px;
 }
 .chart-common {
-  height: 31%;
+  height: 29%;
   /* background:#fff; */
   background: url("../../assets/images/data/common_chart_bg.png") no-repeat;
   background-size: 100% 100%;
@@ -513,12 +513,15 @@ ul {
 }
 /* 男女比例图表 */
 .bili-chart {
-  height: 15%;
+  height: 12%;
 }
 .bili-chart div {
   height: 100%;
   width: 90%;
   margin: 0 auto;
+}
+.main-content1{
+  height: calc(100% - 50px);
 }
 
 </style>

@@ -191,7 +191,7 @@ h5 {
   margin-top: 1%;
 }
 .div2 {
-  height: 34%;
+  height: 33%;
 }
 .div3 {
   height: 25%;
@@ -215,6 +215,9 @@ h5 {
   font-size: 30px;
 }
 .info-table{
-    height: 60%;
+    height: 100%;
+}
+.info-table .el-table{
+  height: 100%;
 }
 </style>
