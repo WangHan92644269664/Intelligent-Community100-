@@ -5,7 +5,7 @@
       <!--左侧侧边栏组件-->
       <ConAside></ConAside>
     </el-aside>
-    <el-container style="margin:35px;padding-top: 70px;">
+    <el-container style="margin:35px;padding-top: 70px;height: 100vh;">
       <!--子路由显示的地方-->
       <router-view/>
     </el-container>

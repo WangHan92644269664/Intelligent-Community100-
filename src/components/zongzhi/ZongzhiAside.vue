@@ -82,8 +82,9 @@
         activeIndex:'/zongzhi/organ/institution'
       }
     },
-    methods:{
-
+    mounted(){
+      //解决页面刷新的时候路由不高亮显示的问题
+      this.activeIndex=this.$route.matched[1].path;
     }
   }
 </script>

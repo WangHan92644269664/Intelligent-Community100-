@@ -31,43 +31,42 @@
       style="width:96%;margin:0 auto"
     >
       <el-table-column
-        type="selection"
-        width="55">
+        type="selection">
       </el-table-column>
       <el-table-column
         prop="name"
         label="姓名"
-        width="200">
+        min-width="11%">
       </el-table-column>
       <el-table-column
         prop="month"
         label="月检"
-        width="200">
+        min-width="13%">
       </el-table-column>
       <el-table-column
         prop="head"
         label="支部名称"
-        width="200">
+        min-width="18%">
       </el-table-column>
       <el-table-column
         prop="money"
         label="缴费金额"
-        width="150">
+        min-width="8%">
       </el-table-column>
       <el-table-column
         prop="date"
         label="缴费时间"
-        width="300">
+        min-width="18%">
       </el-table-column>
       <el-table-column
         prop="status"
         label="状态"
-        width="200">
+        min-width="13%">
       </el-table-column>
       <el-table-column
         fixed="right"
         label="操作"
-        width="250">
+        min-width="25%">
         <template slot-scope="scope">
           <el-button @click="handleClick(scope.row)"size="small" >查看</el-button>
           <el-button @click="deleteRow(scope.$index,tableData)"size="small">删除</el-button>

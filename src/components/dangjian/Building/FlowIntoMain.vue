@@ -22,44 +22,43 @@
       style="width:96%;margin:0 auto"
     >
       <el-table-column
-        type="selection"
-        width="55">
+        type="selection">
       </el-table-column>
       <el-table-column
         prop="name"
         label="姓名"
-        width="200">
+        min-width="10%">
       </el-table-column>
       <el-table-column
         prop="phone"
         label="手机号"
-        width="200">
+        min-width="13%">
       </el-table-column>
       <el-table-column
         prop="ago"
         label="原属组织"
-        width="300">
+        min-width="20%">
       </el-table-column>
       <el-table-column
         prop="now"
         label="现属组织"
-        width="300">
+        min-width="20%">
       </el-table-column>
       <el-table-column
         prop="into"
         label="转入说明"
-        width="300">
+        min-width="18%">
       </el-table-column>
       <el-table-column
         prop="id"
         label="身份证号"
-        width="300">
+        min-width="16%">
       </el-table-column>
 
       <el-table-column
         fixed="right"
         label="操作"
-        width="250">
+        min-width="25%">
         <template slot-scope="scope">
           <el-button @click="handleClick(scope.row)"size="small" >查看</el-button>
           <el-button @click="deleteRow(scope.$index,tableData)"size="small">删除</el-button>

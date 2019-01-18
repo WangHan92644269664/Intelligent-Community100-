@@ -9,25 +9,23 @@
       style="width:96%;margin:30px auto 0"
     >
       <el-table-column
-        type="selection"
-        width="50">
+        type="selection">
       </el-table-column>
       <el-table-column
-        fixed
         type="index"
         label="编号"
         :index="indexMethod"
-        width="100">
+        min-width="8%">
       </el-table-column>
       <el-table-column
         prop="name"
         label="支部名称"
-        width="300">
+        min-width="14%">
       </el-table-column>
       <el-table-column
         prop="big"
         label="支部大会"
-        width="150">
+        min-width="11%">
       </el-table-column>
       <el-table-column
         prop="meeting"

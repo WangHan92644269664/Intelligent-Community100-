@@ -1,31 +1,45 @@
 <template>
-  <el-menu class="submenu"  :default-active="activeIndex" unique-opened router>
-    <el-menu-item index="#" class="leftTitle">安防平台</el-menu-item>
-    <el-menu-item class="gis-map" index="/gis/map">
-      <span slot="title">GIS地图</span>
-    </el-menu-item>
-    <el-menu-item class="gis-zhian" index="/gis/zhian">
-      <span slot="title">社会治安</span>
-    </el-menu-item>
-    <el-menu-item class="gis-street" index="/gis/street">
-      <span slot="title">智慧街道</span>
-    </el-menu-item>
-    <el-menu-item class="gis-community" index="/gis/community">
-      <span slot="title">智慧社区</span>
-    </el-menu-item>
-    <el-menu-item class="gis-car" index="/gis/car">
-      <span slot="title">车辆识别门禁</span>
-    </el-menu-item>
-  </el-menu>
+  <Aside :active="activeIndex" :title="title" :lists="lists"></Aside>
 </template>
 
 <script>
+  import Aside from '../Aside'
 export default {
   data() {
     return {
-      activeIndex: "/gis/map"
+      activeIndex: "/gis/map",
+      title:'安防平台',
+      lists:[
+        {
+          index:'/gis/map',
+          name:'GIS地图'
+        },
+        {
+          index:'/gis/zhian',
+          name:'社会治安'
+        },
+        {
+          index:'/gis/street',
+          name:'智慧街道'
+        },
+        {
+          index:'/gis/community',
+          name:'智慧社区'
+        },
+        {
+          index:'/gis/car',
+          name:'车辆识别门禁'
+        },
+      ]
     };
   },
+  components:{
+    Aside
+  },
+  mounted(){
+    //解决页面刷新的时候路由不高亮显示的问题
+    this.activeIndex=this.$route.matched[1].path;
+  }
 };
 </script>
 <style>

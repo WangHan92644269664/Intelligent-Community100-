@@ -34,54 +34,47 @@
       style="width:96%;margin:0 auto"
     >
       <el-table-column
-        type="selection"
-        width="55">
+        type="selection">
       </el-table-column>
       <el-table-column
-        fixed
         prop="id"
         label="编号"
-        width="100">
+        min-width="8%">
       </el-table-column>
       <el-table-column
         prop="title"
         label="标题"
-        width="200">
+        min-width="15%">
       </el-table-column>
       <el-table-column
         prop="name"
         label="操作人"
-        width="150">
+        min-width="15%">
       </el-table-column>
       <el-table-column
         prop="isPublic"
         label="是否为群众公告"
-        width="150">
+        min-width="10%">
       </el-table-column>
       <el-table-column
         prop="time"
         label="操作时间"
-        width="300">
+        min-width="20%">
       </el-table-column>
       <el-table-column
         prop="desc"
         label="文章描述"
-        width="200">
+        min-width="20%">
       </el-table-column>
       <el-table-column
         prop="photo"
         label="电话"
-        width="120">
-      </el-table-column>
-      <el-table-column
-        prop="zip"
-        label="邮编"
-        width="120">
+        min-width="14%">
       </el-table-column>
       <el-table-column
         fixed="right"
         label="操作"
-        width="300">
+        min-width="25%">
         <template slot-scope="scope">
           <el-button @click="handleClick(scope.row)" plain size="small">详情</el-button>
           <el-button @click="handleClick(scope.row)" type="info" size="small">编辑</el-button>

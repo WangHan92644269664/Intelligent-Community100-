@@ -26,19 +26,18 @@
               style="width:96%;margin:0 auto"
             >
               <el-table-column
-                type="selection"
-                width="55">
+                type="selection">
               </el-table-column>
               <el-table-column
                 fixed
                 prop="id"
                 label="文章编号"
-                width="100">
+                min-width="8%">
               </el-table-column>
               <el-table-column
                 prop="name"
                 label="缩略图"
-                width="150">
+                min-width="12%">
                 <template slot-scope="scope">
                   <img :src="scope.row.name" alt="" style="width: 90px;height: 40px;">
                 </template>
@@ -47,38 +46,33 @@
                 prop="title"
                 label="文章标题"
                 show-overflow-tooltip
-                width="200" class="hideWord">
+                min-width="20%">
               </el-table-column>
               <el-table-column
                 prop="people"
                 label="添加人"
-                width="150">
+                min-width="14%">
               </el-table-column>
               <el-table-column
                 prop="address"
                 label="地址"
-                width="300">
+                min-width="22%">
               </el-table-column>
               <el-table-column
                 prop="title"
                 label="文章描述"
                 show-overflow-tooltip
-                width="200">
+                min-width="20%">
               </el-table-column>
               <el-table-column
                 prop="photo"
                 label="电话"
-                width="120">
-              </el-table-column>
-              <el-table-column
-                prop="zip"
-                label="邮编"
-                width="120">
+                min-width="13%">
               </el-table-column>
               <el-table-column
                 fixed="right"
                 label="操作"
-                width="300">
+                min-width="25%">
                 <template slot-scope="scope">
                   <el-button @click="handleClick(scope.row)"size="small" >详情</el-button>
                   <el-button @click="handleClick(scope.row)" size="small">编辑</el-button>

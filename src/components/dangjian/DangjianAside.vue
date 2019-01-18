@@ -2,6 +2,7 @@
   <div class="sidebar" >
     <p style="background: #008aff;color:#fff;height: 70px;line-height: 70px;font-size:20px;font-weight: bolder;margin: 0;">党建平台</p>
     <el-menu class="sidebar-el-menu" :default-active="$route.path" unique-opened router>
+      <el-menu-item index="#" class="leftTitle">党建平台</el-menu-item>
       <template v-for="item in items">
         <template v-if="item.subs">
           <el-submenu :index="item.index" :key="item.index">

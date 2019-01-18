@@ -52,56 +52,55 @@
       style="width:96%;margin:0 auto"
     >
       <el-table-column
-        type="selection"
-        width="55">
+        type="selection">
       </el-table-column>
       <el-table-column
         fixed
         prop="id"
         sortable
         label="编号"
-        width="120">
+        min-width="8%">
       </el-table-column>
       <el-table-column
         prop="name"
         label="计划标题"
-        width="200">
+        min-width="22%">
       </el-table-column>
       <el-table-column
         prop="people"
         sortable
         label="审核人"
-        width="120">
+        min-width="14%">
       </el-table-column>
         <el-table-column
           prop="finish"
           label="完成程度"
-          width="150">
+          min-width="12%">
         </el-table-column>
       <el-table-column
         prop="before"
         label="开始时间"
-        width="200">
+        min-width="20%">
       </el-table-column>
       <el-table-column
         prop="end"
         label="完成时间"
-        width="200">
+        min-width="20%">
       </el-table-column>
       <el-table-column
         prop="photo"
         label="电话"
-        width="150">
+        min-width="14%">
       </el-table-column>
       <el-table-column
         prop="title"
         label="计划描述"
-        width="200">
+        min-width="22%">
       </el-table-column>
       <el-table-column
         fixed="right"
         label="操作"
-        width="350">
+        min-width="15%">
         <template slot-scope="scope">
           <el-button @click="handleClick(scope.row)" plain size="small">查看</el-button>
         </template>

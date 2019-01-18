@@ -1,102 +1,81 @@
 <template>
-  <el-menu  class="submenu"   :default-active="activeIndex" unique-opened router>
-    <el-menu-item index="#" class="leftTitle">工作平台</el-menu-item>
-    <el-submenu index="/working/advertise">
-      <template slot="title">宣传管理</template>
-      <el-menu-item-group>
-        <el-menu-item index="/working/advertise/essay">文章管理</el-menu-item>
-        <el-menu-item index="/working/essay/column">文章栏目管理</el-menu-item>
-        <el-menu-item index="/working/essay/carousel">轮播图管理</el-menu-item>
-      </el-menu-item-group>
-    </el-submenu>
-    <el-submenu index="/working/logmanage">
-      <template slot="title">日志管理</template>
-      <el-menu-item-group>
-        <el-menu-item index="/working/logmanage/log">工作日志</el-menu-item>
-        <el-menu-item index="/working/logmanage/audit">日志审核</el-menu-item>
-      </el-menu-item-group>
-    </el-submenu>
-    <el-submenu index="/working/plan">
-      <template slot="title">工作计划</template>
-      <el-menu-item-group>
-        <el-menu-item index="/working/plan/my">我的工作计划</el-menu-item>
-        <el-menu-item index="/working/plan/undo">我安排的工作</el-menu-item>
-        <el-menu-item index="/working/plan/dept">部门工作计划</el-menu-item>
-      </el-menu-item-group>
-    </el-submenu>
-    <el-menu-item index="/working/notice">公告管理</el-menu-item>
-
-  </el-menu>
+  <Aside :active="activeIndex" :title="title" :lists="lists"></Aside>
 </template>
 
 <script>
+  import Aside from '../Aside'
     export default {
         name: "ContainerAside",
       data(){
           return {
-            activeIndex:'/working/plan/my'
+            activeIndex:'/working/plan/my',
+            title:'工作平台',
+            lists:[
+              {
+                index:'/working/advertise',
+                name:'宣传管理',
+                childs:[
+                  {
+                    index:'/working/advertise/essay',
+                    name:'文章管理'
+                  },
+                  {
+                    index:'/working/essay/column',
+                    name:'文章栏目管理'
+                  },
+                  {
+                    index:'/working/essay/carousel',
+                    name:'轮播图管理'
+                  },
+                ]
+              },
+              {
+                index:'/working/logmanage',
+                name:'日志管理',
+                childs:[
+                  {
+                    index:'/working/logmanage/log',
+                    name:'工作日志'
+                  },
+                  {
+                    index:'/working/logmanage/audit',
+                    name:'日志审核'
+                  }
+                ]
+              },
+              {
+                index:'/working/plan',
+                name:'工作计划',
+                childs:[
+                  {
+                    index:'/working/plan/my',
+                    name:'我的工作计划'
+                  },
+                  {
+                    index:'/working/plan/undo',
+                    name:'我安排的工作'
+                  },
+                  {
+                    index:'/working/plan/dept',
+                    name:'部门工作计划'
+                  },
+                ]
+              },
+              {
+                index:'/working/notice',
+                name:'公告管理',
+              },
+            ]
           }
+      },
+      components:{
+          Aside
+      },
+      mounted(){
+        //解决页面刷新的时候路由不高亮显示的问题
+        this.activeIndex=this.$route.matched[1].path;
       }
     }
 </script>
-<style>
-  .el-submenu__title{
-    color:#c9c9c9;
-    font-weight: bolder;
-  }
-  .el-menu-item-group .el-menu-item{
-    color:#777!important;
-    line-height: 34px!important;
-    height: 34px!important;
-  }
-</style>
 <style scoped>
-  ul{
-    position: fixed;
-    bottom: 0;
-    top: 70px;
-    width:200px;
-    left: 0;
-    background: #202020;
-    z-index: 999;
-  }
-  .submenu li.leftTitle{
-    background: #008aff;
-    color:#fff;
-    text-align: center!important;
-    border:none!important;
-    height: 70px;
-    line-height: 70px;
-    font-size: 20px;
-    font-weight: bolder;
-  }
-  .el-submenu .el-menu-item{
-    min-width: 160px;
-  }
-  .el-menu-item.is-active {
-    color: #0077ff!important;
-    background:#121212;
-    font-weight: bolder;
-    border-left: 2px solid #0077ff;
-  }
-  .el-menu-item, .el-submenu__title{
-    height: 60px;
-    line-height: 60px;
-    color:#c9c9c9;
-    font-size:14px
-  }
-  .submenu li:nth-of-type(1){
-    text-align: center;
-  }
-  .submenu>li{
-    text-align: left!important;
-    border-bottom: 2px solid #3a3a3a;
-  }
-  .submenu>li i{
-    margin-right: 10px;
-    color:#555
-  }
-  .el-menu-item:focus, .el-menu-item:hover{
-    background:#121212;
-  }
 </style>
