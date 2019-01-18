@@ -1,7 +1,7 @@
 <template>
   <el-container style>
     <!--主体内容的侧边栏-->
-    <el-aside width="160px" style="height: 100%">
+    <el-aside width="200px" style="height: 100%">
       <!--左侧侧边栏组件-->
       <GISAside></GISAside>
     </el-aside>
@@ -48,7 +48,7 @@ export default {
 </script>
 <style scoped>
 #content{
-  padding:30px;
+  padding:100px 30px 30px;
   height: 100%;
   width:100%;
   background:#f4f4f4;
