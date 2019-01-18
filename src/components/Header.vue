@@ -51,7 +51,7 @@
 </template>
 
 <script>
-import Bus from '../assets/js/bus' 
+import Bus from '../assets/js/bus'
 export default {
   name: "Header",
   data() {
@@ -87,6 +87,13 @@ export default {
 .el-menu {
   height: 70px !important;
   border-bottom: none !important;
+}
+.el-header{
+  z-index:999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 #headerBtn {
   background: #0077df;

@@ -249,14 +249,16 @@
 </style>
 <style scoped>
   ul{
-    position: absolute;
+    position: fixed;
     bottom: 0;
     top: 70px;
-    width: 160px;
+    width:200px;
     left: 0;
     background: #202020;
+    z-index: 999;
   }
-  .submenu li.leftTitle{
+
+  .sidebar .leftTitle{
     background: #008aff;
     color:#fff;
     text-align: center!important;
