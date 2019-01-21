@@ -234,6 +234,7 @@ export default {
   position: relative;
 }
 .enter-con {
+  cursor: pointer;
   padding-top: 15%;
   border-radius: 10px;
   width: 92%;
@@ -283,7 +284,7 @@ export default {
   left: 50%;
   transform: translate(-50%, -50%);
   animation: show-big 0.15s;
-  -webkit-animation:show-big 0.15s;
+  -webkit-animation: show-big 0.15s;
   /* 阴影 */
 }
 @keyframes show-big {
@@ -351,8 +352,8 @@ export default {
   }
 }
 @media screen and (min-width: 2560px) {
-  .enter-con{
-    padding:25%
+  .enter-con {
+    padding: 25%;
   }
   .enter-con img {
     /* width: 30%; */
@@ -384,10 +385,9 @@ export default {
   }
 }
 @media screen and (max-height: 970px) {
- 
   .enter-con img {
-   width:120px;
-   height: 124px;
+    width: 120px;
+    height: 124px;
   }
   .enter-con {
     padding: 7%;
@@ -401,11 +401,34 @@ export default {
   } */
   .enter-con img {
     /* width: 30%; */
-    width:100px;
+    width: 100px;
     height: 108px;
   }
   .enter-con {
     padding: 10%;
+  }
+  .enter-con:hover {
+  }
+}
+@media screen and (max-height: 620px) {
+  /* .enter-con{
+    padding:30%
+  } */
+  .enter-con img {
+    /* width: 30%; */
+    /* width:100px;
+    height: 108px; */
+    width: 70px;
+    height: 72px;
+  }
+  .enter-con {
+    padding: 10%;
+  }
+  .enter-con p {
+    font-size: 20px;
+  }
+  .enter-con span{
+    height: 2px;
   }
   .enter-con:hover {
   }
