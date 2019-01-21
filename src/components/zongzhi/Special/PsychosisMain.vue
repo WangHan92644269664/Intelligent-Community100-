@@ -25,53 +25,51 @@
       style="width:96%;margin:0 auto"
     >
       <el-table-column
-        type="selection"
-        width="55">
+        type="selection">
       </el-table-column>
       <el-table-column
         prop="name"
         label="姓名"
-        width="120">
+        show-overflow-tooltip
+        min-width="10%">
       </el-table-column>
       <el-table-column
         prop="id"
         label="公民省份证号"
-        width="200">
+        show-overflow-tooltip
+        min-width="14%">
       </el-table-column>
       <el-table-column
         prop="sex"
         label="性别"
-        width="120">
+        min-width="10%">
       </el-table-column>
       <el-table-column
         prop="dept"
         label="所属部门"
-        width="150">
+        show-overflow-tooltip
+        min-width="13%">
       </el-table-column>
       <el-table-column
         prop="education"
         label="学历"
-        width="150">
+        min-width="12%">
       </el-table-column>
       <el-table-column
         prop="politics"
         label="政治面貌"
-        width="200">
+        show-overflow-tooltip
+        min-width="13%">
       </el-table-column>
       <el-table-column
         prop="photo"
         label="电话"
-        width="150">
-      </el-table-column>
-      <el-table-column
-        prop="zip"
-        label="邮编"
-        width="120">
+        min-width="14%">
       </el-table-column>
       <el-table-column
         fixed="right"
         label="操作"
-        width="350">
+        min-width="55%">
         <template slot-scope="scope">
           <el-button @click="handleClick(scope.row)"size="small" >详情</el-button>
           <el-button @click="handleClick(scope.row)" size="small">编辑</el-button>

@@ -15,7 +15,7 @@
         type="index"
         label="编号"
         :index="indexMethod"
-        min-width="8%">
+        width="100">
       </el-table-column>
       <el-table-column
         prop="name"
@@ -25,27 +25,27 @@
       <el-table-column
         prop="big"
         label="支部大会"
-        min-width="11%">
+        min-width="10%">
       </el-table-column>
       <el-table-column
         prop="meeting"
         label="支委会议"
-        width="200">
+        min-width="10%">
       </el-table-column>
       <el-table-column
         prop="group"
         label="党小组会"
-        width="200">
+        min-width="10%">
       </el-table-column>
       <el-table-column
         prop="class"
         label="党课"
-        width="200">
+        min-width="10%">
       </el-table-column>
       <el-table-column
         fixed="right"
         label="操作"
-        width="300">
+        min-width="30%">
         <template slot-scope="scope">
           <el-button @click="handleClick(scope.row)"size="small" >详情</el-button>
           <el-button @click="handleClick(scope.row)" size="small">添加会议</el-button>

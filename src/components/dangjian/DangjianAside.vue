@@ -1,44 +1,14 @@
 <template>
-  <div class="sidebar" >
-    <p style="background: #008aff;color:#fff;height: 70px;line-height: 70px;font-size:20px;font-weight: bolder;margin: 0;">党建平台</p>
-    <el-menu class="sidebar-el-menu" :default-active="$route.path" unique-opened router>
-      <el-menu-item index="#" class="leftTitle">党建平台</el-menu-item>
-      <template v-for="item in items">
-        <template v-if="item.subs">
-          <el-submenu :index="item.index" :key="item.index">
-            <template slot="title" class="first">
-             <span slot="title">{{item.title}}</span>
-            </template>
-            <template v-for="subItem in item.subs">
-              <el-submenu v-if="subItem.subs" :index="subItem.index" :key="subItem.index">
-                <template slot="title" class="second">
-                  {{subItem.title}}
-                </template>
-                <el-menu-item v-for="(threeItem,i) in subItem.subs" :key="i" :index="threeItem.index" class="three">
-                  {{threeItem.title}}
-                </el-menu-item>
-              </el-submenu>
-              <el-menu-item v-else :index="subItem.index" :key="subItem.index" class="first">
-                {{subItem.title}}
-              </el-menu-item>
-            </template>
-          </el-submenu>
-        </template>
-        <template v-else>
-          <el-menu-item :index="item.index" :key="item.index">
-           <span slot="title">{{item.title}}</span>
-          </el-menu-item>
-        </template>
-      </template>
-    </el-menu>
-  </div>
+    <Aside :activeIndex="activeIndex" :items="items" :title="title"></Aside>
 </template>
 
 <script>
+  import Aside from '../ThreeAside'
   export default {
-    name: "ContainerAside",
     data(){
       return{
+        activeIndex:'column',
+        title:'党建平台',
         items:[
           {
             index:'1',
@@ -229,74 +199,19 @@
         ],
       }
     },
-    methods:{
-
-    },
-    computed:{
-
-    },
+   components:{
+      Aside
+   },
+    mounted(){
+      //解决页面刷新的时候路由不高亮显示的问题
+      let urlStr =this.$route.matched[1].path;
+      let index=urlStr.lastIndexOf('\/');
+      urlStr=urlStr.substring(index+1,urlStr.length)
+      this.activeIndex=urlStr;
+    }
   }
 </script>
-<style>
-  .el-submenu__title{
-    color:#c9c9c9;
-    font-weight: bolder;
-  }
-  .el-menu-item-group .el-menu-item{
-    color:#777!important;
-    line-height: 34px!important;
-    height: 34px!important;
-  }
-</style>
 <style scoped>
-  ul{
-    position: fixed;
-    bottom: 0;
-    top: 70px;
-    width:200px;
-    left: 0;
-    background: #202020;
-    z-index: 999;
-  }
 
-  .sidebar .leftTitle{
-    background: #008aff;
-    color:#fff;
-    text-align: center!important;
-    border:none!important;
-    height: 70px;
-    line-height: 70px;
-    font-size: 20px;
-    font-weight: bolder;
-  }
-  .el-submenu .el-menu-item{
-    min-width: 160px;
-  }
-  .el-menu-item.is-active {
-    color: #0077ff!important;
-    background:#121212;
-    font-weight: bolder;
-    border-left: 2px solid #0077ff;
-  }
-  .el-menu-item, .el-submenu__title{
-    height: 60px;
-    line-height: 60px;
-    color:#c9c9c9;
-    font-size:14px
-  }
-  .submenu li:nth-of-type(1){
-    text-align: center;
-  }
-  .submenu>li{
-    text-align: left!important;
-    border-bottom: 2px solid #3a3a3a;
-  }
-  .submenu>li i{
-    margin-right: 10px;
-    color:#555
-  }
-  .el-menu-item:focus, .el-menu-item:hover{
-    background:#121212;
-  }
 
 </style>

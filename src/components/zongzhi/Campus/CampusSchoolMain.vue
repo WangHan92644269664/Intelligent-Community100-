@@ -32,57 +32,52 @@
       style="width:96%;margin:0 auto"
     >
       <el-table-column
-        type="selection"
-        width="55">
+        type="selection">
       </el-table-column>
       <el-table-column
         fixed
         prop="id"
         sortable
         label="所属网格"
-        width="200">
+        min-width="12%">
       </el-table-column>
       <el-table-column
         prop="name"
         sortable
         label="学校名称"
-        width="200">
+        min-width="13%">
       </el-table-column>
       <el-table-column
         prop="kind"
         label="学校类型"
-        width="150">
+        show-overflow-tooltip
+        min-width="12%">
       </el-table-column>
       <el-table-column
         prop="address"
         label="学校地址"
-        width="200">
+        min-width="13%">
       </el-table-column>
       <el-table-column
         prop="num"
         label="在校人数"
-        width="150">
+        min-width="10%">
       </el-table-column>
       <el-table-column
         prop="headName"
         label="校长姓名"
-        width="200">
+        min-width="10%">
       </el-table-column>
       <el-table-column
         prop="secName"
         label="安保负责人姓名"
-        width="150">
-      </el-table-column>
-      <el-table-column
-        prop="zip"
-        label="邮编"
-        width="120">
+        min-width="10%">
       </el-table-column>
       <el-table-column
         fixed="right"
         label="操作"
         sortable
-        width="350">
+        min-width="40%">
         <template slot-scope="scope">
           <el-button @click="handleClick(scope.row)"size="small" >详情</el-button>
           <el-button @click="handleClick(scope.row)" size="small">编辑</el-button>

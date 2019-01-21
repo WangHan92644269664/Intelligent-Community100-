@@ -32,16 +32,19 @@
       <el-table-column
         prop="phone"
         label="手机号"
+        show-overflow-tooltip
         min-width="13%">
       </el-table-column>
       <el-table-column
         prop="ago"
         label="原属组织"
+        show-overflow-tooltip
         min-width="20%">
       </el-table-column>
       <el-table-column
         prop="now"
         label="现属组织"
+        show-overflow-tooltip
         min-width="20%">
       </el-table-column>
       <el-table-column
@@ -52,6 +55,7 @@
       <el-table-column
         prop="id"
         label="身份证号"
+        show-overflow-tooltip
         min-width="16%">
       </el-table-column>
 

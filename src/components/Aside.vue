@@ -36,7 +36,7 @@
 </script>
 <style>
   .el-submenu__title{
-    color:#c9c9c9;
+    color:#c9c9c9!important;
     font-weight: bolder;
   }
   .el-menu-item-group .el-menu-item{
@@ -46,6 +46,9 @@
   }
 </style>
 <style scoped>
+  .el-menu{
+    border-right-width: 0;
+  }
   ul{
     position: fixed;
     bottom: 0;

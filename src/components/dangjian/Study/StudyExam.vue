@@ -25,44 +25,42 @@
       style="width:96%;margin:0 auto"
     >
       <el-table-column
-        type="selection"
-        width="50">
+        type="selection">
       </el-table-column>
       <el-table-column
-        fixed
         prop="id"
         label="编号"
-        width="250">
+        min-width="8%">
       </el-table-column>
       <el-table-column
         prop="name"
         label="考试标题"
-        width="350">
+        min-width="14%">
       </el-table-column>
       <el-table-column
         prop="img"
         label="缩略图"
-        width="200">
+        min-width="13%">
       </el-table-column>
       <el-table-column
         prop="right"
         label="正确答案"
-        width="200">
+        min-width="12%">
       </el-table-column>
       <el-table-column
         prop="date"
         label="考试时间"
-        width="300">
+        min-width="20%">
       </el-table-column>
       <el-table-column
         prop="status"
         label="状态"
-        width="250">
+        min-width="16%">
       </el-table-column>
       <el-table-column
         fixed="right"
         label="操作"
-        width="300">
+        min-width="25%">
         <template slot-scope="scope">
           <el-button @click="handleClick(scope.row)" size="small">编辑</el-button>
           <el-button @click="handleClick(scope.row)"size="small">停用</el-button>

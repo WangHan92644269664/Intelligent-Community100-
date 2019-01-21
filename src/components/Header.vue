@@ -39,6 +39,7 @@
               :span="13"
               :offset="1"
               style="color:#fff;font-size:12px;line-height: 40px;"
+              id="user"
             >管理员 : 黄佩珊</el-col>
             <el-col :span="2" :offset="1">
               <el-button type="primary" id="headerBtn">退出</el-button>
@@ -123,6 +124,11 @@ export default {
 .el-menu-item[data-v-61dd7a3d] {
   padding: 0 30px;
 }
+@media screen and (min-width: 1720px) {
+  .el-menu-item[data-v-61dd7a3d] {
+    padding: 0 35px !important;
+  }
+}
 @media screen and (max-width: 1720px) {
   .el-menu-item[data-v-61dd7a3d] {
     padding: 0 28px !important;
@@ -130,17 +136,31 @@ export default {
 }
 @media screen and (max-width: 1500px) {
   .el-menu-item[data-v-61dd7a3d] {
-    padding: 0 25px !important;
+    padding: 0 24px !important;
   }
 }
 @media screen and (max-width: 1400px) {
   .el-menu-item[data-v-61dd7a3d] {
-    padding: 0 23px !important;
+    padding: 0 22px !important;
   }
 }
 @media screen and (max-width: 1366px) {
   .el-menu-item[data-v-61dd7a3d] {
     padding: 0 20px !important;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .el-col-lg-16{
+    width: 65.5%;
+  }
+  .el-col-lg-3{
+    width: 13%;
+  }
+  #user{
+    width: 60.2%;
+  }
+  .el-col-offset-1{
+    margin-left: 5%;
   }
 }
 </style>

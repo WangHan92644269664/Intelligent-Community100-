@@ -25,34 +25,33 @@
       style="width:96%;margin:0 auto"
     >
       <el-table-column
-        type="selection"
-        width="55">
+        type="selection">
       </el-table-column>
       <el-table-column
         fixed
         prop="name"
         label="小区名称"
-        width="250">
+        min-width="13%">
       </el-table-column>
       <el-table-column
         prop="goodsName"
         label="建筑物名称"
-        width="300">
+        min-width="13%">
       </el-table-column>
       <el-table-column
         prop="peopleName"
         label="楼栋长姓名"
-        width="300">
+        min-width="12%">
       </el-table-column>
       <el-table-column
         prop="phone"
         label="联系电话"
-        width="300">
+        min-width="14%">
       </el-table-column>
       <el-table-column
         fixed="right"
         label="操作"
-        width="400">
+        min-width="30%">
         <template slot-scope="scope">
           <el-button @click="handleClick(scope.row)"size="small" >详情</el-button>
           <el-button @click="handleClick(scope.row)" size="small">编辑</el-button>

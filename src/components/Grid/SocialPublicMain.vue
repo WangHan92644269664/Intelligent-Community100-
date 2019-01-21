@@ -35,38 +35,38 @@
         sortable
         prop="id"
         label="序号"
-        width="150">
+        min-width="11%">
       </el-table-column>
       <el-table-column
         prop="name"
         label="登记人"
-        width="200">
+        min-width="13%">
       </el-table-column>
       <el-table-column
         prop="object"
         label="走访对象"
-        width="200">
+        min-width="12%">
       </el-table-column>
 
       <el-table-column
         prop="phone"
         label="联系方式"
-        width="250">
+        min-width="14%">
       </el-table-column>
       <el-table-column
         prop="time"
         label="走访时间"
-        width="250">
+        min-width="13%">
       </el-table-column>
       <el-table-column
         prop="from"
         label="走访缘由"
-        width="200">
+        min-width="14%">
       </el-table-column>
       <el-table-column
         fixed="right"
         label="操作"
-        width="300">
+        min-width="30%">
         <template slot-scope="scope">
           <el-button @click="handleClick(scope.row)"size="small" >详情</el-button>
           <el-button @click="handleClick(scope.row)" size="small">编辑</el-button>

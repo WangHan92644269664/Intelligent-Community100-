@@ -35,8 +35,7 @@
       style="width:96%;margin:0 auto"
     >
       <el-table-column
-        type="selection"
-        width="50">
+        type="selection">
       </el-table-column>
       <el-table-column
         fixed
@@ -44,42 +43,37 @@
         label="编号"
         sortable
         :index="indexMethod"
-        width="190">
+        width="100">
       </el-table-column>
       <el-table-column
         prop="name"
         label="标题"
-        width="300">
+        min-width="20%">
       </el-table-column>
       <el-table-column
         prop="kind"
         label="总结类型"
-        width="200">
+        min-width="12%">
       </el-table-column>
       <el-table-column
         prop="people"
         label="提交人"
-        width="200">
+        min-width="13%">
       </el-table-column>
       <el-table-column
         prop="time"
         label="提交时间"
-        width="240">
+        min-width="18%">
       </el-table-column>
       <el-table-column
         prop="status"
         label="状态"
-        width="120">
-      </el-table-column>
-      <el-table-column
-        prop="zip"
-        label="邮编"
-        width="120">
+        min-width="11%">
       </el-table-column>
       <el-table-column
         fixed="right"
         label="操作"
-        width="300">
+        min-width="25%">
         <template slot-scope="scope">
           <el-button @click="handleClick(scope.row)"size="small" >详情</el-button>
           <el-button @click="handleClick(scope.row)" size="small">编辑</el-button>

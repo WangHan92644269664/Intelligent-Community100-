@@ -25,42 +25,40 @@
       style="width:96%;margin:0 auto"
     >
       <el-table-column
-        type="selection"
-        width="50">
+        type="selection">
       </el-table-column>
       <el-table-column
-        fixed
         prop="id"
         label="编号"
-        width="200">
+        min-width="8%">
       </el-table-column>
       <el-table-column
         prop="name"
         label="标题"
-        width="300">
+        min-width="13%">
       </el-table-column>
       <el-table-column
         prop="time"
         label="更改时间"
         sortable
-        width="260">
+        min-width="20%">
       </el-table-column>
       <el-table-column
         prop="people"
         label="操作人"
         sortable
-        width="260">
+        min-width="13%">
       </el-table-column>
       <el-table-column
         prop="status"
         label="状态"
         sortable
-        width="260">
+        min-width="13%">
       </el-table-column>
       <el-table-column
         fixed="right"
         label="操作"
-        width="280">
+        min-width="25%">
         <template slot-scope="scope">
           <el-button @click="handleClick(scope.row)"size="small" >编辑</el-button>
           <el-button @click="handleClick(scope.row)" size="small">停用</el-button>

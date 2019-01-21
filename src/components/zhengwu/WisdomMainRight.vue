@@ -49,6 +49,7 @@
       <el-table-column
         prop="date"
         label="出生日期"
+        show-overflow-tooltip
         min-width="19%">
       </el-table-column>
       <el-table-column
@@ -64,6 +65,7 @@
       <el-table-column
         prop="photo"
         label="电话"
+        show-overflow-tooltip
         min-width="14%">
       </el-table-column>
       <el-table-column
@@ -74,6 +76,7 @@
       <el-table-column
         prop="title"
         label="计划描述"
+        show-overflow-tooltip
         min-width="21%">
       </el-table-column>
       <el-table-column

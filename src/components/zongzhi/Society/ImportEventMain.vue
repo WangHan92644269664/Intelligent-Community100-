@@ -22,16 +22,15 @@
     <el-table :data="tableData" border   style="width:96%;margin:0 auto"
     >
       <el-table-column
-        type="selection"
-        width="55">
+        type="selection">
       </el-table-column>
-      <el-table-column fixed prop="name" sortable label="案(事)件名称" width="150"></el-table-column>
-      <el-table-column prop="date" sortable label="发生日期" width="120"></el-table-column>
-      <el-table-column prop="area" label="发生地" width="250"></el-table-column>
-      <el-table-column prop="desc" label="发生地详细地址" width="150"></el-table-column>
-      <el-table-column prop="rank" label="案(事)件分级" width="250"></el-table-column>
-      <el-table-column prop="kind" label="案(事)件类型" width="200"></el-table-column>
-      <el-table-column fixed="right" label="操作" width="300">
+      <el-table-column fixed prop="name" sortable label="案(事)件名称"  min-width="13%"></el-table-column>
+      <el-table-column prop="date" sortable label="发生日期"  min-width="13%"></el-table-column>
+      <el-table-column prop="area" label="发生地"   show-overflow-tooltip min-width="13%"></el-table-column>
+      <el-table-column prop="desc" label="发生地详细地址"   show-overflow-tooltip min-width="13%"></el-table-column>
+      <el-table-column prop="rank" label="案(事)件分级"  min-width="10%"></el-table-column>
+      <el-table-column prop="kind" label="案(事)件类型"  min-width="12%"></el-table-column>
+      <el-table-column fixed="right" label="操作"  min-width="40%">
         <template slot-scope="scope">
           <el-button @click="handleClick(scope.row)"size="small" >详情</el-button>
           <el-button @click="handleClick(scope.row)" size="small">编辑</el-button>

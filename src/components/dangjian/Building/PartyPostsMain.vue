@@ -22,29 +22,28 @@
       style="width:96%;margin:0 auto"
     >
       <el-table-column
-        type="selection"
-        width="100">
+        type="selection">
       </el-table-column>
       <el-table-column
         fixed
         prop="id"
         label="服务编号"
-        width="300">
+        width="100">
       </el-table-column>
       <el-table-column
         prop="name"
         label="服务名称"
-        width="350">
+        min-width="13%">
       </el-table-column>
       <el-table-column
         prop="status"
         label="状态"
-        width="300">
+        min-width="13%">
       </el-table-column>
       <el-table-column
         fixed="right"
         label="操作"
-        width="550">
+        min-width="25%">
         <template slot-scope="scope">
           <el-button @click="handleClick(scope.row)"size="small" >详情</el-button>
           <el-button @click="handleClick(scope.row)" size="small">编辑</el-button>

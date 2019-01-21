@@ -25,44 +25,42 @@
       style="width:96%;margin:0 auto"
     >
       <el-table-column
-        type="selection"
-        width="50">
+        type="selection">
       </el-table-column>
       <el-table-column
-        fixed
         prop="id"
         label="编号"
-        width="250">
+        min-width="8%">
       </el-table-column>
       <el-table-column
         prop="name"
         label="笔记标题"
-        width="350">
+        min-width="13%">
       </el-table-column>
       <el-table-column
         prop="kind"
         label="笔记分类"
-        width="300">
+        min-width="13%">
       </el-table-column>
       <el-table-column
         prop="zhuan"
         label="专题类型"
-        width="200">
+        min-width="13%">
       </el-table-column>
       <el-table-column
         prop="people"
         label="操作人"
-        width="200">
+        min-width="11%">
       </el-table-column>
       <el-table-column
         prop="date"
         label="更改时间"
-        width="250">
+        min-width="16%">
       </el-table-column>
       <el-table-column
         fixed="right"
         label="操作"
-        width="300">
+        min-width="25%">
         <template slot-scope="scope">
           <el-button @click="handleClick(scope.row)"size="small" >详情</el-button>
           <el-button @click="handleClick(scope.row)" size="small">编辑</el-button>

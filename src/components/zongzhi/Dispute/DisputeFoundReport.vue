@@ -29,17 +29,16 @@
     <el-table :data="tableData" border   style="width:96%;margin:0 auto"
     >
       <el-table-column
-        type="selection"
-        width="55">
+        type="selection">
       </el-table-column>
-      <el-table-column fixed prop="square" sortable label="所属网格" width="220"></el-table-column>
-      <el-table-column prop="id" sortable label="登记编号" width="150"></el-table-column>
-      <el-table-column prop="problem" label="事件名称" width="180"></el-table-column>
-      <el-table-column prop="problemFrom" label="来源" width="200"></el-table-column>
-      <el-table-column prop="dengjiTime" label="登记时间" width="200"></el-table-column>
-      <el-table-column prop="problemPeople" label="登记人" width="150"></el-table-column>
-      <el-table-column prop="problemType" label="事件类型" width="220"></el-table-column>
-      <el-table-column fixed="right" label="操作" width="350">
+      <el-table-column fixed prop="square" sortable label="所属网格"   show-overflow-tooltip min-width="13%"></el-table-column>
+      <el-table-column prop="id" sortable label="登记编号"  min-width="12%"></el-table-column>
+      <el-table-column prop="problem" label="事件名称"   show-overflow-tooltip min-width="13%"></el-table-column>
+      <el-table-column prop="problemFrom" label="来源"  min-width="12%"></el-table-column>
+      <el-table-column prop="dengjiTime" label="登记时间"  min-width="12%"></el-table-column>
+      <el-table-column prop="problemPeople" label="登记人"  min-width="12%"></el-table-column>
+      <el-table-column prop="problemType" label="事件类型"  min-width="12%"></el-table-column>
+      <el-table-column fixed="right" label="操作"  min-width="30%">
         <template slot-scope="scope">
           <el-button @click="handleClick(scope.row)"size="small" >详情</el-button>
           <el-button @click="handleClick(scope.row)" size="small">编辑</el-button>

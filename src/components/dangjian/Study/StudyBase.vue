@@ -22,44 +22,42 @@
       style="width:96%;margin:0 auto"
     >
       <el-table-column
-        type="selection"
-        width="50">
+        type="selection">
       </el-table-column>
       <el-table-column
-        fixed
         prop="id"
         label="编号"
-        width="250">
+        min-width="8%">
       </el-table-column>
       <el-table-column
         prop="name"
         label="题目"
-        width="350">
+        min-width="25%">
       </el-table-column>
       <el-table-column
         prop="select"
         label="题目选项"
-        width="300">
+        min-width="27%">
       </el-table-column>
       <el-table-column
         prop="right"
         label="正确答案"
-        width="200">
+        min-width="10%">
       </el-table-column>
       <el-table-column
         prop="count"
         label="分值"
-        width="200">
+        min-width="10%">
       </el-table-column>
       <el-table-column
         prop="status"
         label="状态"
-        width="250">
+        min-width="15%">
       </el-table-column>
       <el-table-column
         fixed="right"
         label="操作"
-        width="300">
+        min-width="20%">
         <template slot-scope="scope">
           <el-button @click="handleClick(scope.row)" size="small">编辑</el-button>
           <el-button @click="handleClick(scope.row)"size="small">停用</el-button>

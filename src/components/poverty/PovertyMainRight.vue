@@ -64,11 +64,13 @@
       <el-table-column
         prop="card"
         label="身份证号"
+        show-overflow-tooltip
         min-width="16%">
       </el-table-column>
       <el-table-column
         prop="photo"
         label="电话"
+        show-overflow-tooltip
         min-width="13%">
       </el-table-column>
       <el-table-column

@@ -45,50 +45,49 @@
       style="width:96%;margin:0 auto"
     >
       <el-table-column
-        type="selection"
-        width="55">
+        type="selection">
       </el-table-column>
       <el-table-column
-        fixed
         prop="id"
         label="信访号"
-        width="200">
+        min-width="11%">
       </el-table-column>
       <el-table-column
         prop="name"
         label="所属网格"
-        width="200">
+        show-overflow-tooltip
+        min-width="14%">
       </el-table-column>
       <el-table-column
         prop="card"
         label="查询码"
-        width="150">
+        min-width="12%">
       </el-table-column>
       <el-table-column
         prop="date"
         label="信访日期"
-        width="200">
+        min-width="12%">
       </el-table-column>
       <el-table-column
         prop="object"
         label="信访对象"
-        width="150">
+        min-width="11%">
       </el-table-column>
       <el-table-column
         prop="kind"
         label="信访形式"
-        width="200">
+        min-width="11%">
       </el-table-column>
       <el-table-column
         prop="de"
         label="信访目的"
-        width="150">
+        min-width="11%">
       </el-table-column>
       <el-table-column
         fixed="right"
         label="操作"
         sortable
-        width="300">
+        min-width="30%">
         <template slot-scope="scope">
           <el-button @click="handleClick(scope.row)"size="small" >详情</el-button>
           <el-button @click="handleClick(scope.row)" size="small">编辑</el-button>

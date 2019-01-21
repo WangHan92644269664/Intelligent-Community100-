@@ -21,18 +21,17 @@
     <el-table :data="tableData" border   style="width:96%;margin:0 auto"
     >
       <el-table-column
-        type="selection"
-        width="55">
+        type="selection">
       </el-table-column>
-      <el-table-column fixed prop="square" sortable label="所属网格" width="120"></el-table-column>
-      <el-table-column prop="id" sortable label="编号" width="120"></el-table-column>
-      <el-table-column prop="problem" label="治安突出问题" width="150"></el-table-column>
-      <el-table-column prop="areaType" label="涉及区域类型" width="200"></el-table-column>
-      <el-table-column prop="cuanTou" label="整治窜头单位" width="200"></el-table-column>
-      <el-table-column prop="join" label="整治参与单位" width="150"></el-table-column>
-      <el-table-column prop="time" label="整改时限" width="120"></el-table-column>
-      <el-table-column prop="status" label="状态" width="200"></el-table-column>
-      <el-table-column fixed="right" label="操作" width="350">
+      <el-table-column fixed prop="square" sortable label="所属网格"    show-overflow-tooltip min-width="12%"></el-table-column>
+      <el-table-column prop="id" sortable label="编号"  min-width="10%"></el-table-column>
+      <el-table-column prop="problem" label="治安突出问题"   show-overflow-tooltip min-width="12%"></el-table-column>
+      <el-table-column prop="areaType" label="涉及区域类型"  min-width="12%"></el-table-column>
+      <el-table-column prop="cuanTou" label="整治窜头单位"  min-width="12%"></el-table-column>
+      <el-table-column prop="join" label="整治参与单位"  min-width="12%"></el-table-column>
+      <el-table-column prop="time" label="整改时限"  min-width="16%"></el-table-column>
+      <el-table-column prop="status" label="状态"  min-width="14%"></el-table-column>
+      <el-table-column fixed="right" label="操作"  min-width="40%">
         <template slot-scope="scope">
           <el-button @click="handleClick(scope.row)"size="small" >详情</el-button>
           <el-button @click="handleClick(scope.row)" size="small">编辑</el-button>

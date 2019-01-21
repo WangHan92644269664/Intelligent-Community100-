@@ -42,43 +42,46 @@
     >
       <el-table-column
         type="selection"
-        width="55">
+        width="50"
+      >
       </el-table-column>
       <el-table-column
         prop="network"
         label="所属网格"
-        width="300">
+        show-overflow-tooltip
+        min-width="18%"
+        >
       </el-table-column>
       <el-table-column
         prop="house"
         label="所属建筑"
-        width="200">
+        min-width="12%">
       </el-table-column>
       <el-table-column
         prop="unit"
         label="所属单元"
-        width="150">
+        min-width="12%">
       </el-table-column>
 
       <el-table-column
         prop="id"
         label="门牌号"
-        width="150">
+        min-width="12%">
       </el-table-column>
       <el-table-column
         prop="name"
         label="房主姓名"
-        width="200">
+        min-width="12%">
       </el-table-column>
       <el-table-column
         prop="desc"
         label="住房情况"
-        width="180">
+        min-width="12%">
       </el-table-column>
       <el-table-column
         fixed="right"
         label="操作"
-        width="300">
+        min-width="30%">
         <template slot-scope="scope">
           <el-button @click="handleClick(scope.row)"size="small" >详情</el-button>
           <el-button @click="handleClick(scope.row)" size="small">编辑</el-button>

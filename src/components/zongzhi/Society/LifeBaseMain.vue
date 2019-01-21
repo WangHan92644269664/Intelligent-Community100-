@@ -22,17 +22,16 @@
     <el-table :data="tableData" border   style="width:96%;margin:0 auto"
     >
       <el-table-column
-        type="selection"
-        width="55">
+        type="selection">
       </el-table-column>
-      <el-table-column fixed prop="square" sortable label="所属网格" width="200"></el-table-column>
-      <el-table-column prop="id" sortable label="案件编号" width="200"></el-table-column>
-      <el-table-column prop="name" label="案件名称" width="150"></el-table-column>
-      <el-table-column prop="start" label="发生日期" width="200"></el-table-column>
-      <el-table-column prop="end" label="结案日期" width="200"></el-table-column>
-      <el-table-column prop="desc" label="简要情况" width="200"></el-table-column>
-      <el-table-column prop="time" label="添加时间" width="200"></el-table-column>
-      <el-table-column fixed="right" label="操作" width="300">
+      <el-table-column fixed prop="square" sortable label="所属网格"  min-width="13%"></el-table-column>
+      <el-table-column prop="id" sortable label="案件编号"  min-width="11%"></el-table-column>
+      <el-table-column prop="name" label="案件名称"  min-width="12%"></el-table-column>
+      <el-table-column prop="start" label="发生日期"  min-width="12%"></el-table-column>
+      <el-table-column prop="end" label="结案日期"  min-width="12%"></el-table-column>
+      <el-table-column prop="desc" label="简要情况"  min-width="12%"></el-table-column>
+      <el-table-column prop="time" label="添加时间"  min-width="13%"></el-table-column>
+      <el-table-column fixed="right" label="操作"  min-width="40%">
         <template slot-scope="scope">
           <el-button @click="handleClick(scope.row)"size="small" >详情</el-button>
           <el-button @click="handleClick(scope.row)" size="small">编辑</el-button>

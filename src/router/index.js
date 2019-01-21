@@ -369,6 +369,10 @@ export default new Router({
       },
       children: [
         {
+          path:'/dangjian',
+          redirect:'/dangjian/activity/three/origan',
+        },
+        {
           path: '/dangjian/activity/three/origan',
           component: Organization,
           meta: {
@@ -522,10 +526,6 @@ export default new Router({
             showHeader: true
           },
         },
-        {
-          path: '/dangjian',
-          redirect: '/dangjian/activity/three/origan'
-        }
       ],
 
     },

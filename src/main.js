@@ -13,6 +13,8 @@ import highcharts from 'highcharts'
 import VueHighCharts from 'vue-highcharts'
 import highcharts3d from 'highcharts/highcharts-3d'
 highcharts3d(highcharts)
+//引入公共的css
+import './assets/styles/common/common.css'
 
 //引入echarts
 import echarts from 'echarts'

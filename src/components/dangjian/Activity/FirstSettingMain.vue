@@ -22,8 +22,7 @@
       style="width:96%;margin:0 auto"
     >
       <el-table-column
-        type="selection"
-        width="50">
+        type="selection">
       </el-table-column>
       <el-table-column
         fixed
@@ -31,25 +30,25 @@
         label="编号"
         sortable
         :index="indexMethod"
-        width="350">
+        width="100">
       </el-table-column>
       <el-table-column
         prop="people"
         label="党员"
         sortable
-        width="400">
+        min-width="16%">
       </el-table-column>
       <el-table-column
         prop="village"
         label="工作村"
         sortable
-        width="500">
+        min-width="16%">
       </el-table-column>
       <el-table-column
         fixed="right"
         sortable
         label="操作"
-        width="400">
+        min-width="25%">
         <template slot-scope="scope">
           <el-button @click="handleClick(scope.row)" size="small">编辑</el-button>
           <el-button @click="deleteRow(scope.$index,tableData)"size="small">删除</el-button>

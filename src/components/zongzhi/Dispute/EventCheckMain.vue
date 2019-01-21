@@ -25,17 +25,16 @@
     <el-table :data="tableData" border   style="width:96%;margin:0 auto"
     >
       <el-table-column
-        type="selection"
-        width="55">
+        type="selection">
       </el-table-column>
-      <el-table-column fixed prop="square" sortable label="所属网格" width="220"></el-table-column>
-      <el-table-column prop="id" sortable label="案件编号" width="150"></el-table-column>
-      <el-table-column prop="name" label="事件名称" width="180"></el-table-column>
-      <el-table-column prop="from" label="来源" width="200"></el-table-column>
-      <el-table-column prop="time" label="登记时间" width="200"></el-table-column>
-      <el-table-column prop="people" label="登记人" width="150"></el-table-column>
-      <el-table-column prop="type" label="事件类型" width="220"></el-table-column>
-      <el-table-column fixed="right" label="操作" width="350">
+      <el-table-column fixed prop="square" sortable label="所属网格"   show-overflow-tooltip min-width="13%"></el-table-column>
+      <el-table-column prop="id" sortable label="案件编号"  min-width="12%"></el-table-column>
+      <el-table-column prop="name" label="事件名称"  min-width="13%"></el-table-column>
+      <el-table-column prop="from" label="来源"  min-width="12%"></el-table-column>
+      <el-table-column prop="time" label="登记时间"  min-width="12%"></el-table-column>
+      <el-table-column prop="people" label="登记人"  min-width="12%"></el-table-column>
+      <el-table-column prop="type" label="事件类型"  min-width="12%"></el-table-column>
+      <el-table-column fixed="right" label="操作"  min-width="20%">
         <template slot-scope="scope">
           <el-button @click="handleClick(scope.row)"size="small" >查询</el-button>
         </template>

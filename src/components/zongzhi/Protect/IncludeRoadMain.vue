@@ -24,52 +24,49 @@
       style="width:96%;margin:0 auto"
     >
       <el-table-column
-        type="selection"
-        width="55">
+        type="selection">
       </el-table-column>
       <el-table-column
-        fixed
         prop="id"
         label="所属网格"
-        width="200">
+        show-overflow-tooltip
+        min-width="13%">
       </el-table-column>
       <el-table-column
-        fixed
         prop="id"
         label="所属线路"
-        width="250">
+        min-width="13%">
       </el-table-column>
       <el-table-column
-        fixed
         prop="id2"
         label="编号"
-        width="150">
+        min-width="8%">
       </el-table-column>
       <el-table-column
         prop="id3"
         label="案件编号"
-        width="200">
+        min-width="11%">
       </el-table-column>
       <el-table-column
         prop="name"
         label="案件名称"
-        width="150">
+        min-width="13%">
       </el-table-column>
       <el-table-column
         prop="date"
         label="发生日期"
-        width="200">
+        min-width="13%">
       </el-table-column>
       <el-table-column
         prop="nature"
         label="案件性质"
-        width="150">
+        min-width="11%">
       </el-table-column>
       <el-table-column
         fixed="right"
         label="操作"
         sortable
-        width="350">
+        min-width="30%">
         <template slot-scope="scope">
           <el-button @click="handleClick(scope.row)"size="small" >详情</el-button>
           <el-button @click="handleClick(scope.row)" size="small">编辑</el-button>

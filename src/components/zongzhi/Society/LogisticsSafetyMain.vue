@@ -22,17 +22,16 @@
     <el-table :data="tableData" border   style="width:96%;margin:0 auto"
     >
       <el-table-column
-        type="selection"
-        width="55">
+        type="selection">
       </el-table-column>
-      <el-table-column fixed prop="square" sortable label="所属网格" width="150"></el-table-column>
-      <el-table-column prop="id" sortable label="案件编号" width="120"></el-table-column>
-      <el-table-column prop="reg" label="工商执照注册号" width="250"></el-table-column>
-      <el-table-column prop="name" label="寄递物流企业名称" width="150"></el-table-column>
-      <el-table-column prop="area" label="所在地" width="250"></el-table-column>
-      <el-table-column prop="desc" label="企业详细地址" width="200"></el-table-column>
-      <el-table-column prop="phone" label="企业联系方式" width="200"></el-table-column>
-      <el-table-column fixed="right" label="操作" width="300">
+      <el-table-column fixed prop="square" sortable label="所属网格" min-width="13%"></el-table-column>
+      <el-table-column prop="id" sortable label="案件编号"  min-width="10%"></el-table-column>
+      <el-table-column prop="reg" label="工商执照注册号"   show-overflow-tooltip  min-width="16%"></el-table-column>
+      <el-table-column prop="name" label="寄递物流企业名称"  min-width="12%"></el-table-column>
+      <el-table-column prop="area" label="所在地"   show-overflow-tooltip min-width="14%"></el-table-column>
+      <el-table-column prop="desc" label="企业详细地址"   show-overflow-tooltip  min-width="13%"></el-table-column>
+      <el-table-column prop="phone" label="企业联系方式"   show-overflow-tooltip min-width="13%"></el-table-column>
+      <el-table-column fixed="right" label="操作"  min-width="40%">
         <template slot-scope="scope">
           <el-button @click="handleClick(scope.row)"size="small" >详情</el-button>
           <el-button @click="handleClick(scope.row)" size="small">编辑</el-button>

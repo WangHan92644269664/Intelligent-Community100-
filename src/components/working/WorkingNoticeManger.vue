@@ -54,7 +54,7 @@
       <el-table-column
         prop="isPublic"
         label="是否为群众公告"
-        min-width="10%">
+        min-width="11%">
       </el-table-column>
       <el-table-column
         prop="time"

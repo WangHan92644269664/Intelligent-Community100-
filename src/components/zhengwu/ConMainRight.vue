@@ -32,7 +32,7 @@
                 fixed
                 prop="id"
                 label="文章编号"
-                min-width="8%">
+                min-width="10%">
               </el-table-column>
               <el-table-column
                 prop="name"
@@ -51,11 +51,13 @@
               <el-table-column
                 prop="people"
                 label="添加人"
+                show-overflow-tooltip
                 min-width="14%">
               </el-table-column>
               <el-table-column
                 prop="address"
                 label="地址"
+                show-overflow-tooltip
                 min-width="22%">
               </el-table-column>
               <el-table-column
@@ -67,12 +69,13 @@
               <el-table-column
                 prop="photo"
                 label="电话"
+                show-overflow-tooltip
                 min-width="13%">
               </el-table-column>
               <el-table-column
                 fixed="right"
                 label="操作"
-                min-width="25%">
+                min-width="45%">
                 <template slot-scope="scope">
                   <el-button @click="handleClick(scope.row)"size="small" >详情</el-button>
                   <el-button @click="handleClick(scope.row)" size="small">编辑</el-button>

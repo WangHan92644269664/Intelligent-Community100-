@@ -27,50 +27,51 @@
       style="width:96%;margin:0 auto"
     >
       <el-table-column
-        type="selection"
-        width="55">
+        type="selection">
       </el-table-column>
       <el-table-column
         fixed
         prop="network"
         label="所属网格"
-        width="200">
+        min-width="12%">
       </el-table-column>
       <el-table-column
         prop="school"
         label="所属学校"
-        width="200">
+        min-width="13%">
       </el-table-column>
       <el-table-column
         prop="id"
         label="案件编号"
-        width="150">
+        min-width="12%">
       </el-table-column>
       <el-table-column
         prop="name"
         label="案件名称"
-        width="200">
+        show-overflow-tooltip
+        min-width="12%">
       </el-table-column>
       <el-table-column
         prop="time"
         label="发生时间"
-        width="150">
+        min-width="13%">
       </el-table-column>
       <el-table-column
         prop="nature"
         label="案件性质"
-        width="200">
+        min-width="12%">
       </el-table-column>
       <el-table-column
         prop="desc"
         label="案件情况"
-        width="150">
+        show-overflow-tooltip
+        min-width="12%">
       </el-table-column>
       <el-table-column
         fixed="right"
         label="操作"
         sortable
-        width="350">
+        min-width="40%">
         <template slot-scope="scope">
           <el-button @click="handleClick(scope.row)"size="small" >详情</el-button>
           <el-button @click="handleClick(scope.row)" size="small">编辑</el-button>

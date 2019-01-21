@@ -28,7 +28,7 @@
     <el-table
       :data="tableData"
       border
-      height="650px"
+      style="width:96%;margin:0 auto"
     >
       <el-table-column
         fixed

@@ -25,29 +25,27 @@
       style="width:96%;margin:0px auto"
     >
       <el-table-column
-        type="selection"
-        width="50">
+        type="selection">
       </el-table-column>
       <el-table-column
-        fixed
         type="index"
         label="编号"
         sortable
         :index="indexMethod"
-        width="200">
+        width="100">
       </el-table-column>
       <el-table-column
         prop="title"
         label="标题"
         sortable
         show-overflow-tooltip
-        width="300">
+        min-width="20%">
       </el-table-column>
       <el-table-column
         prop="name"
         label="缩略图"
         sortable
-        width="150">
+        min-width="13%">
         <template slot-scope="scope">
           <img :src="scope.row.name" alt="" style="width: 90px;height: 40px;">
         </template>
@@ -56,23 +54,23 @@
         prop="people"
         label="操作人"
         sortable
-        width="200">
+        min-width="13%">
       </el-table-column>
       <el-table-column
         prop="time"
         sortable
         label="操作时间"
-        width="300">
+        min-width="20%">
       </el-table-column>
       <el-table-column
         prop="photo"
         label="电话"
-        width="220">
+        min-width="16%">
       </el-table-column>
       <el-table-column
         fixed="right"
         label="操作"
-        width="300">
+        min-width="30%">
         <template slot-scope="scope">
           <el-button @click="handleClick(scope.row)"size="small" >详情</el-button>
           <el-button @click="handleClick(scope.row)" size="small">编辑</el-button>
