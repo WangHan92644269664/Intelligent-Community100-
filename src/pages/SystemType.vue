@@ -210,6 +210,7 @@ export default {
   color: rgb(23, 35, 47);
   margin-left: 10px;
   margin-right: 50px;
+  padding:0 10px;
 }
 .auto-div {
   height: 60%;
