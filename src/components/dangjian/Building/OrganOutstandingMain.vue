@@ -34,21 +34,13 @@
       </el-table-column>
       <el-table-column
         prop="title"
-        label="标题"
+        label="党组织名称"
         show-overflow-tooltip
         min-width="13%">
       </el-table-column>
       <el-table-column
-        prop="name"
-        label="缩略图"
-        min-width="13%">
-        <template slot-scope="scope">
-          <img :src="scope.row.name" alt="" style="width: 90px;height: 40px;">
-        </template>
-      </el-table-column>
-      <el-table-column
         prop="head"
-        label="所属栏目"
+        label="党组织级别"
         min-width="18%">
       </el-table-column>
       <el-table-column
@@ -102,55 +94,29 @@
         currentPage4: 1,
         tableData: [
           {
-            id: '6',
-            name: require('../../images/advertise.jpg'),
-            title: '智慧大厅简介',
+            id: '25',
+            title: '九庄镇政法委',
             people: '超级管理员',
-            head:'智慧大厅简介',
+            head:'区/县委',
             date:'2017-11-24 12:21:10',
-            photo: '15455545555',
           },   {
-            id: '6',
-            name: require('../../images/advertise.jpg'),
-            title: '智慧大厅简介',
+            id: '24',
+            title: '开阳县政法委',
             people: '超级管理员',
-            head:'智慧大厅简介',
+            head:'街道工委/乡镇党委',
             date:'2017-11-24 12:21:10',
-            photo: '15455545555',
           },  {
-            id: '6',
-            name: require('../../images/advertise.jpg'),
-            title: '智慧大厅简介',
+            id: '26',
+            title: '久安乡政法委',
             people: '超级管理员',
-            head:'智慧大厅简介',
+            head:'街道工委/乡镇党委',
             date:'2017-11-24 12:21:10',
-            photo: '15455545555',
           },  {
-            id: '6',
-            name: require('../../images/advertise.jpg'),
-            title: '智慧大厅简介',
+            id: '27',
+            title: '大石乡政法委',
             people: '超级管理员',
-            head:'智慧大厅简介',
+            head:'街道工委/乡镇党委',
             date:'2017-11-24 12:21:10',
-            photo: '15455545555',
-          },
-          {
-            id: '6',
-            name: require('../../images/advertise.jpg'),
-            title: '智慧大厅简介',
-            people: '超级管理员',
-            head:'智慧大厅简介',
-            date:'2017-11-24 12:21:10',
-            photo: '15455545555',
-          },
-          {
-            id: '6',
-            name: require('../../images/advertise.jpg'),
-            title: '智慧大厅简介',
-            people: '超级管理员',
-            head:'智慧大厅简介',
-            date:'2017-11-24 12:21:10',
-            photo: '15455545555',
           },
         ],
         formInline: {

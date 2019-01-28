@@ -15,7 +15,7 @@
           <el-form-item label="出生日期:">
             <el-input v-model="formInline.time"></el-input>
           </el-form-item>
-          <el-form-item label="关键字:">
+          <el-form-item label="关键词:">
             <el-input v-model="formInline.key" placeholder="姓名/身份证"></el-input>
           </el-form-item>
           <el-form-item class="search">
@@ -68,12 +68,6 @@
         min-width="16%">
       </el-table-column>
       <el-table-column
-        prop="photo"
-        label="电话"
-        show-overflow-tooltip
-        min-width="13%">
-      </el-table-column>
-      <el-table-column
         fixed="right"
         label="操作"
         min-width="50%">
@@ -115,7 +109,7 @@
         tableData: [
           {
           id: '918',
-          name: '王晗',
+          name: '王静',
           sex: '男',
           time: '19951007',
           nation:'汉族',
@@ -124,7 +118,7 @@
           zip: 200333
         }, {
           id: '924',
-          name: '李萌萌',
+          name: '丁春华',
           sex: '男',
           time: '19951207',
           nation:'汉族',
@@ -133,7 +127,7 @@
           zip: 200333
         }, {
           id: '928',
-          name: '吴鑫',
+          name: '黄明',
           sex: '男',
           time: '19960505',
           nation:'汉族',
@@ -142,7 +136,7 @@
           zip: 200333
         }, {
           id: '1159',
-          name: '张赢芳',
+          name: '付晓丽',
           sex: '男',
           time: '19971024',
           nation:'汉族',
@@ -152,19 +146,9 @@
         },
           {
             id: '891',
-            name: '徐樱花',
+            name: '徐鑫',
             sex: '女',
             time: '19951007',
-            nation:'汉族',
-            card:'***********4776',
-            photo: '15455545555',
-            zip: 200333
-          },
-          {
-            id: '895',
-            name: '张鑫',
-            sex: '女',
-            time: '19940808',
             nation:'汉族',
             card:'***********4776',
             photo: '15455545555',

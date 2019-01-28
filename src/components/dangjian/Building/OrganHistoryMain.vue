@@ -1,24 +1,16 @@
 <template>
-  <div>
-    <el-row  class="mainRight">
-      <el-col :span="24" class="borderBottom">
-        人口列表
-      </el-col>
+  <div class="mainRight">
+    <el-row class="borderBottom">
+      <el-col :span="24">{{rightTitle}}</el-col>
     </el-row>
     <el-row style="padding-left: 30px;padding-top: 20px;background: #fff;">
       <el-col :span="24" style="text-align: left;">
         <el-form :inline="true" :model="formInline" class="demo-form-inline">
-          <el-form-item label="性别:">
-            <el-select v-model="formInline.sex" placeholder="请选择">
-              <el-option label="男" value="male"></el-option>
-              <el-option label="女" value="female"></el-option>
-            </el-select>
+          <el-form-item label="所属组织:">
+            <el-input v-model="formInline.time"></el-input>
           </el-form-item>
-          <el-form-item label="出生日期:">
-            <el-input v-model="formInline.date" ></el-input>
-          </el-form-item>
-          <el-form-item label="关键词:">
-            <el-input v-model="formInline.key" placeholder="姓名/身份证号"></el-input>
+          <el-form-item label="姓名:">
+            <el-input v-model="formInline.title" placeholder="姓名/身份证号"></el-input>
           </el-form-item>
           <el-form-item class="search">
             <el-button type="primary" size="small"><img :src="search" alt="" style="margin-right: 8px;">查询</el-button>
@@ -30,33 +22,25 @@
     <el-table
       :data="tableData"
       border
-      stripe
       style="width:96%;margin:0 auto"
     >
       <el-table-column
-        type="selection"
-        width="55">
-      </el-table-column>
-      <el-table-column
-        prop="id"
-        label="序号"
-        min-width="10%">
+        type="selection">
       </el-table-column>
       <el-table-column
         prop="name"
         label="姓名"
-        min-width="11%">
+        min-width="10%">
       </el-table-column>
       <el-table-column
         prop="sex"
         label="性别"
-        min-width="8%">
+        min-width="10%">
       </el-table-column>
-
       <el-table-column
         prop="date"
         label="出生日期"
-        min-width="12%">
+        min-width="18%">
       </el-table-column>
       <el-table-column
         prop="nation"
@@ -64,15 +48,19 @@
         min-width="10%">
       </el-table-column>
       <el-table-column
-        prop="card"
+        prop="id"
         label="身份证号"
-        show-overflow-tooltip
         min-width="15%">
+      </el-table-column>
+      <el-table-column
+        prop="area"
+        label="所属组织"
+        min-width="13%">
       </el-table-column>
       <el-table-column
         fixed="right"
         label="操作"
-        min-width="30%">
+        min-width="35%">
         <template slot-scope="scope">
           <el-button @click="handleClick(scope.row)"size="small" >详情</el-button>
           <el-button @click="handleClick(scope.row)" size="small">编辑</el-button>
@@ -80,7 +68,7 @@
         </template>
       </el-table-column>
     </el-table>
-    <el-row style="background: #fff;padding-bottom:40px;margin-top:60px;">
+    <el-row style="background: #fff;padding-bottom:40px;margin-top: 40px;">
       <el-col :span="24">
         <div class="block">
           <el-pagination
@@ -89,9 +77,8 @@
             :current-page="currentPage4"
             :page-sizes="[5,10]"
             :page-size="10"
-            :page-count="2"
             layout="prev, pager,next, jumper, total, sizes"
-            :total="12">
+            :total="6">
           </el-pagination>
         </div>
       </el-col>
@@ -101,66 +88,49 @@
 
 <script>
   export default {
+    props:{
+      rightTitle:String
+    },
     data() {
       return {
-        search:require('../images/search.png'),
-        add:require('../images/add.png'),
-        formInline: {
-        sex:'',
-          date:'',
-          key:''
-        },
+        search:require('../../images/search.png'),
+        add:require('../../images/add.png'),
         currentPage4: 1,
         tableData: [
           {
-            id:'0001',
-            name:'王静',
-            sex:'女',
-            date:'1996.05.16',
+            name:'陈华',
+           sex:'男',
+           date:'1994-05-16',
+           nation:'汉',
+            id:'**************2546',
+            area:'久安乡政法委'
+          },   {
+            name:'黄伟',
+            sex:'男',
+            date:'1994-05-16',
             nation:'汉',
-            card:'***************5426'
+            id:'**************2546',
+            area:'新华社区政法委'
+          },  {
+            name:'徐秋红',
+            sex:'女',
+            date:'1994-05-16',
+            nation:'汉',
+            id:'**************2546',
+            area:'珍珠河社区政法委'
+          },  {
+            name:'刘光',
+            sex:'女',
+            date:'1994-05-16',
+            nation:'汉',
+            id:'**************2546',
+            area:'九庄镇综治办'
           },
-          {
-            id:'0001',
-            name:'丁春华',
-            sex:'女',
-            date:'1996.05.16',
-            nation:'汉',
-            card:'***************5426'
-          },
-          {
-            id:'0001',
-            name:'黄丽',
-            sex:'女',
-            date:'1996.05.16',
-            nation:'汉',
-            card:'***************5426'
-          },
-          {
-            id:'0001',
-            name:'付晓丽',
-            sex:'女',
-            date:'1996.05.16',
-            nation:'汉',
-            card:'***************5426'
-          },
-          {
-            id:'0001',
-            name:'沈诗韵',
-            sex:'女',
-            date:'1996.05.16',
-            nation:'汉',
-            card:'***************5426'
-          },{
-            id:'0001',
-            name:'张毅',
-            sex:'女',
-            date:'1996.05.16',
-            nation:'汉',
-            card:'***************5426'
-          },
-
         ],
+        formInline: {
+          title: '',
+          time: '',
+        },
       }
     },
     methods: {
@@ -180,25 +150,22 @@
       deleteRow(index,rows){
         rows.splice(index,1)
       },
-    },
+    }
   }
 </script>
-<style>
-
-</style>
 <style scoped>
- .cell .el-button:first-child{
+  .cell .el-button:first-child{
     background: none;
-   border:1px solid #999
+    border:1px solid #999
   }
- .cell .el-button:nth-child(2){
-   background: none;
-   border:1px solid #ff813d;
-   color:#ff813d
- }
- .cell .el-button:nth-child(3){
-   background: none;
-   border:1px solid #008aff;
-   color:#008aff;
- }
+  .cell .el-button:nth-child(2){
+    background: none;
+    border:1px solid #ff813d;
+    color:#ff813d
+  }
+  .cell .el-button:nth-child(3){
+    background: none;
+    border:1px solid #008aff;
+    color:#008aff;
+  }
 </style>

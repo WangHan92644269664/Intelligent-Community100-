@@ -33,24 +33,29 @@
         label="编号"
         sortable
         :index="indexMethod"
-        width="100">
+      width="100">
       </el-table-column>
       <el-table-column
         prop="name"
         label="标题"
+        show-overflow-tooltip
+        min-width="15%">
+      </el-table-column>
+      <el-table-column
+        prop="kind"
+        label="总结类型"
+        min-width="10%">
+      </el-table-column>
+      <el-table-column
+        prop="people"
+        label="提交人"
         min-width="10%">
       </el-table-column>
       <el-table-column
         prop="time"
-        label="更改时间"
+        label="提交时间"
         sortable
         min-width="20%">
-      </el-table-column>
-      <el-table-column
-        prop="people"
-        label="操作人"
-        sortable
-        min-width="9%">
       </el-table-column>
       <el-table-column
         prop="status"
@@ -59,14 +64,9 @@
         min-width="10%">
       </el-table-column>
       <el-table-column
-        prop="class"
-        label="党课"
-        min-width="10%">
-      </el-table-column>
-      <el-table-column
         fixed="right"
         label="操作"
-        min-width="25%">
+        min-width="35%">
         <template slot-scope="scope">
           <el-button @click="handleClick(scope.row)"size="small" >详情</el-button>
           <el-button @click="handleClick(scope.row)" size="small">编辑</el-button>
@@ -104,65 +104,29 @@
         currentPage4: 1,
         tableData: [
           {
-            name: '两学一做',
+            name: '2018年第48期 对外开放：发展中国特色社会主义',
+            kind:'日报',
             people:'超级管理员',
             time:'2018-11-17 14:02:43',
-            status:'可用',
-            class: '0/0',
-            zip: 200333
+            status:'未审核',
           }, {
-            name: '两学一做',
+            name: '2018年第48期 把握时代机遇,共享亚太未来',
+            kind:'日报',
             people:'超级管理员',
             time:'2018-11-17 14:02:43',
-            status:'可用',
-            class: '0/0',
-            zip: 200333
+            status:'未审核',
           }, {
-            name: '三严三实',
+            name: '2018年第48期 对外开放：发展中国特色社会主义',
+            kind:'日报',
             people:'超级管理员',
             time:'2018-11-17 14:02:43',
-            status:'可用',
-            class: '0/0',
-            zip: 200333
+            status:'未审核',
           }, {
-            name: '三会一课',
+            name: '2018年第48期 把握时代机遇,共享亚太未来',
+            kind:'日报',
             people:'超级管理员',
             time:'2018-11-17 14:02:43',
-            status:'可用',
-            class: '0/0',
-            zip: 200333
-          },
-          {
-            name: '法治建设',
-            people:'超级管理员',
-            time:'2018-11-17 14:02:43',
-            status:'可用',
-            class: '0/0',
-            zip: 200333
-          },
-          {
-            name: '规章制度',
-            people:'超级管理员',
-            time:'2018-11-17 14:02:43',
-            status:'可用',
-            class: '0/0',
-            zip: 200333
-          },
-          {
-            name: '公共服务',
-            people:'超级管理员',
-            time:'2018-11-17 14:02:43',
-            status:'可用',
-            class: '0/0',
-            zip: 200333
-          },
-          {
-            name: '就业创业',
-            people:'超级管理员',
-            time:'2018-11-17 14:02:43',
-            status:'可用',
-            class: '0/0',
-            zip: 200333
+            status:'未审核',
           },
         ],
         formInline: {

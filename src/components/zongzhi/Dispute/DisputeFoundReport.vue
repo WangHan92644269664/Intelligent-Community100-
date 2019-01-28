@@ -17,7 +17,7 @@
             </el-select>
           </el-form-item>
           <el-form-item label="万能搜索:">
-            <el-input v-model="formInline.search"  placeholder="万能搜索"></el-input>
+            <el-input v-model="formInline.search"  placeholder="请输入关键词"></el-input>
           </el-form-item>
           <el-form-item class="search">
             <el-button type="primary" size="small"><img :src="search" alt="" style="margin-right: 8px;">查询</el-button>
@@ -31,8 +31,8 @@
       <el-table-column
         type="selection">
       </el-table-column>
-      <el-table-column fixed prop="square" sortable label="所属网格"   show-overflow-tooltip min-width="13%"></el-table-column>
-      <el-table-column prop="id" sortable label="登记编号"  min-width="12%"></el-table-column>
+      <el-table-column fixed prop="square"  label="所属网格"   show-overflow-tooltip min-width="13%"></el-table-column>
+      <el-table-column prop="id"  label="登记编号"  min-width="12%"></el-table-column>
       <el-table-column prop="problem" label="事件名称"   show-overflow-tooltip min-width="13%"></el-table-column>
       <el-table-column prop="problemFrom" label="来源"  min-width="12%"></el-table-column>
       <el-table-column prop="dengjiTime" label="登记时间"  min-width="12%"></el-table-column>
@@ -79,7 +79,7 @@ export default {
       currentPage4: 1,
       tableData: [
         {
-          square: "高新区-天桥办事处",
+          square: "九庄镇政法委",
           id: "AS00002",
           problem: "土地使用权纠纷",
           problemFrom: "群众来访",
@@ -88,7 +88,7 @@ export default {
           problemType: "土地及资产",
         },
          {
-          square: "高新区-开发区",
+          square: "开阳县政法委",
           id: "AS00001",
           problem: "下水道井盖丢失",
           problemFrom: "电话热线",

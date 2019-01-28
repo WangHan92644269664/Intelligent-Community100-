@@ -3,7 +3,7 @@
     <el-row class="borderBottom">
       <el-col :span="24">{{rightTitle}}</el-col>
     </el-row>
-    <el-row style="padding-left: 15px;">
+    <el-row style="padding-left: 30px;padding-top: 20px;background: #fff;">
       <el-col :span="24" style="text-align: left;">
         <el-form :inline="true" :model="formInline" class="demo-form-inline">
           <el-form-item label="性别:">
@@ -34,46 +34,38 @@
         fixed
         prop="name"
         label="姓名"
-        width="200">
+       min-width="10%">
       </el-table-column>
       <el-table-column
         prop="sex"
         label="性别"
-        sortable
-        width="150">
+       min-width="10%">
       </el-table-column>
       <el-table-column
         prop="date"
         label="出生日期"
-        width="250">
+       min-width="14%">
       </el-table-column>
       <el-table-column
         prop="nation"
         label="民族"
-        width="150">
+        min-width="10%">
       </el-table-column>
       <el-table-column
         prop="id"
         label="身份证号"
-        sortable
-        width="300">
+       min-width="15%">
       </el-table-column>
       <el-table-column
         prop="area"
         label="所属组织"
         sortable
-        width="200">
-      </el-table-column>
-      <el-table-column
-        prop="area"
-        sortable
-        label="党内职务"
-        width="200">
+       min-width="14%">
       </el-table-column>
       <el-table-column
         fixed="right"
         label="操作"
-        width="250">
+        min-width="30%">
         <template slot-scope="scope">
           <el-button @click="handleClick(scope.row)"size="small" >查看</el-button>
           <el-button @click="deleteRow(scope.$index,tableData)"size="small">删除</el-button>
@@ -94,6 +86,35 @@
         add:require('../images/add.png'),
         currentPage4: 1,
         tableData: [
+          {
+            name: '钟浩',
+           sex:'男',
+            date:'1994-5-16',
+            nation:'汉',
+            id:'**************0518',
+            area:'大石乡政法委'
+          },   {
+            name: '张强',
+            sex:'男',
+            date:'1994-5-16',
+            nation:'汉',
+            id:'**************0518',
+            area:'久安乡政法委'
+          },  {
+            name: '张雯雯',
+            sex:'女',
+            date:'1994-5-16',
+            nation:'汉',
+            id:'**************0518',
+            area:'明珠社区'
+          },  {
+            name: '李芳',
+            sex:'女',
+            date:'1994-5-16',
+            nation:'汉',
+            id:'**************0518',
+            area:'九庄镇政法委'
+          },
         ],
         formInline: {
           sex: '',
@@ -124,4 +145,13 @@
 </script>
 
 <style scoped>
+  .cell .el-button:first-child{
+    background: none;
+    border:1px solid #999
+  }
+  .cell .el-button:nth-child(2){
+    background: none;
+    border:1px solid #008aff;
+    color:#008aff;
+  }
 </style>

@@ -24,8 +24,8 @@
       <el-table-column
         type="selection">
       </el-table-column>
-      <el-table-column fixed prop="square" sortable label="所属网格"  min-width="13%"></el-table-column>
-      <el-table-column prop="id" sortable label="案件编号"  min-width="11%"></el-table-column>
+      <el-table-column fixed prop="square"  label="所属网格"  min-width="13%"></el-table-column>
+      <el-table-column prop="id" label="案件编号"  min-width="11%"></el-table-column>
       <el-table-column prop="name" label="案件名称"  min-width="12%"></el-table-column>
       <el-table-column prop="start" label="发生日期"  min-width="12%"></el-table-column>
       <el-table-column prop="end" label="结案日期"  min-width="12%"></el-table-column>
@@ -71,7 +71,7 @@
         currentPage4: 1,
         tableData: [
           {
-            square: "开发区",
+            square: "新天社区",
             id: "AS000001",
            name:'偷电动车',
             start:'2018.1.15',
@@ -80,50 +80,32 @@
             time: "2018.11.13",
           },
           {
-            square: "天桥办事区",
+            square: "九庄镇政法委党支部",
             id: "AS000001",
-            name:'偷电动车',
+            name:'群众斗殴',
             start:'2018.1.15',
             end:'2018.1.15',
             desc:'已经结案',
             time: "2018.11.13",
           },
           {
-            square: "舜泰办事区",
+            square: "久安乡政法委党支部",
             id: "AS000001",
-            name:'偷电动车',
+            name:'偷窃',
             start:'2018.1.15',
             end:'2018.1.15',
             desc:'已经结案',
             time: "2018.11.13",
           },
           {
-            square: "花园路社区",
+            square: "大石乡政法委党支部",
             id: "AS000001",
-            name:'偷电动车',
+            name:'抢劫杀人',
             start:'2018.1.15',
             end:'2018.1.15',
             desc:'已经结案',
             time: "2018.11.13",
           },
-          {
-            square: "港西办事处",
-            id: "AS000001",
-            name:'偷电动车',
-            start:'2018.1.15',
-            end:'2018.1.15',
-            desc:'已经结案',
-            time: "2018.11.13",
-          },
-          {
-            square: "平西2号网格",
-            id: "AS000001",
-            name:'偷电动车',
-            start:'2018.1.15',
-            end:'2018.1.15',
-            desc:'已经结案',
-            time: "2018.11.13",
-          }
         ]
       };
     },

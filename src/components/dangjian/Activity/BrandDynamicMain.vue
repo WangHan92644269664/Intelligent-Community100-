@@ -63,11 +63,6 @@
         min-width="20%">
       </el-table-column>
       <el-table-column
-        prop="photo"
-        label="电话"
-        min-width="16%">
-      </el-table-column>
-      <el-table-column
         fixed="right"
         label="操作"
         min-width="30%">

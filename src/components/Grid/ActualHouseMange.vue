@@ -24,7 +24,7 @@
           <el-form-item label="门牌号:">
             <el-input v-model="formInline.id" placeholder="请输入"></el-input>
           </el-form-item>
-          <el-form-item label="只能搜索:">
+          <el-form-item label="智能搜索:">
             <el-input v-model="formInline.search" placeholder="房主姓名/身份证号"></el-input>
           </el-form-item>
           <el-form-item class="search">
@@ -123,23 +123,23 @@
         currentPage4: 1,
         tableData: [
           {
-            network:'高新区-开发区-开发区一号网格',
+            network:'新天社区一号网格',
            house:'衣服加工厂',
            unit:'一单元',
             id:'001',
-           name:'李小龙',
-           desc:'常住',
+           name:'翁振新',
+           desc:'租赁',
           },
           {
-            network:'高新区-开发区-开发区一号网格',
+            network:'新天社区一号网格',
             house:'衣服加工厂',
             unit:'一单元',
             id:'002',
-            name:'李小龙',
+            name:'吴昊',
             desc:'常住',
           },
           {
-            network:'高新区-开发区-开发区一号网格',
+            network:'新天社区一号网格',
             house:'衣服加工厂',
             unit:'一单元',
             id:'003',
@@ -147,27 +147,27 @@
             desc:'常住',
           },
           {
-            network:'高新区-开发区-开发区一号网格',
+            network:'新天社区一号网格',
             house:'衣服加工厂',
             unit:'一单元',
             id:'004',
-            name:'李小龙',
+            name:'范金金',
             desc:'常住',
           },
           {
-            network:'高新区-开发区-开发区一号网格',
+            network:'新天社区一号网格',
             house:'衣服加工厂',
             unit:'一单元',
             id:'005',
-            name:'李小龙',
+            name:'李慕云',
             desc:'常住',
           },
           {
-            network:'高新区-开发区-开发区一号网格',
+            network:'新天社区一号网格',
             house:'衣服加工厂',
             unit:'一单元',
             id:'006',
-            name:'李小龙',
+            name:'李柳',
             desc:'常住',
           },
         ],

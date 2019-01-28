@@ -28,7 +28,6 @@
     <el-table
       :data="tableData"
       border
-      height="450px"
       style="width:96%;margin:0 auto"
     >
       <el-table-column
@@ -62,7 +61,7 @@
       </el-table-column>
       <el-table-column
         prop="area"
-        label="所属地区"
+        label="所属组织"
         show-overflow-tooltip
         min-width="13%">
       </el-table-column>
@@ -107,64 +106,33 @@
         currentPage4: 1,
         tableData: [
           {
-            name: '王晗',
+            name: '许华盛',
             sex:'女',
-            date:'19951004',
-            nation:'汉族',
-            id:'4114214554555545',
-            area:'管城回族区中兴南路',
-            zip: 200333
+            date:'1995-10-04',
+            nation:'汉',
+            id:'**************5545',
+            area:'九庄镇综治办',
           },   {
-            name: '方立群',
-            sex:'男',
-            date:'19951004',
-            nation:'汉族',
-            id:'4114214554555545',
-            area:'管城回族区中兴南路',
-            zip: 200333
+            name: '刘光',
+            sex:'女',
+            date:'1995-10-04',
+            nation:'汉',
+            id:'**************5545',
+            area:'久安乡政法委',
           },    {
-            name: '白恩施',
-            sex:'男',
-            date:'19951004',
-            nation:'汉族',
-            id:'4114214554555545',
-            area:'管城回族区中兴南路',
-            zip: 200333
+            name: '谢凡',
+            sex:'女',
+            date:'1995-10-04',
+            nation:'汉',
+            id:'**************5545',
+            area:'新天社区政法委',
           },   {
-            name: '张树要',
-            sex:'男',
-            date:'19951004',
-            nation:'汉族',
-            id:'4114214554555545',
-            area:'管城回族区中兴南路',
-            zip: 200333
-          },
-          {
-            name: '方文轩',
-            sex:'男',
-            date:'19951004',
-            nation:'汉族',
-            id:'4114214554555545',
-            area:'管城回族区中兴南路',
-            zip: 200333
-          },
-          {
-            name: '刘华龙',
-            sex:'男',
-            date:'19951004',
-            nation:'汉族',
-            id:'4114214554555545',
-            area:'管城回族区中兴南路',
-            zip: 200333
-          },
-          {
-            name: '王德川',
-            sex:'男',
-            date:'19951004',
-            nation:'汉族',
-            id:'4114214554555545',
-            area:'管城回族区中兴南路',
-            zip: 200333
+            name: '李东',
+            sex:'女',
+            date:'1995-10-04',
+            nation:'汉',
+            id:'**************5545',
+            area:'开阳县综治办',
           },
         ],
         formInline: {

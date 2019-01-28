@@ -23,8 +23,8 @@
       <el-table-column
         type="selection">
       </el-table-column>
-      <el-table-column fixed prop="square" sortable label="所属网格"    show-overflow-tooltip min-width="12%"></el-table-column>
-      <el-table-column prop="id" sortable label="编号"  min-width="10%"></el-table-column>
+      <el-table-column fixed prop="square"  label="所属网格"    show-overflow-tooltip min-width="12%"></el-table-column>
+      <el-table-column prop="id" label="编号"  min-width="10%"></el-table-column>
       <el-table-column prop="problem" label="治安突出问题"   show-overflow-tooltip min-width="12%"></el-table-column>
       <el-table-column prop="areaType" label="涉及区域类型"  min-width="12%"></el-table-column>
       <el-table-column prop="cuanTou" label="整治窜头单位"  min-width="12%"></el-table-column>
@@ -70,7 +70,7 @@ export default {
       currentPage4: 1,
       tableData: [
         {
-          square: "开发区",
+          square: "九庄镇政法委",
           id: "2",
           problem: "抢劫抢夺",
           areaType: "学校周边",
@@ -80,7 +80,7 @@ export default {
           status: "待处理"
         },
         {
-          square: "天桥办事区",
+          square: "开阳县政法委",
           id: "3",
           problem: "其他",
           areaType: "交通场站",
@@ -90,7 +90,7 @@ export default {
           status: "待处理"
         },
         {
-          square: "舜泰办事区",
+          square: "久安乡政法委",
           id: "4",
           problem: "电信诈骗",
           areaType: "集贸市场",
@@ -100,7 +100,7 @@ export default {
           status: "待处理"
         },
         {
-          square: "花园路社区",
+          square: "大石乡政法委",
           id: "5",
           problem: "交通秩序混乱",
           areaType: "重点线路",
@@ -110,7 +110,7 @@ export default {
           status: "待处理"
         },
         {
-          square: "港西办事处",
+          square: "开阳县政法委",
           id: "6",
           problem: "偷盗机动车",
           areaType: "学校周边",
@@ -120,7 +120,7 @@ export default {
           status: "待处理"
         },
         {
-          square: "平西2号网格",
+          square: "大石乡政法委",
           id: "1",
           problem: "入室盗窃",
           areaType: "交通场站",

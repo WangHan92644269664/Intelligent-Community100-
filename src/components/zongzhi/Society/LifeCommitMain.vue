@@ -21,8 +21,8 @@
       <el-table-column
         type="selection">
       </el-table-column>
-      <el-table-column fixed prop="life" sortable label="所属命案"  min-width="12%"></el-table-column>
-      <el-table-column prop="square" sortable label="所属区域"  min-width="12%"></el-table-column>
+      <el-table-column fixed prop="life"  label="所属命案"  min-width="12%"></el-table-column>
+      <el-table-column prop="square"  label="所属区域"  min-width="12%"></el-table-column>
       <el-table-column prop="isTrue" label="嫌疑人/受害人"   show-overflow-tooltip  min-width="12%"></el-table-column>
       <el-table-column prop="id" label="身份证号"   show-overflow-tooltip min-width="14%"></el-table-column>
       <el-table-column prop="name" label="姓名"  min-width="11%"></el-table-column>
@@ -69,64 +69,44 @@
         tableData: [
           {
             life:'偷电动车',
-            square: "开发区",
+            square: "新天社区",
             isTrue:'受害人',
             id: "************2255",
-            name:'世博',
+            name:'杨盼',
            sex:'男',
-           area:'许昌',
+           area:'贵阳',
            phone:'15546256465',
           },
           {
             life:'偷电动车',
-            square: "开发区",
+            square: "新天社区",
             isTrue:'受害人',
             id: "************2255",
-            name:'世博',
+            name:'吴静',
             sex:'男',
-            area:'许昌',
+            area:'贵阳',
             phone:'15546256465',
           },
           {
             life:'偷电动车',
-            square: "开发区",
+            square: "新天社区",
             isTrue:'受害人',
             id: "************2255",
-            name:'世博',
+            name:'付晓丽',
             sex:'男',
-            area:'许昌',
+            area:'贵阳',
             phone:'15546256465',
           },
           {
             life:'偷电动车',
-            square: "开发区",
+            square: "新天社区",
             isTrue:'受害人',
             id: "************2255",
-            name:'世博',
+            name:'张倩',
             sex:'男',
-            area:'许昌',
+            area:'贵阳',
             phone:'15546256465',
           },
-          {
-            life:'偷电动车',
-            square: "开发区",
-            isTrue:'受害人',
-            id: "************2255",
-            name:'世博',
-            sex:'男',
-            area:'许昌',
-            phone:'15546256465',
-          },
-          {
-            life:'偷电动车',
-            square: "开发区",
-            isTrue:'受害人',
-            id: "************2255",
-            name:'世博',
-            sex:'男',
-            area:'许昌',
-            phone:'15546256465',
-          }
         ]
       };
     },

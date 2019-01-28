@@ -6,11 +6,17 @@
     <el-row style="padding-left: 30px;padding-top: 20px;background: #fff;">
       <el-col :span="24" style="text-align: left;">
         <el-form :inline="true" :model="formInline" class="demo-form-inline">
-          <el-form-item label="姓名:">
-            <el-input v-model="formInline.name"></el-input>
+          <el-form-item label="性别:">
+            <el-select v-model="formInline.sex" placeholder="请选择">
+              <el-option label="男" value="male"></el-option>
+              <el-option label="女" value="female"></el-option>
+            </el-select>
           </el-form-item>
-          <el-form-item label="公民身份证号:">
-            <el-input v-model="formInline.id"></el-input>
+          <el-form-item label="出生日期:">
+            <el-input v-model="formInline.time"></el-input>
+          </el-form-item>
+          <el-form-item label="关键词:">
+            <el-input v-model="formInline.key" placeholder="姓名/身份证"></el-input>
           </el-form-item>
           <el-form-item class="search">
             <el-button type="primary" size="small"><img :src="search" alt="" style="margin-right: 8px;">查询</el-button>
@@ -28,53 +34,46 @@
         type="selection">
       </el-table-column>
       <el-table-column
-        prop="name"
-        label="姓名"
-        show-overflow-tooltip
+        prop="id"
+        sortable
+        label="序号"
         min-width="10%">
       </el-table-column>
       <el-table-column
-        prop="id"
-        label="公民省份证号"
-        show-overflow-tooltip
+        prop="name"
+        label="姓名"
         min-width="13%">
       </el-table-column>
       <el-table-column
         prop="sex"
+        sortable
         label="性别"
         min-width="10%">
       </el-table-column>
       <el-table-column
-        prop="dept"
-        label="所属部门"
-        show-overflow-tooltip
-        min-width="12%">
+        prop="time"
+        label="出生日期"
+        min-width="15%">
       </el-table-column>
       <el-table-column
-        prop="education"
-        label="学历"
-        min-width="11%">
+        prop="nation"
+        label="民族"
+        min-width="10%">
       </el-table-column>
       <el-table-column
-        prop="politics"
-        label="政治面貌"
+        prop="card"
+        label="身份证号"
         show-overflow-tooltip
-        min-width="12%">
-      </el-table-column>
-      <el-table-column
-        prop="photo"
-        label="电话"
-        show-overflow-tooltip
-        min-width="13%">
+        min-width="16%">
       </el-table-column>
       <el-table-column
         fixed="right"
         label="操作"
-        min-width="55%">
+        min-width="50%">
         <template slot-scope="scope">
-          <el-button @click="handleClick(scope.row)"size="small" >详情</el-button>
-          <el-button @click="handleClick(scope.row)" size="small">编辑</el-button>
-          <el-button @click="deleteRow(scope.$index,tableData)"size="small">移除</el-button>
+          <el-button @click="handleClick(scope.row)" plain size="small">详情</el-button>
+          <el-button @click="handleClick(scope.row)" type="info" size="small">编辑</el-button>
+          <el-button type="success" @click="deleteRow(scope.$index,tableData)" size="small">删除</el-button>
           <el-button @click="handleClick(scope.row)" plain size="small">居住信息</el-button>
         </template>
       </el-table-column>
@@ -107,33 +106,52 @@
         currentPage4: 1,
         tableData: [
           {
-          name: '王晗',
-          id:'55455445622521',
-          sex: '女',
-          dept:'综治办',
-          education:'本科',
-          politics:'共青团员',
-          photo: '15455545555',
-          zip: 200333
-        }, {
-          name: '成功',
-          id:'55455445622521',
-          sex: '男',
-          dept:'度假区综治中心',
-          education:'本科',
-          politics:'共青团员',
-          photo: '15455545555',
-          zip: 200333
-        }, {
-          name: '超级管理员',
-          id:'55455445622521',
-          sex: '男',
-          dept:'高新区综治中心',
-          education:'本科',
-          politics:'共青团员',
-          photo: '15455545555',
-          zip: 200333
-        }
+            id: '918',
+            name: '王静',
+            sex: '男',
+            time: '19951007',
+            nation:'汉族',
+            card:'***********4776',
+            photo: '15455545555',
+            zip: 200333
+          }, {
+            id: '924',
+            name: '丁春华',
+            sex: '男',
+            time: '19951207',
+            nation:'汉族',
+            card:'***********4476',
+            photo: '15455545555',
+            zip: 200333
+          }, {
+            id: '928',
+            name: '黄明',
+            sex: '男',
+            time: '19960505',
+            nation:'汉族',
+            card:'***********6664',
+            photo: '15455545555',
+            zip: 200333
+          }, {
+            id: '1159',
+            name: '付晓丽',
+            sex: '男',
+            time: '19971024',
+            nation:'汉族',
+            card:'***********4556',
+            photo: '15455545555',
+            zip: 200333
+          },
+          {
+            id: '891',
+            name: '徐鑫',
+            sex: '女',
+            time: '19951007',
+            nation:'汉族',
+            card:'***********4776',
+            photo: '15455545555',
+            zip: 200333
+          },
         ],
         formInline: {
           sex: '',

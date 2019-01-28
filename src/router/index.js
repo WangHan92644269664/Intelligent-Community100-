@@ -24,6 +24,7 @@ import WorkingEssayColumn from '../pages/Working/Advertise/Column'
 import Dangjian from '../pages/DangJian/DangJian'
 import DangjianFlowInto from '../pages/DangJian/Building/Flow/FlowInto'
 import DangjianOrganList from '../pages/DangJian/Building/Organ/OrganList'
+import OrganHistory from '../pages/DangJian/Building/Organ/OrganHistory'
 import DangjianOrganOutstanding from '../pages/DangJian/Building/Organ/OrganOutstanding'
 import DangjianRelationInto from '../pages/DangJian/Building/Relation/RelationInto'
 import DangjianBirthday from '../pages/DangJian/Building/Birthday'
@@ -389,6 +390,13 @@ export default new Router({
         {
           path: '/dangjian/activity/three/outstanding',
           component: DangjianOutstanding,
+          meta: {
+            showHeader: true
+          },
+        },
+        {
+          path: '/dangjian/activity/three/history',
+          component: OrganHistory,
           meta: {
             showHeader: true
           },

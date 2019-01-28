@@ -41,7 +41,7 @@
                     title:'党员列表'
                   },
                   {
-                    index:'#1-3-2',
+                    index:'history',
                     title:'历史党员'
                   },
                   {
@@ -212,6 +212,4 @@
   }
 </script>
 <style scoped>
-
-
 </style>

@@ -62,12 +62,6 @@
         min-width="12%">
       </el-table-column>
       <el-table-column
-        prop="photo"
-        label="电话"
-        show-overflow-tooltip
-        min-width="14%">
-      </el-table-column>
-      <el-table-column
         fixed="right"
         label="操作"
         min-width="33%">
@@ -106,32 +100,26 @@
         currentPage4: 1,
         tableData: [
           {
-          name: '王晗',
+          name: '王多晓',
           id:'55455445622521',
           sex: '女',
-          dept:'综治办',
+          dept:'义务巡防队伍',
           education:'本科',
           politics:'共青团员',
-          photo: '15455545555',
-          zip: 200333
         }, {
-          name: '成功',
+          name: '王开富',
           id:'55455445622521',
           sex: '男',
-          dept:'度假区综治中心',
+          dept:'专职巡防队伍',
           education:'本科',
           politics:'共青团员',
-          photo: '15455545555',
-          zip: 200333
         }, {
-          name: '超级管理员',
+          name: '李想',
           id:'55455445622521',
           sex: '男',
-          dept:'高新区综治中心',
+          dept:'其它',
           education:'本科',
           politics:'共青团员',
-          photo: '15455545555',
-          zip: 200333
         }
         ],
         formInline: {

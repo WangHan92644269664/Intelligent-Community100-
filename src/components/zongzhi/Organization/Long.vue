@@ -87,17 +87,17 @@
         currentPage4: 1,
         tableData: [
           {
-          name: '工业园区',
+          name: '花果园区',
           goodsName:'华润中心',
           peopleName:'徐华',
           phone:'15464455545',
         }, {
-          name: '工业园区',
+          name: '花果园区',
           goodsName:'华润中心',
           peopleName:'徐华',
           phone:'15464455545',
         }, {
-          name: '工业园区',
+          name: '花果园区',
           goodsName:'华润中心',
           peopleName:'徐华',
           phone:'15464455545',

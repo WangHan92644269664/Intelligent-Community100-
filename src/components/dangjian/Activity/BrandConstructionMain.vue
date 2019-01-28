@@ -6,8 +6,8 @@
     <el-row style="padding-left: 30px;padding-top: 20px;background: #fff;">
       <el-col :span="24" style="text-align: left;">
         <el-form :inline="true" :model="formInline" class="demo-form-inline">
-          <el-form-item label="品牌党建列表:">
-            <el-input v-model="formInline.list" placeholder="请输入"></el-input>
+          <el-form-item label="工作组名称/党员:">
+            <el-input v-model="formInline.list" ></el-input>
           </el-form-item>
           <el-form-item class="search">
             <el-button type="primary" size="small"><img :src="search" alt="" style="margin-right: 8px;">查询</el-button>
@@ -34,13 +34,13 @@
       <el-table-column
         prop="name"
         sortable
-        label="工作组织名称"
+        label="工作组名称"
         min-width="18%">
       </el-table-column>
       <el-table-column
         prop="people"
         sortable
-        label="工作成员"
+        label="工作组成员"
         min-width="20%">
       </el-table-column>
       <el-table-column
@@ -92,39 +92,19 @@
           {
             name: '开发区一号工作组',
             people:'百元徐 张书轩 方文轩',
-            village:'开发区一号党支部',
+            village:'久安乡政法委党支部',
           }, {
             name: '开发区一号工作组',
             people:'百元徐 张书轩',
-            village:'开发区一号党支部',
+            village:'开阳县政法委党支部',
           }, {
             name: '开发区一号工作组',
             people:'百元徐 张书轩',
-            village:'开发区一号党支部',
+            village:'大石乡政法委党支部',
           }, {
             name: '开发区一号工作组',
             people:'百元徐 张书轩 方文轩',
-            village:'开发区一号党支部',
-          },
-          {
-            name: '开发区一号工作组',
-            people:'百元徐 张书轩',
-            village:'开发区一号党支部',
-          },
-          {
-            name: '开发区一号工作组',
-            people:'百元徐',
-            village:'开发区一号党支部',
-          },
-          {
-            name: '开发区一号工作组',
-            people:'张书轩 ',
-            village:'开发区一号党支部',
-          },
-          {
-            name: '开发区一号工作组',
-            people:'方文轩',
-            village:'开发区一号党支部',
+            village:'九庄镇政法委党支部',
           },
         ],
         formInline: {

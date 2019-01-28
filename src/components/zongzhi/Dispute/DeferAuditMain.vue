@@ -12,8 +12,8 @@
           <el-form-item label="登记时间:">
             <el-input v-model="formInline.time"  placeholder="请选择"></el-input>
           </el-form-item>
-          <el-form-item label>
-            <el-input v-model="formInline.search"  placeholder="万能搜索"></el-input>
+          <el-form-item label="万能搜索:">
+            <el-input v-model="formInline.search"  placeholder="请输入关键词"></el-input>
           </el-form-item>
           <el-form-item class="search">
             <el-button type="primary" size="small"><img :src="search" alt="" style="margin-right: 8px;">查询</el-button>
@@ -75,7 +75,7 @@
         currentPage4: 1,
         tableData: [
           {
-            square: "高新区-天桥办事处",
+            square: "九庄镇政法委",
             id: "AS00002",
             name: "土地使用权纠纷",
             from: "群众来访",
@@ -84,7 +84,7 @@
             type: "土地及资产",
           },
           {
-            square: "高新区-开发区",
+            square: "开阳县政法委",
             id: "AS00001",
             name: "下水道井盖丢失",
             from: "电话热线",
@@ -93,7 +93,7 @@
             type: "物权相关",
           },
           {
-            square: "高新区-天桥办事处",
+            square: "久安乡政法委",
             id: "AS00002",
             name: "土地使用权纠纷",
             from: "群众来访",
@@ -102,7 +102,7 @@
             type: "土地及资产",
           },
           {
-            square: "高新区-开发区",
+            square: "大石乡政法委",
             id: "AS00001",
             name: "下水道井盖丢失",
             from: "电话热线",

@@ -13,7 +13,7 @@
     name: "Three",
     data() {
       return {
-        rightTitle:'专题设置列表',
+        rightTitle:'品牌党建日志列表',
       }
     },
     components: {

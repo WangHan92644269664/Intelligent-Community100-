@@ -77,8 +77,8 @@
         <el-table-column
           prop="tag"
           label="完成程度"
-          min-width="12%"
           column-key="tag"
+          min-width="12%"
           :filters="[{text:'未审核',value:'未审核'},{text:'正在进行',value:'正在进行'},{text:'还未开始',value:'还未开始'}]"
           align="center"
         >

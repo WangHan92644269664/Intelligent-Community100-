@@ -8,16 +8,14 @@
     <el-row style="padding-left: 30px;padding-top: 20px;background: #fff;">
       <el-col :span="24" style="text-align: left;">
         <el-form :inline="true" :model="formInline" class="demo-form-inline">
-          <el-form-item label="学校名称:">
+          <el-form-item label="所属网格:">
             <el-input v-model="formInline.name" placeholder="请输入"></el-input>
           </el-form-item>
-          <el-form-item label="学校类型:">
-            <el-select v-model="formInline.kind" placeholder="请选择">
-              <el-option label="幼儿园" value="幼儿园"></el-option>
-              <el-option label="小学" value="小学"></el-option>
-              <el-option label="普通高中" value="普通高中"></el-option>
-              <el-option label="普通高等学校" value="普通高等学校"></el-option>
-            </el-select>
+          <el-form-item label="姓名:">
+            <el-input v-model="formInline.name" placeholder="请输入"></el-input>
+          </el-form-item>
+          <el-form-item label="公民省份证号:">
+            <el-input v-model="formInline.name" placeholder="请输入"></el-input>
           </el-form-item>
           <el-form-item class="search">
             <el-button type="primary" size="small"><img :src="search" alt="" style="margin-right: 8px;">查询</el-button>
@@ -42,41 +40,40 @@
         min-width="13%">
       </el-table-column>
       <el-table-column
-        prop="name"
+        prop="school"
         sortable
-        label="学校名称"
+        label="所属学校"
         min-width="13%">
       </el-table-column>
       <el-table-column
-        prop="kind"
-        label="学校类型"
+        prop="name"
+        label="姓名"
         show-overflow-tooltip
         min-width="12%">
       </el-table-column>
       <el-table-column
-        prop="address"
-        label="学校地址"
+        prop="idCard"
+        label="公民身份证号"
         min-width="13%">
       </el-table-column>
       <el-table-column
-        prop="num"
-        label="在校人数"
+        prop="agoName"
+        label="曾用名"
         min-width="10%">
       </el-table-column>
       <el-table-column
-        prop="headName"
-        label="校长姓名"
+        prop="sex"
+        label="性别"
         min-width="10%">
       </el-table-column>
       <el-table-column
-        prop="secName"
-        label="安保负责人姓名"
+        prop="zhiye"
+        label="职业"
         min-width="12%">
       </el-table-column>
       <el-table-column
         fixed="right"
         label="操作"
-        sortable
         min-width="40%">
         <template slot-scope="scope">
           <el-button @click="handleClick(scope.row)"size="small" >详情</el-button>
@@ -117,52 +114,38 @@
         currentPage4: 1,
         tableData: [
           {
-          id: '舜泰办事处',
-          name: '顺泰幼儿园',
-          kind: '幼儿园',
-          address: '顺泰幼儿园',
-          num: '234',
-          headName: '王天',
-          secName: '赵斌',
-          zip: 200333
+          id: '九庄镇政法委',
+          school:'九庄镇幼儿园',
+          name:'陈佳',
+         idCard:'**************5461',
+          agoName:'李想',
+          sex:'女',
+          zhiye:'学生',
         }, {
-          id: '高新区',
-          name: '田镇小学',
-          kind: '小学',
-          address: '田镇街道',
-          num: '400',
-          headName: '王白石',
-          secName: '王东',
-          zip: 200333
+            id: '开阳县政法委',
+            school:'开阳县小学',
+            name:'周浩',
+            idCard:'**************5461',
+            agoName:'周明明',
+            sex:'女',
+            zhiye:'学生',
         }, {
-          id: '开发区',
-          name: '开发区小学',
-          kind: '小学',
-          address: '开发区小学',
-          num: '234',
-          headName: '王天',
-          secName: '赵斌',
-          zip: 200333
+            id: '久安乡政法委',
+            school:'久安乡小学',
+            name:'付晓丽',
+            idCard:'**************5461',
+            agoName:'付想',
+            sex:'女',
+            zhiye:'学生',
         }, {
-          id: '天桥办事处',
-          name: '天桥区中学',
-          kind: '普通高中',
-          address: '天桥区中学',
-          num: '234',
-          headName: '王天',
-          secName: '赵斌',
-          zip: 200333
+            id: '大石乡政法委',
+            school:'大石乡小学',
+            name:'李瑶',
+            idCard:'**************5461',
+            agoName:'李想',
+            sex:'女',
+            zhiye:'学生',
         },
-          {
-            id: '中平路社区',
-            name: '平西大学',
-            kind: '普通高等学校',
-            address: '平西大学',
-            num: '234',
-            headName: '王天',
-            secName: '赵斌',
-            zip: 200333
-          }
         ],
       }
     },

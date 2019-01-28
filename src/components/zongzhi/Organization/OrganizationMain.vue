@@ -62,12 +62,6 @@
         min-width="12%">
       </el-table-column>
       <el-table-column
-        prop="photo"
-        label="电话"
-        show-overflow-tooltip
-        min-width="13%">
-      </el-table-column>
-      <el-table-column
         fixed="right"
         label="操作"
         min-width="33%">
@@ -106,32 +100,29 @@
         currentPage4: 1,
         tableData: [
           {
-          name: '王晗',
+          name: '王洪涛',
           id:'55455445622521',
           sex: '女',
           dept:'综治办',
           education:'本科',
           politics:'共青团员',
           photo: '15455545555',
-          zip: 200333
         }, {
-          name: '成功',
+          name: '郭嘉林',
           id:'55455445622521',
           sex: '男',
           dept:'度假区综治中心',
           education:'本科',
           politics:'共青团员',
           photo: '15455545555',
-          zip: 200333
         }, {
-          name: '超级管理员',
+          name: '张福运',
           id:'55455445622521',
           sex: '男',
           dept:'高新区综治中心',
           education:'本科',
           politics:'共青团员',
           photo: '15455545555',
-          zip: 200333
         }
         ],
         formInline: {

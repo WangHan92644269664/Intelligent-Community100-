@@ -37,13 +37,11 @@
       <el-table-column
         fixed
         prop="id"
-        sortable
         label="所属网格"
         min-width="12%">
       </el-table-column>
       <el-table-column
         prop="name"
-        sortable
         label="学校名称"
         min-width="13%">
       </el-table-column>
@@ -117,8 +115,8 @@
         currentPage4: 1,
         tableData: [
           {
-          id: '舜泰办事处',
-          name: '顺泰幼儿园',
+          id: '九庄镇政法委',
+          name: '九庄镇幼儿园',
           kind: '幼儿园',
           address: '顺泰幼儿园',
           num: '234',
@@ -126,8 +124,8 @@
           secName: '赵斌',
           zip: 200333
         }, {
-          id: '高新区',
-          name: '田镇小学',
+          id: '开阳县政法委',
+          name: '开阳县小学',
           kind: '小学',
           address: '田镇街道',
           num: '400',
@@ -135,8 +133,8 @@
           secName: '王东',
           zip: 200333
         }, {
-          id: '开发区',
-          name: '开发区小学',
+          id: '久安乡政法委',
+          name: '久安乡小学',
           kind: '小学',
           address: '开发区小学',
           num: '234',
@@ -144,8 +142,8 @@
           secName: '赵斌',
           zip: 200333
         }, {
-          id: '天桥办事处',
-          name: '天桥区中学',
+          id: '大石乡政法委',
+          name: '大石乡小学',
           kind: '普通高中',
           address: '天桥区中学',
           num: '234',
@@ -153,16 +151,6 @@
           secName: '赵斌',
           zip: 200333
         },
-          {
-            id: '中平路社区',
-            name: '平西大学',
-            kind: '普通高等学校',
-            address: '平西大学',
-            num: '234',
-            headName: '王天',
-            secName: '赵斌',
-            zip: 200333
-          }
         ],
       }
     },

@@ -23,19 +23,27 @@
       <el-table-column
         type="selection">
       </el-table-column>
-      <el-table-column fixed prop="square" sortable label="所属网格"  min-width="13%"></el-table-column>
-      <el-table-column prop="id" sortable label="编号"  min-width="8%"></el-table-column>
+      <el-table-column fixed prop="square"  label="所属网格"  min-width="13%"></el-table-column>
+      <el-table-column prop="id"  label="编号"  min-width="8%"></el-table-column>
       <el-table-column prop="problem" label="治安突出问题"   show-overflow-tooltip min-width="12%"></el-table-column>
       <el-table-column prop="areaType" label="涉及区域类型"  min-width="12%"></el-table-column>
       <el-table-column prop="cuanTou" label="整治窜头单位"  min-width="12%"></el-table-column>
       <el-table-column prop="join" label="整治参与单位"  min-width="13%"></el-table-column>
       <el-table-column prop="time" label="整改时限"   show-overflow-tooltip  min-width="10%"></el-table-column>
-      <el-table-column prop="status" label="状态"  min-width="11%"></el-table-column>
-      <el-table-column fixed="right" label="操作"  min-width="40%">
+      <el-table-column prop="tag" label="状态"  min-width="11%"
+                       column-key="tag"
+                       :filters="[{text:'已处理',value:'已处理'},{text:'待处理',value:'待处理'}]">
+      </el-table-column>
+      <el-table-column fixed="right" label="操作" column-key="tag"  min-width="40%">
         <template slot-scope="scope">
-          <el-button @click="handleClick(scope.row)"size="small" >详情</el-button>
-          <el-button @click="handleClick(scope.row)" size="small">编辑</el-button>
-          <el-button @click="deleteRow(scope.$index,tableData)"size="small">移除</el-button>
+          <template v-if="scope.row.tag='待处理'">
+            <el-button @click="handleClick(scope.row)"size="small" >详情</el-button>
+            <el-button @click="handleClick(scope.row)" size="small">编辑</el-button>
+            <el-button @click="deleteRow(scope.$index,tableData)" size="small">移除</el-button>
+          </template>
+          <template v-else>
+            <el-button @click="handleClick(scope.row)"size="small" >详情</el-button>
+          </template>
         </template>
       </el-table-column>
     </el-table>
@@ -70,65 +78,45 @@
         currentPage4: 1,
         tableData: [
           {
-            square: "开发区",
+            square: "新天社区政法委",
             id: "2",
             problem: "抢劫抢夺",
             areaType: "学校周边",
             cuanTou: "保安大队",
             join: "保安大队",
             time: "20181113",
-            status: "待处理"
+            tag: "待处理"
           },
           {
-            square: "天桥办事区",
+            square: "九庄镇政法委",
             id: "3",
             problem: "其他",
             areaType: "交通场站",
             cuanTou: "保安大队",
             join: "保安大队",
             time: "20181112",
-            status: "待处理"
+           tag: "待处理"
           },
           {
-            square: "舜泰办事区",
+            square: "开阳县政法委",
             id: "4",
             problem: "电信诈骗",
             areaType: "集贸市场",
             cuanTou: "安保大队",
             join: "安保大队",
             time: "20181120",
-            status: "待处理"
+            tag: "待处理"
           },
           {
-            square: "花园路社区",
+            square: "大石乡政法委",
             id: "5",
             problem: "交通秩序混乱",
             areaType: "重点线路",
             cuanTou: "安保大队",
             join: "安保大队",
             time: "20181120",
-            status: "待处理"
+            tag: "已处理"
           },
-          {
-            square: "港西办事处",
-            id: "6",
-            problem: "偷盗机动车",
-            areaType: "学校周边",
-            cuanTou: "安保大队",
-            join: "安保大队",
-            time: "20181119",
-            status: "待处理"
-          },
-          {
-            square: "平西2号网格",
-            id: "1",
-            problem: "入室盗窃",
-            areaType: "交通场站",
-            cuanTou: "安保大队",
-            join: "历下区政府",
-            time: "20180920",
-            status: "已处理"
-          }
         ]
       };
     },

@@ -55,7 +55,15 @@
       <el-table-column
         prop="status"
         label="状态"
-        min-width="16%">
+        min-width="16%"
+        column-key="status"
+        :filters="[{text:'已结束',value:'已结束'},{text:'未开始',value:'未开始'},{text:'考试中',value:'考试中'}]"
+      >
+        <template slot-scope="scope">
+            <span :class="{red:scope.row.status==='已结束',blue:scope.row.status==='未开始'}">
+              {{scope.row.status}}
+            </span>
+        </template>
       </el-table-column>
       <el-table-column
         fixed="right"
@@ -152,6 +160,12 @@
   }
 </script>
 <style scoped>
+  .red{
+    color:red
+  }
+  .blue{
+    color:#008aff;
+  }
   .cell .el-button:first-child{
     background: none;
     border:1px solid #ff813d;

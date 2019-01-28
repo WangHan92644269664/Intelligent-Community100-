@@ -85,33 +85,17 @@
         currentPage4: 1,
         tableData: [
           {
-            people:'百元徐',
-            village:'开发区一号党支部'
+            people:'徐洪涛',
+            village:'九庄镇政法委'
           }, {
-            people:'百元徐',
-            village:'开发区一号党支部'
+            people:'王红',
+            village:'开阳县政法委'
           }, {
-            people:'百元徐',
-            village:'开发区一号党支部'
+            people:'徐鑫',
+            village:'久安乡政法委'
           }, {
-            people:'百元徐',
-            village:'开发区一号党支部'
-          },
-          {
-            people:'百元徐',
-            village:'开发区一号党支部'
-          },
-          {
-            people:'百元徐',
-            village:'开发区一号党支部'
-          },
-          {
-            people:'百元徐',
-            village:'开发区一号党支部'
-          },
-          {
-            people:'百元徐',
-            village:'开发区一号党支部'
+            people:'王明明',
+            village:'大石乡政法委'
           },
         ],
         formInline: {

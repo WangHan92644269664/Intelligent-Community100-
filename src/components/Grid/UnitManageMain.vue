@@ -60,7 +60,16 @@
       <el-table-column
         prop="isFlag"
         label="是否标记"
-        min-width="12%">
+        min-width="12%"
+        column-key="isFlag"
+        :filters="[{text:'已标记',value:'已标记'},{text:'未标记',value:'未标记'}]"
+        align="center"
+      >
+        <template slot-scope="scope">
+            <span :class="{red:scope.row.isFlag==='未标记',blue:scope.row.isFlag==='已标记'}">
+              {{scope.row.isFlag}}
+            </span>
+        </template>
       </el-table-column>
       <el-table-column
         fixed="right"
@@ -111,44 +120,44 @@
             isFlag:'未标记',
           },
           {
-            id:'A001',
-            network:'平西路社区',
-            name:'路灯一号',
-            kind:'路灯',
+            id:'A002',
+            network:'开发区',
+            name:'器材二号',
+            kind:'健身器材',
+            isFlag:'已标记',
+          },
+          {
+            id:'A003',
+            network:'舜泰二号网格',
+            name:'宣传栏一号',
+            kind:'宣传栏',
+            isFlag:'已标记',
+          },
+          {
+            id:'A004',
+            network:'天桥办事处',
+            name:'宣传栏二号',
+            kind:'宣传栏',
             isFlag:'未标记',
           },
           {
-            id:'A001',
-            network:'平西路社区',
-            name:'路灯一号',
+            id:'A005',
+            network:'开发区',
+            name:'路灯三号',
             kind:'路灯',
             isFlag:'已标记',
           },
           {
-            id:'A001',
-            network:'平西路社区',
-            name:'路灯一号',
-            kind:'路灯',
+            id:'A006',
+            network:'开发区',
+            name:'垃圾桶',
+            kind:'垃圾桶',
             isFlag:'未标记',
           },
           {
-            id:'A001',
-            network:'平西路社区',
-            name:'路灯一号',
-            kind:'路灯',
-            isFlag:'已标记',
-          },
-          {
-            id:'A001',
-            network:'平西路社区',
-            name:'路灯一号',
-            kind:'路灯',
-            isFlag:'未标记',
-          },
-          {
-            id:'A001',
-            network:'平西路社区',
-            name:'路灯一号',
+            id:'A007',
+            network:'天桥办事处',
+            name:'路灯二号',
             kind:'路灯',
             isFlag:'已标记',
           },
@@ -179,6 +188,12 @@
 
 </style>
 <style scoped>
+  .red{
+    color:#ff813d
+  }
+  .blue{
+    color:#008aff;
+  }
  .cell .el-button:first-child{
    background: none;
    border:1px solid #ff813d;

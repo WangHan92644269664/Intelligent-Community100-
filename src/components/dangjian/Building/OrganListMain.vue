@@ -2,11 +2,11 @@
   <div>
     <el-card class="box-card">
       <div slot="header" class="clearfix">
-        <span style="float: left">高新区区委 简介</span>
+        <span style="float: left">新天社区区委 简介</span>
         <el-button style="float: right; padding: 3px 10px;border-radius: 0" type="primary">修改</el-button>
       </div>
       <div style="color:#777;text-align:left;font-size:14px">
-        郑州市高新区区委会工作职责有应急办公室、组织部、宣传部、纪工委(审计监察局)、政法委员会(信访局)、发展改革局(金融工作办公室)、科技经济局、商务局、投资服务局
+        贵阳新天社区区委会工作职责有应急办公室、组织部、宣传部、纪工委(审计监察局)、政法委员会(信访局)、发展改革局(金融工作办公室)、科技经济局、商务局、投资服务局
         (安全生产监管局)、市场监督管理局、财政局、建设局、城市管理局(城市管理行政执法局)、郑州市国土资源局高新技术产业开发区分局、社会保障局(人民武装部)、
         社会事务局、机关党委、总工会17个
       </div>
@@ -54,8 +54,8 @@
       </div>
       <div style="float: left;padding-left: 30px;">
         <img :src="header" alt="" style="width: 40px;border-radius: 50%">
-        <p>世博</p>
-        <p>1545452243</p>
+        <p>吴功杰</p>
+        <p>17378451232</p>
       </div>
     </el-card>
     <el-card class="box-card" style="margin-top: 20px;">
@@ -137,5 +137,6 @@
 
   .box-card {
     width: 100%;
+    height: 25%;
   }
 </style>

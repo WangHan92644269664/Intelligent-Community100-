@@ -49,7 +49,7 @@
 </script>
 <style>
   .dangjian .el-submenu__title{
-    color: #c9c9c9 !important;
+    color: #999 !important;
     font-weight: bolder;
     padding: 0 125px;
   }
@@ -94,7 +94,7 @@
   }
   .el-menu-item.is-active {
     color: #0077ff!important;
-    background:#121212;
+    background:rgba(0,0,0,0.2);
     font-weight: bolder;
     border-left: 2px solid #0077ff;
   }
@@ -110,6 +110,6 @@
     color:#555
   }
   .el-menu-item:focus, .el-menu-item:hover{
-    background:#121212;
+    background:rgba(0,0,0,0.1);
   }
 </style>

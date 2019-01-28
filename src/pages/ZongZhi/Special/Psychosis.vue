@@ -21,29 +21,39 @@
         rightTitle:'精神病人员',
         data: [
           {
-            label: '高新区',
-            children: [
+            label: '新天社区政法委',
+            children: [{
+              label: '九庄镇政法委',
+              children:[
+                {
+                  label: '九庄镇政法委',
+                }
+              ]
+            },
               {
-                label: '开发区',
+                label: '开阳县政法委',
+                children:[
+                  {
+                    label: '开阳县政法委',
+                  }
+                ]
               },
               {
-                label: '天桥办事处',
+                label: '久安乡政法委',
+                children:[
+                  {
+                    label: '久安乡政法委',
+                  }
+                ]
               },
               {
-                label: '舜泰办事处',
-              },
-              {
-                label: '软件园办事处',
-              },
-              {
-                label: '湛西办事处',
-              },
-              {
-                label: '花园路社区',
-              },
-              {
-                label: '平西路社区',
-              },
+                label:'大石乡政法委',
+                children:[
+                  {
+                    label: '大石乡政法委',
+                  }
+                ]
+              }
             ]
           }],
         formInline: {

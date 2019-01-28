@@ -64,11 +64,6 @@
         min-width="18%">
       </el-table-column>
       <el-table-column
-        prop="photo"
-        label="电话"
-        min-width="14%">
-      </el-table-column>
-      <el-table-column
         fixed="right"
         label="操作"
         min-width="25%">
@@ -113,53 +108,21 @@
             people:'超级管理员',
             name: require('../../images/timg.jpg'),
             time:'2018-11-17 14:02:43',
-            photo:'15141554652'
+          }, {
+            title:'2018年第49期 把握时代机遇，共享亚太未来',
+            people:'超级管理员',
+            name: require('../../images/timg.jpg'),
+            time:'2018-11-17 14:02:43',
           }, {
             title:'2018年第49期 对历史大势 走人间正道',
             people:'超级管理员',
             name: require('../../images/timg.jpg'),
             time:'2018-11-17 14:02:43',
-            photo:'15141554652'
           }, {
-            title:'2018年第49期 对历史大势 走人间正道',
+            title:'2018年第49期 把握时代机遇，共享亚太未来',
             people:'超级管理员',
             name: require('../../images/timg.jpg'),
             time:'2018-11-17 14:02:43',
-            photo:'15141554652'
-          }, {
-            title:'2018年第49期 对历史大势 走人间正道',
-            people:'超级管理员',
-            name: require('../../images/timg.jpg'),
-            time:'2018-11-17 14:02:43',
-            photo:'15141554652'
-          },
-          {
-            title:'2018年第49期 对历史大势 走人间正道',
-            people:'超级管理员',
-            name: require('../../images/timg.jpg'),
-            time:'2018-11-17 14:02:43',
-            photo:'15141554652'
-          },
-          {
-            title:'2018年第49期 对历史大势 走人间正道',
-            people:'超级管理员',
-            name: require('../../images/timg.jpg'),
-            time:'2018-11-17 14:02:43',
-            photo:'15141554652'
-          },
-          {
-            title:'2018年第49期 对历史大势 走人间正道',
-            people:'超级管理员',
-            name: require('../../images/timg.jpg'),
-            time:'2018-11-17 14:02:43',
-            photo:'15141554652'
-          },
-          {
-            title:'2018年第49期 对历史大势 走人间正道',
-            people:'超级管理员',
-            name: require('../../images/timg.jpg'),
-            time:'2018-11-17 14:02:43',
-            photo:'15141554652'
           },
         ],
         formInline: {

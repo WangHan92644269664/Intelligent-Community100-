@@ -20,36 +20,36 @@
         rightTitle:'政治生日列表',
         data: [
           {
-            label: '高新区区委',
+            label: '新天社区政法委',
             children: [{
-              label: '开发区街道工委',
+              label: '九庄镇政法委',
               children:[
                 {
-                  label: '开发区街道工委1',
+                  label: '九庄镇政法委',
                 }
               ]
             },
               {
-                label: '天桥区街道工委',
+                label: '开阳县政法委',
                 children:[
                   {
-                    label: '天桥区街道工委1',
+                    label: '开阳县政法委',
                   }
                 ]
               },
               {
-                label: '舜泰街道工委',
+                label: '久安乡政法委',
                 children:[
                   {
-                    label: '舜泰街道工委1',
+                    label: '久安乡政法委',
                   }
                 ]
               },
               {
-                label:'湛西街道工委',
+                label:'大石乡政法委',
                 children:[
                   {
-                    label: '湛西街道工委1',
+                    label: '大石乡政法委',
                   }
                 ]
               }

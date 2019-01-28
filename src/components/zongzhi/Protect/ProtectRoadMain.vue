@@ -69,11 +69,6 @@
         min-width="15%">
       </el-table-column>
       <el-table-column
-        prop="secName"
-        label="安保负责人姓名"
-        min-width="13%">
-      </el-table-column>
-      <el-table-column
         fixed="right"
         label="操作"
         sortable
@@ -117,90 +112,46 @@
         currentPage4: 1,
         tableData: [
           {
-          id: '开发区',
+          id: '新天社区办事处',
           id2:'2',
-          name: '武夷山路',
-          deptName:'济南市交通监管局',
-          address: '山东省济南市市区',
+          name: '修文县枣山村',
+          deptName:'贵阳交通监管局',
+          address: '贵阳省贵阳市市区',
           phone:'0512-52244654',
           headName: '王天',
           secName: '赵斌',
           zip: 200333
         }, {
-          id: '高新区',
-          id2:'4',
-          name: '黑龙江路',
-          deptName:'济南市交通监管局',
-          address: '山东省济南市市区',
+            id: '九庄镇政法委',
+            id2:'2',
+            name: '修文县新东村',
+            deptName:'贵阳交通监管局',
+            address: '贵阳省贵阳市市区',
           phone:'0512-52244654',
           headName: '王天',
           secName: '赵斌',
           zip: 200333
         }, {
-          id: '花园路3号网格',
-          id2:'6',
-          name: '平西路',
-          deptName:'济南市交通监管局',
-          address: '山东省济南市市区',
-          phone:'0512-52244654',
+            id: '久安乡政法委',
+            id2:'4',
+            name: '六屯镇都报村',
+            deptName:'贵阳交通监管局',
+            address: '贵阳省贵阳市市区',
+            phone:'0512-52244654',
           headName: '王天',
           secName: '赵斌',
           zip: 200333
         }, {
-          id: '花园路5号网格',
-          id2:'8',
-          name: '舜华东路',
-          deptName:'济南市交通监管局',
-          address: '山东省济南市市区',
-          phone:'0512-52244654',
-          headName: '王天',
+            id: '大石乡政法委',
+            id2:'3',
+            name: '南明区花果园',
+            deptName:'贵阳交通监管局',
+            address: '贵阳省贵阳市市区',
+            phone:'0512-52244654',
+          headName: '赵海',
           secName: '赵斌',
           zip: 200333
         },
-          {
-            id: '平西4号网格',
-            id2:'1',
-            name: '舜华路',
-            deptName:'济南市交通监管局',
-            address: '山东省济南市市区',
-            phone:'0512-52244654',
-            headName: '王天',
-            secName: '赵斌',
-            zip: 200333
-          },
-          {
-            id: '开发区一号网格',
-            id2:'3',
-            name: '天津路',
-            deptName:'济南市交通监管局',
-            address: '山东省济南市市区',
-            phone:'0512-52244654',
-            headName: '王天',
-            secName: '赵斌',
-            zip: 200333
-          },
-          {
-            id: '中海4号网格',
-            id2:'5',
-            name: '市话路',
-            deptName:'济南市交通监管局',
-            address: '山东省济南市市区',
-            phone:'0512-52244654',
-            headName: '王天',
-            secName: '赵斌',
-            zip: 200333
-          },
-          {
-            id: '花园路4号网格',
-            id2:'7',
-            name: '舜华西路',
-            deptName:'济南市交通监管局',
-            address: '山东省济南市市区',
-            phone:'0512-52244654',
-            headName: '王天',
-            secName: '赵斌',
-            zip: 200333
-          }
         ],
       }
     },
